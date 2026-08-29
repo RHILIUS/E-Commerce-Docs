@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e" pages="5">
     <diagram name="auth_login-process" id="UIlVx-N6pBm2TEacQP6A">
-        <mxGraphModel dx="2056" dy="518" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1997" dy="518" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -139,7 +139,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="EcSFkvXWOHsX0-cqH5E2" name="auth_signup-process">
-        <mxGraphModel dx="1419" dy="609" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="765" dy="345" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -877,7 +877,7 @@
                 <mxCell id="noCQcWINAd5OfLZeI2Ld-3" value="&lt;b&gt;INPUT FIELDS VALIDATION&lt;/b&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="noCQcWINAd5OfLZeI2Ld-1" vertex="1">
                     <mxGeometry x="60" y="8.575714285714412" width="225" height="42.85714285714286" as="geometry"/>
                 </mxCell>
-                <mxCell id="noCQcWINAd5OfLZeI2Ld-4" value="&lt;div&gt;Username&lt;/div&gt;&lt;div&gt;1. Required (not empty, trimmed of leading/trailing whitespace)&lt;/div&gt;&lt;div&gt;2. Minimum length (3 characters)&lt;/div&gt;&lt;div&gt;3. Maximum length (30–characters)&lt;/div&gt;&lt;div&gt;4. Allowed characters only: letters, numbers, underscore, hyphen, period (regex like ^[a-zA-Z0-9_.-]+$)&lt;/div&gt;&lt;div&gt;5. No spaces&lt;/div&gt;&lt;div&gt;6. Must start with a letter or number (not a symbol)&lt;/div&gt;&lt;div&gt;7. No consecutive special characters (e.g. __, ..)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Password&lt;/div&gt;&lt;div&gt;1. Required (not empty)&lt;/div&gt;&lt;div&gt;2. Minimum length (8 characters)&lt;/div&gt;&lt;div&gt;3. Maximum length cap (64 characters)&lt;/div&gt;&lt;div&gt;4. No character-type restrictions (don’t block special characters or spaces)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=top;rounded=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="noCQcWINAd5OfLZeI2Ld-1" vertex="1">
+                <mxCell id="noCQcWINAd5OfLZeI2Ld-4" value="&lt;div&gt;Username&lt;/div&gt;&lt;div&gt;1. Required (not empty, trimmed of leading/trailing whitespace)&lt;/div&gt;&lt;div&gt;2. Minimum length (3 characters)&lt;/div&gt;&lt;div&gt;3. Maximum length (30–characters)&lt;/div&gt;&lt;div&gt;4. Allowed characters only: letters, numbers, underscore, hyphen, period (regex like ^[a-zA-Z0-9_.-]+$)&lt;/div&gt;&lt;div&gt;5. No spaces&lt;/div&gt;&lt;div&gt;6. Must start with a letter or number (not a symbol)&lt;/div&gt;&lt;div&gt;7. No consecutive special characters (e.g. __, ..)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Password&lt;/div&gt;&lt;div&gt;1. Required (not empty)&lt;/div&gt;&lt;div&gt;2. Minimum length (8 characters)&lt;/div&gt;&lt;div&gt;3. Maximum length cap (64 characters)&lt;/div&gt;&lt;div&gt;4. No character-type restrictions (don’t block special characters or spaces)&lt;/div&gt;&lt;div&gt;5. Atleast one uppercase letter&lt;/div&gt;&lt;div&gt;6. Atleast one number&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=top;rounded=0;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="noCQcWINAd5OfLZeI2Ld-1" vertex="1">
                     <mxGeometry x="40" y="38.58000000000004" width="290" height="367.15" as="geometry"/>
                 </mxCell>
             </root>
