@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e" pages="5">
     <diagram name="auth_login-process" id="UIlVx-N6pBm2TEacQP6A">
-        <mxGraphModel dx="1997" dy="518" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1528" dy="769" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -139,7 +139,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="EcSFkvXWOHsX0-cqH5E2" name="auth_signup-process">
-        <mxGraphModel dx="765" dy="345" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="666" dy="641" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -461,7 +461,7 @@
                 <mxCell id="Gu0yt309OdvKz0EOZxvX-5" value="Is email already registered" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="GmZeK7h_D6ga8UHFZ-il-1" vertex="1">
                     <mxGeometry x="80" y="150" width="115" height="120" as="geometry"/>
                 </mxCell>
-                <mxCell id="lH6V26N1YSTfUAN2-gWZ-1" value="Return 409 conflict response&lt;div&gt;&quot;Email is already registered&quot;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=#f8cecc;strokeColor=#b85450;" parent="GmZeK7h_D6ga8UHFZ-il-1" vertex="1">
+                <mxCell id="lH6V26N1YSTfUAN2-gWZ-1" value="Return 400 bad_request response&lt;div&gt;&quot;Email is already registered&quot;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=#f8cecc;strokeColor=#b85450;" parent="GmZeK7h_D6ga8UHFZ-il-1" vertex="1">
                     <mxGeometry x="385" y="150" width="100" height="100" as="geometry"/>
                 </mxCell>
                 <mxCell id="zek1DrFCrtd62lhsTPgL-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="GmZeK7h_D6ga8UHFZ-il-1" source="zek1DrFCrtd62lhsTPgL-1" target="zek1DrFCrtd62lhsTPgL-3" edge="1">
