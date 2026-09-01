@@ -139,7 +139,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="EcSFkvXWOHsX0-cqH5E2" name="auth_signup-process">
-        <mxGraphModel dx="1438" dy="513" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="2810" dy="1709" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -496,7 +496,7 @@
                 <mxCell id="RR8xrSO7kwdP9YbaXtqj-7" value="Store/Update OTP verification data" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="GmZeK7h_D6ga8UHFZ-il-1" vertex="1">
                     <mxGeometry x="185" y="665" width="100" height="100" as="geometry"/>
                 </mxCell>
-                <mxCell id="RR8xrSO7kwdP9YbaXtqj-32" value="Returns 200 OK response" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;" parent="GmZeK7h_D6ga8UHFZ-il-1" vertex="1">
+                <mxCell id="RR8xrSO7kwdP9YbaXtqj-32" value="Returns 200 OK response:&lt;br&gt;&lt;br&gt;&lt;div style=&quot;text-align: left;&quot;&gt;Body:&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;1. retry_after&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;2. email&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;3. message&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;" parent="GmZeK7h_D6ga8UHFZ-il-1" vertex="1">
                     <mxGeometry x="640" y="510" width="100" height="100" as="geometry"/>
                 </mxCell>
                 <mxCell id="3AJP8axHg7W5mqb3cNu1-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="GmZeK7h_D6ga8UHFZ-il-1" source="3AJP8axHg7W5mqb3cNu1-6" target="3AJP8axHg7W5mqb3cNu1-7" edge="1">
