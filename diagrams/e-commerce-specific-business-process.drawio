@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e" pages="5">
     <diagram name="auth_login-process" id="UIlVx-N6pBm2TEacQP6A">
-        <mxGraphModel dx="1888" dy="905" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="2056" dy="770" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -139,7 +139,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="EcSFkvXWOHsX0-cqH5E2" name="auth_signup-process">
-        <mxGraphModel dx="2810" dy="1709" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="3043" dy="1400" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -216,7 +216,7 @@
                         <mxPoint x="580" y="80" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="RR8xrSO7kwdP9YbaXtqj-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="L3MLXxfl6u-Rs78_CE9i-2" source="RR8xrSO7kwdP9YbaXtqj-11" target="RR8xrSO7kwdP9YbaXtqj-24" edge="1">
+                <mxCell id="RR8xrSO7kwdP9YbaXtqj-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="L3MLXxfl6u-Rs78_CE9i-2" source="RR8xrSO7kwdP9YbaXtqj-11" target="RR8xrSO7kwdP9YbaXtqj-24" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="740" y="320"/>
@@ -233,7 +233,7 @@
                 <mxCell id="RR8xrSO7kwdP9YbaXtqj-21" value="Show /register/enter-email/ page showing cooldown and disabled &quot;Send OTP&quot; button" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="L3MLXxfl6u-Rs78_CE9i-2" vertex="1">
                     <mxGeometry x="540" y="90" width="140" height="120" as="geometry"/>
                 </mxCell>
-                <mxCell id="hhhjK2Sa5PBJEYrRPuWq-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="L3MLXxfl6u-Rs78_CE9i-2" source="RR8xrSO7kwdP9YbaXtqj-24" target="gRBf1pObN-JOs3SVIKxT-6" edge="1">
+                <mxCell id="hhhjK2Sa5PBJEYrRPuWq-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="L3MLXxfl6u-Rs78_CE9i-2" source="RR8xrSO7kwdP9YbaXtqj-24" target="gRBf1pObN-JOs3SVIKxT-6" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="1030" y="190"/>
@@ -241,10 +241,10 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="RR8xrSO7kwdP9YbaXtqj-24" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;Show /register/verify-otp/&amp;nbsp;&lt;/div&gt;&lt;div&gt;page showing cooldown&lt;/div&gt;&lt;div&gt;&amp;nbsp;and disabled &quot;Resend code&quot;&lt;/div&gt;&lt;div&gt;&amp;nbsp;button&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" parent="L3MLXxfl6u-Rs78_CE9i-2" vertex="1">
+                <mxCell id="RR8xrSO7kwdP9YbaXtqj-24" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;div&gt;Show /register/verify-otp/&amp;nbsp;&lt;/div&gt;&lt;div&gt;page showing cooldown&lt;/div&gt;&lt;div&gt;&amp;nbsp;and disabled &quot;Resend code&quot;&lt;/div&gt;&lt;div&gt;&amp;nbsp;button&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="L3MLXxfl6u-Rs78_CE9i-2" vertex="1">
                     <mxGeometry x="800" y="100" width="224" height="145" as="geometry"/>
                 </mxCell>
-                <mxCell id="gRBf1pObN-JOs3SVIKxT-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="L3MLXxfl6u-Rs78_CE9i-2" source="gRBf1pObN-JOs3SVIKxT-6" target="gRBf1pObN-JOs3SVIKxT-9" edge="1">
+                <mxCell id="gRBf1pObN-JOs3SVIKxT-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="L3MLXxfl6u-Rs78_CE9i-2" source="gRBf1pObN-JOs3SVIKxT-6" target="gRBf1pObN-JOs3SVIKxT-9" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="1090" y="355"/>
@@ -269,10 +269,10 @@
                         <mxPoint as="offset"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="gRBf1pObN-JOs3SVIKxT-6" value="User wants to resend OTP?" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" parent="L3MLXxfl6u-Rs78_CE9i-2" vertex="1">
+                <mxCell id="gRBf1pObN-JOs3SVIKxT-6" value="User wants to resend OTP?" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="L3MLXxfl6u-Rs78_CE9i-2" vertex="1">
                     <mxGeometry x="1040" y="140" width="100" height="100" as="geometry"/>
                 </mxCell>
-                <mxCell id="gRBf1pObN-JOs3SVIKxT-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="L3MLXxfl6u-Rs78_CE9i-2" source="gRBf1pObN-JOs3SVIKxT-9" target="RVN5ff4oGZ09e05vKRft-1" edge="1">
+                <mxCell id="gRBf1pObN-JOs3SVIKxT-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="L3MLXxfl6u-Rs78_CE9i-2" source="gRBf1pObN-JOs3SVIKxT-9" target="RVN5ff4oGZ09e05vKRft-1" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="330" y="415"/>
@@ -280,7 +280,7 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="gRBf1pObN-JOs3SVIKxT-9" value="User clicks&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;on &quot;Resend OTP&quot;&lt;/span&gt;&lt;div&gt;Button&amp;nbsp;&lt;/div&gt;" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" parent="L3MLXxfl6u-Rs78_CE9i-2" vertex="1">
+                <mxCell id="gRBf1pObN-JOs3SVIKxT-9" value="User clicks&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;on &quot;Resend OTP&quot;&lt;/span&gt;&lt;div&gt;Button&amp;nbsp;&lt;/div&gt;" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="L3MLXxfl6u-Rs78_CE9i-2" vertex="1">
                     <mxGeometry x="890" y="320" width="115" height="70" as="geometry"/>
                 </mxCell>
                 <mxCell id="3AJP8axHg7W5mqb3cNu1-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="L3MLXxfl6u-Rs78_CE9i-2" source="3AJP8axHg7W5mqb3cNu1-1" target="3AJP8axHg7W5mqb3cNu1-4" edge="1">
@@ -796,7 +796,7 @@
                         <mxPoint x="610" y="1575" as="sourcePoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="gRBf1pObN-JOs3SVIKxT-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=8 8;" parent="L3MLXxfl6u-Rs78_CE9i-1" source="RR8xrSO7kwdP9YbaXtqj-32" target="RR8xrSO7kwdP9YbaXtqj-24" edge="1">
+                <mxCell id="gRBf1pObN-JOs3SVIKxT-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=8 8;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="L3MLXxfl6u-Rs78_CE9i-1" source="RR8xrSO7kwdP9YbaXtqj-32" target="RR8xrSO7kwdP9YbaXtqj-24" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="870" y="1100.09"/>
