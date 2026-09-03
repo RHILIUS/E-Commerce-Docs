@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e" pages="5">
     <diagram name="auth_login-process" id="UIlVx-N6pBm2TEacQP6A">
-        <mxGraphModel dx="1576" dy="638" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="2056" dy="770" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -139,7 +139,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="EcSFkvXWOHsX0-cqH5E2" name="auth_signup-process">
-        <mxGraphModel dx="2056" dy="770" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1581" dy="467" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -304,7 +304,7 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="3AJP8axHg7W5mqb3cNu1-10" value="Shows&amp;nbsp;&lt;div&gt;&quot;Invalid OTP&quot;&amp;nbsp;&lt;/div&gt;&lt;div&gt;error&lt;/div&gt;" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;fillColor=#f8cecc;strokeColor=#b85450;" parent="L3MLXxfl6u-Rs78_CE9i-2" vertex="1">
+                <mxCell id="3AJP8axHg7W5mqb3cNu1-10" value="Shows&amp;nbsp;&lt;div&gt;&quot;Invalid OTP or email&quot;&amp;nbsp;&lt;/div&gt;&lt;div&gt;error&lt;/div&gt;" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;fillColor=#f8cecc;strokeColor=#b85450;" parent="L3MLXxfl6u-Rs78_CE9i-2" vertex="1">
                     <mxGeometry x="1315" y="330" width="115" height="75" as="geometry"/>
                 </mxCell>
                 <mxCell id="3AJP8axHg7W5mqb3cNu1-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="L3MLXxfl6u-Rs78_CE9i-2" source="3AJP8axHg7W5mqb3cNu1-28" target="3AJP8axHg7W5mqb3cNu1-1" edge="1">
@@ -411,7 +411,7 @@
                 <mxCell id="2erHS5mOwFie3CC5exoj-1" value="Show backend validation error&amp;nbsp;" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" parent="L3MLXxfl6u-Rs78_CE9i-2" vertex="1">
                     <mxGeometry x="1865" y="360" width="120" height="85" as="geometry"/>
                 </mxCell>
-                <mxCell id="JqctoujynEXoSFbhyrtp-8" style="edgeStyle=orthogonalEdgeStyle;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" edge="1" parent="L3MLXxfl6u-Rs78_CE9i-2" source="JqctoujynEXoSFbhyrtp-6" target="3AJP8axHg7W5mqb3cNu1-1">
+                <mxCell id="JqctoujynEXoSFbhyrtp-8" style="edgeStyle=orthogonalEdgeStyle;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="L3MLXxfl6u-Rs78_CE9i-2" source="JqctoujynEXoSFbhyrtp-6" target="3AJP8axHg7W5mqb3cNu1-1" edge="1">
                     <mxGeometry relative="1" as="geometry">
                         <Array as="points">
                             <mxPoint x="1613" y="160"/>
@@ -419,7 +419,7 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="JqctoujynEXoSFbhyrtp-6" value="&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Shows&amp;nbsp;&lt;/font&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(192, 192, 192);&quot;&gt;&lt;font&gt;You have exceeded the maximum attempts. Please request a new OTP&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="L3MLXxfl6u-Rs78_CE9i-2">
+                <mxCell id="JqctoujynEXoSFbhyrtp-6" value="&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Shows&amp;nbsp;&lt;/font&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(192, 192, 192);&quot;&gt;&lt;font&gt;You have exceeded the maximum attempts. Please request a new OTP&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;fillColor=#f8cecc;strokeColor=#b85450;" parent="L3MLXxfl6u-Rs78_CE9i-2" vertex="1">
                     <mxGeometry x="1555" y="352" width="115" height="75" as="geometry"/>
                 </mxCell>
                 <mxCell id="GmZeK7h_D6ga8UHFZ-il-1" value="Backend" style="swimlane;startSize=20;horizontal=0;html=1;" parent="L3MLXxfl6u-Rs78_CE9i-1" vertex="1">
@@ -569,7 +569,7 @@
                 <mxCell id="3AJP8axHg7W5mqb3cNu1-22" value="Return 410 gone error response&lt;br&gt;&quot;Expired or Invalid OTP&quot;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=#f8cecc;strokeColor=#b85450;" parent="GmZeK7h_D6ga8UHFZ-il-1" vertex="1">
                     <mxGeometry x="1457.5" y="470" width="100" height="100" as="geometry"/>
                 </mxCell>
-                <mxCell id="3AJP8axHg7W5mqb3cNu1-25" value="Return 400&lt;div&gt;bad_request error response&lt;br&gt;&quot;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Invalid OTP&quot;&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=#f8cecc;strokeColor=#b85450;" parent="GmZeK7h_D6ga8UHFZ-il-1" vertex="1">
+                <mxCell id="3AJP8axHg7W5mqb3cNu1-25" value="Return 400&lt;div&gt;bad_request error response&lt;br&gt;&quot;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Invalid OTP email&quot;&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=#f8cecc;strokeColor=#b85450;" parent="GmZeK7h_D6ga8UHFZ-il-1" vertex="1">
                     <mxGeometry x="1330" y="120" width="100" height="100" as="geometry"/>
                 </mxCell>
                 <mxCell id="3AJP8axHg7W5mqb3cNu1-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="GmZeK7h_D6ga8UHFZ-il-1" source="3AJP8axHg7W5mqb3cNu1-32" target="3AJP8axHg7W5mqb3cNu1-22" edge="1">
@@ -793,7 +793,7 @@
                 <mxCell id="LSaeoZ1vOZnpRSqXkXHU-7" value="Normalize email" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="GmZeK7h_D6ga8UHFZ-il-1" vertex="1">
                     <mxGeometry x="187.5" y="40" width="100" height="100" as="geometry"/>
                 </mxCell>
-                <mxCell id="JqctoujynEXoSFbhyrtp-4" value="Return 429&lt;div&gt;too_many_requests&lt;br&gt;&quot;You have exceeded the maximum attempts. Please request a new OTP&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="GmZeK7h_D6ga8UHFZ-il-1">
+                <mxCell id="JqctoujynEXoSFbhyrtp-4" value="Return 429&lt;div&gt;too_many_requests&lt;br&gt;&quot;You have exceeded the maximum attempts. Please request a new OTP&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&quot;&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="GmZeK7h_D6ga8UHFZ-il-1" vertex="1">
                     <mxGeometry x="1540" y="120" width="130" height="110" as="geometry"/>
                 </mxCell>
                 <mxCell id="GmZeK7h_D6ga8UHFZ-il-6" value="Email Provider" style="swimlane;startSize=20;horizontal=0;html=1;" parent="L3MLXxfl6u-Rs78_CE9i-1" vertex="1">
@@ -875,7 +875,7 @@
                 <mxCell id="2erHS5mOwFie3CC5exoj-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="L3MLXxfl6u-Rs78_CE9i-1" source="DxBe0T5ONrXfZITf7rol-1" target="2erHS5mOwFie3CC5exoj-1" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="JqctoujynEXoSFbhyrtp-7" style="edgeStyle=none;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" edge="1" parent="L3MLXxfl6u-Rs78_CE9i-1" source="JqctoujynEXoSFbhyrtp-4" target="JqctoujynEXoSFbhyrtp-6">
+                <mxCell id="JqctoujynEXoSFbhyrtp-7" style="edgeStyle=none;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="L3MLXxfl6u-Rs78_CE9i-1" source="JqctoujynEXoSFbhyrtp-4" target="JqctoujynEXoSFbhyrtp-6" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="noCQcWINAd5OfLZeI2Ld-1" value="" style="group" parent="1" connectable="0" vertex="1">
