@@ -139,7 +139,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="EcSFkvXWOHsX0-cqH5E2" name="auth_signup-process">
-        <mxGraphModel dx="1412" dy="440" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="2226" dy="770" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -751,7 +751,7 @@
                 <mxCell id="hhhjK2Sa5PBJEYrRPuWq-144" value="Invalidate registration_token" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="GmZeK7h_D6ga8UHFZ-il-1" vertex="1">
                     <mxGeometry x="2450" y="830" width="100" height="100" as="geometry"/>
                 </mxCell>
-                <mxCell id="hhhjK2Sa5PBJEYrRPuWq-147" value="Return 201 create success response&lt;br&gt;&quot;Account created successfully&quot;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="GmZeK7h_D6ga8UHFZ-il-1" vertex="1">
+                <mxCell id="hhhjK2Sa5PBJEYrRPuWq-147" value="Return 201 create success response&lt;br&gt;&quot;Account successfully created&quot;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="GmZeK7h_D6ga8UHFZ-il-1" vertex="1">
                     <mxGeometry x="2590" y="495" width="100" height="100" as="geometry"/>
                 </mxCell>
                 <mxCell id="nztird0NYHKuFxuNkEhI-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="GmZeK7h_D6ga8UHFZ-il-1" source="nr3ZLDKP-tOVTSiRKi2a-1" target="tUoi6GhG9JKHPDLKxeZr-2" edge="1">
