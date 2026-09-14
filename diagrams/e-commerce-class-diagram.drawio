@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e" pages="4">
     <diagram id="QyDcIkjQeNJ-GFT1gWiU" name="Class Diagram (General INC)">
-        <mxGraphModel dx="1463" dy="1649" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1708" dy="1869" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -1079,7 +1079,7 @@
         </mxGraphModel>
     </diagram>
     <diagram name="Class Diagram (Store)" id="71O14V9lp5HuHGQS9mkd">
-        <mxGraphModel dx="1206" dy="1870" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="440" dy="1494" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="X_IBreIrD5oCrPICwLxM-0"/>
                 <mxCell id="X_IBreIrD5oCrPICwLxM-1" parent="X_IBreIrD5oCrPICwLxM-0"/>
@@ -1167,10 +1167,10 @@
                 <mxCell id="X_IBreIrD5oCrPICwLxM-22" value="+ description: string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="X_IBreIrD5oCrPICwLxM-19" vertex="1">
                     <mxGeometry y="78" width="160" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="X_IBreIrD5oCrPICwLxM-23" value="+ stock: string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="X_IBreIrD5oCrPICwLxM-19" vertex="1">
+                <mxCell id="X_IBreIrD5oCrPICwLxM-23" value="+ stock: in&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="X_IBreIrD5oCrPICwLxM-19" vertex="1">
                     <mxGeometry y="104" width="160" height="26" as="geometry"/>
                 </mxCell>
-                <mxCell id="X_IBreIrD5oCrPICwLxM-24" value="+ price: string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="X_IBreIrD5oCrPICwLxM-19" vertex="1">
+                <mxCell id="X_IBreIrD5oCrPICwLxM-24" value="+ price: decimal" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="X_IBreIrD5oCrPICwLxM-19" vertex="1">
                     <mxGeometry y="130" width="160" height="26" as="geometry"/>
                 </mxCell>
                 <mxCell id="X_IBreIrD5oCrPICwLxM-25" value="+ createdAt: datetime" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="X_IBreIrD5oCrPICwLxM-19" vertex="1">
@@ -1301,7 +1301,7 @@
         </mxGraphModel>
     </diagram>
     <diagram name="Class Diagram (Shipment)" id="Sbi7F2JU4ur6oLWMI-_0">
-        <mxGraphModel dx="1206" dy="770" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="858" dy="769" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="9qUonPcouuh7HzMaM7mO-0"/>
                 <mxCell id="9qUonPcouuh7HzMaM7mO-1" parent="9qUonPcouuh7HzMaM7mO-0"/>
