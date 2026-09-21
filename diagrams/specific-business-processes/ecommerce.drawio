@@ -1,0 +1,34 @@
+<mxfile host="65bd71144e">
+    <diagram id="pYUjO-J_Hb8ful58cZGy" name="landing-page">
+        <mxGraphModel dx="1604" dy="481" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="17" value="Landing Page Process" style="swimlane;html=1;childLayout=stackLayout;resizeParent=1;resizeParentMax=0;horizontal=1;startSize=20;horizontalStack=0;whiteSpace=wrap;" parent="1" vertex="1">
+                    <mxGeometry x="-40" y="130" width="480" height="530" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="Frontend" style="swimlane;html=1;startSize=20;horizontal=0;" parent="17" vertex="1">
+                    <mxGeometry y="20" width="480" height="290" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" style="edgeStyle=none;html=1;" parent="18" source="21" target="22" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="User navigates&lt;div&gt;to LandingPage&lt;/div&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" parent="18" vertex="1">
+                    <mxGeometry x="50" y="20" width="100" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="Sends GET request to /shop/products/" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="18" vertex="1">
+                    <mxGeometry x="50" y="140" width="100" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="Backend" style="swimlane;html=1;startSize=20;horizontal=0;" parent="17" vertex="1">
+                    <mxGeometry y="310" width="480" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="19" vertex="1">
+                    <mxGeometry x="50" y="30" width="100" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" style="edgeStyle=none;html=1;" parent="17" source="22" target="24" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
