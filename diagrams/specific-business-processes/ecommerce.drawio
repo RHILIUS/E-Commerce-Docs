@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="pYUjO-J_Hb8ful58cZGy" name="landing-page">
-        <mxGraphModel dx="1604" dy="481" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1999" dy="733" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -10,22 +10,40 @@
                 <mxCell id="18" value="Frontend" style="swimlane;html=1;startSize=20;horizontal=0;" parent="17" vertex="1">
                     <mxGeometry y="20" width="480" height="290" as="geometry"/>
                 </mxCell>
-                <mxCell id="23" style="edgeStyle=none;html=1;" parent="18" source="21" target="22" edge="1">
+                <mxCell id="23" style="edgeStyle=none;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="18" source="21" target="22" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="21" value="User navigates&lt;div&gt;to LandingPage&lt;/div&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;" parent="18" vertex="1">
+                <mxCell id="21" value="User navigates&lt;div&gt;to LandingPage&lt;/div&gt;" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="18" vertex="1">
                     <mxGeometry x="50" y="20" width="100" height="60" as="geometry"/>
                 </mxCell>
-                <mxCell id="22" value="Sends GET request to /shop/products/" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="18" vertex="1">
-                    <mxGeometry x="50" y="140" width="100" height="100" as="geometry"/>
+                <mxCell id="22" value="Sends GET&amp;nbsp;&lt;div&gt;request to /api/shop/products/&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="18" vertex="1">
+                    <mxGeometry x="40" y="140" width="110" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" style="edgeStyle=none;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" edge="1" parent="18" source="28" target="30">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="Show products" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="18">
+                    <mxGeometry x="245" y="120" width="110" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="End" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="18">
+                    <mxGeometry x="240" y="20" width="100" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="19" value="Backend" style="swimlane;html=1;startSize=20;horizontal=0;" parent="17" vertex="1">
                     <mxGeometry y="310" width="480" height="220" as="geometry"/>
                 </mxCell>
-                <mxCell id="24" value="" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" parent="19" vertex="1">
+                <mxCell id="27" style="edgeStyle=none;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" edge="1" parent="19" source="24" target="26">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="Sort products using a dynamic catalog service based on user preferences" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="19" vertex="1">
                     <mxGeometry x="50" y="30" width="100" height="100" as="geometry"/>
                 </mxCell>
-                <mxCell id="25" style="edgeStyle=none;html=1;" parent="17" source="22" target="24" edge="1">
+                <mxCell id="26" value="Return processed products with HTTP 200 OK response" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="19">
+                    <mxGeometry x="250" y="40" width="100" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" style="edgeStyle=none;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="17" source="22" target="24" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" style="edgeStyle=none;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" edge="1" parent="17" source="26" target="28">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
             </root>
