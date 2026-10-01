@@ -8,3 +8,9 @@ Documentation include diagrams like entity-relationship diagrams (ERDs), Unified
 
 - [Frontend Repository](https://github.com/RHILIUS/E-Commerce-API-Frontend)
 - [Backend Repository](https://github.com/RHILIUS/E-Commerce-API)
+
+## Diagrams
+
+See the [diagram index and conventions](diagrams/README.md). Feature-specific
+workflows now use Mermaid UML sequence diagrams, starting with
+[COD checkout](<diagrams/UML sequence diagram/cod-checkout.md>).
