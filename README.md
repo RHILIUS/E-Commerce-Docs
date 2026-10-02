@@ -11,6 +11,6 @@ Documentation include diagrams like entity-relationship diagrams (ERDs), Unified
 
 ## Diagrams
 
-See the [diagram index and conventions](diagrams/README.md). Feature-specific
-workflows now use Mermaid UML sequence diagrams, starting with
-[COD checkout](<diagrams/UML sequence diagram/cod-checkout.md>).
+See the [diagram index](diagrams/README.md) and
+[diagramming specification](diagrams/diagramming-specification.md). Specific
+business processes use Mermaid swimlane flowcharts.
