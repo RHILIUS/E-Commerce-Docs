@@ -1,7 +1,7 @@
 # Cash on Delivery checkout
 
-**Status:** Approved workflow design. Saved-recipient listing and creation are
-implemented. Preview, placement, confirmation and frontend integration remain
+**Status:** Approved workflow design. Saved-recipient listing/creation and checkout preview are
+implemented. Placement, confirmation and frontend integration remain
 pending. The diagrams describe the intended completed behavior.
 
 ## Scope and notation
@@ -10,6 +10,8 @@ Authenticated customers buy one product or selected cart items, choose one
 recipient, review store totals, place an atomic COD purchase, and view confirmation.
 Follow phases A → B → C → D. A blocked branch cannot advance to placement.
 API routes and payloads are listed below to keep decision nodes readable.
+
+Preview implementation and response details: [backend API contract](../../../../backend/docs/checkout/preview-api.md).
 
 ## A. Enter checkout and review prices
 
