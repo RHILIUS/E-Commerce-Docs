@@ -1,8 +1,12 @@
 # Cash on Delivery checkout
 
-**Status:** Approved workflow design. Saved-recipient listing/creation and checkout preview are
-implemented. Placement, confirmation and frontend integration remain
-pending. The diagrams describe the intended completed behavior.
+**Status:** Implemented COD workflow. Saved-recipient listing/creation, checkout
+preview, atomic COD placement, owner-only confirmation APIs, and frontend checkout
+and confirmation pages are implemented. See the
+[frontend handoff](../../../../frontend/docs/checkout/README.md) for UI behavior,
+recovery and verification. The request-fingerprint migration exists in the backend
+repository and must be applied to the target database before placement is used.
+Stripe, delivery and payment collection remain outside the implemented scope.
 
 ## Scope and notation
 
@@ -99,6 +103,8 @@ alone does not change the saved default. Placement remains disabled while the
 recipient is missing/incomplete or preview invalid/expired.
 
 ## C. Place the purchase exactly once
+
+[Placement and confirmation contract](../../../../backend/docs/checkout/cod-api.md).
 
 ```mermaid
 swimlane-beta TB
