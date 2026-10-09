@@ -6,3 +6,10 @@ are supplementary views for request ordering and interactions.
 
 Read the [diagramming specification](diagramming-specification.md)
 for notation, placement and validation requirements.
+
+
+## Checkout
+
+- [Cash on Delivery checkout](specific-business-processes/checkout/cod-checkout.md) — implemented purchase flow.
+- [Demo online checkout and USD wallets](specific-business-processes/checkout/demo-online-checkout.md) — proposed multi-store Stripe test payment, seven-day settlement, simulated wallets and mock withdrawals.
+- [Proposed wallet and settlement ERD](erd/demo-wallet-ledger.md) — USD journal, ownership, holds and withdrawal records; not implemented.
