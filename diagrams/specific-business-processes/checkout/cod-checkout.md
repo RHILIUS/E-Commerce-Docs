@@ -1,6 +1,6 @@
 # Cash on Delivery checkout
 
-**Status:** Implemented COD workflow. Saved-recipient listing/creation, checkout
+**Status:** Implemented COD workflow. Saved-recipient listing/creation/editing, checkout
 preview, atomic COD placement, owner-only confirmation APIs, and frontend checkout
 and confirmation pages are implemented. See the
 [frontend handoff](../../../../frontend/docs/checkout/README.md) for UI behavior,
@@ -77,17 +77,26 @@ swimlane-beta TB
         B_select["Select exactly one complete recipient"]
         B_next(["Review recipient, items and COD total<br/>Place Order → phase C"])
         B_list --> B_action
+        B_edit["Prefill saved recipient<br/>Save changes or cancel to list"]
+        B_edit_error["Show validation error<br/>Keep edit draft"]
+        B_action -->|Edit saved| B_edit
+        B_edit -->|Cancel| B_list
         B_action -->|Add new| B_form
         B_action -->|Choose saved| B_select
         B_error --> B_form
         B_select --> B_next
     end
     subgraph B_API["Backend"]
+        B_update["PATCH owned recipient<br/>Validate and update defaults atomically"]
         B_get["GET own recipients"]
         B_validate{"New recipient fields valid?"}
         B_save["Save for authenticated customer<br/>Update defaults atomically"]
         B_validate -->|Yes| B_save
     end
+    B_edit -->|PATCH recipient| B_update
+    B_update -->|200: preserve checkout selection| B_list
+    B_update -->|400| B_edit_error
+    B_edit_error --> B_edit
     B_start --> B_get
     B_get -->|Recipient list| B_list
     B_form -->|POST recipient| B_validate
@@ -98,7 +107,13 @@ swimlane-beta TB
 The recipient list response is required before preselection. An empty list requires
 adding a recipient. Failed requests show an error with retry and do not advance.
 The first saved recipient becomes default. Explicitly creating a new default
-clears the previous default atomically. Selecting a recipient for this purchase
+clears the previous default atomically.
+
+Editing a saved recipient uses `PATCH /api/account/recipients/{id}/`, preserves
+checkout selection, and affects future purchases only. Existing order snapshots
+remain unchanged. The current default stays default until another replaces it.
+
+Selecting a recipient for this purchase
 alone does not change the saved default. Placement remains disabled while the
 recipient is missing/incomplete or preview invalid/expired.
 
@@ -191,6 +206,7 @@ These common guards apply to every diagram, including the request-shape guard in
 | Operation            | Endpoint                               | Request / result                                                                                                    |
 | -------------------- | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
 | List recipients      | `GET /api/account/recipients/`         | Own saved recipients, default first                                                                                 |
+| Edit recipient       | `PATCH /api/account/recipients/{id}/` | Partial contact/address/default changes → 200 saved recipient; owner-only |
 | Add recipient        | `POST /api/account/recipients/`        | Name, E.164 phone, country/address fields, optional default flag → 201 recipient                                    |
 | Preview product      | `POST /api/shop/checkout/preview/`     | `source: "product"`, `product_id`, `quantity`                                                                       |
 | Preview cart         | Same preview route                     | `source: "cart"`, `item_ids` containing selected cart-line IDs                                                      |
