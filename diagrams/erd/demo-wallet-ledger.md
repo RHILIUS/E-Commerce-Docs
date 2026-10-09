@@ -1,6 +1,6 @@
 # Proposed demo wallet and settlement ERD
 
-**Status: proposal, not migrations or the current schema.** Read the
+**Status: wallet/ledger foundation implemented; settlement and withdrawal design remains proposed.** Read the
 [online checkout process](../specific-business-processes/checkout/demo-online-checkout.md)
 for business rules and scope. This supplements the existing
 [system ERD](e-commerce-entity-relationship-diagram.drawio) without altering it.
@@ -8,7 +8,7 @@ for business rules and scope. This supplements the existing
 ## Existing purchase boundary and proposed settlement
 
 User, Store, Checkout, Order, PaymentAttempt and StockReservation already exist.
-Wallet, OrderSettlement, SettlementHold and ProviderEvent are proposed additions.
+Wallet is now implemented. OrderSettlement, SettlementHold and ProviderEvent remain proposed additions.
 Only relevant relationships/fields are shown; this is not a complete model listing.
 `Order.delivered_at` is a proposed addition, distinct from existing `concluded_at`.
 
@@ -80,7 +80,13 @@ erDiagram
 
 ## Journal and mock withdrawal boundary
 
-All entities below are proposed. The diagram omits optional business foreign keys
+Wallet, LedgerAccount, LedgerTransaction and LedgerEntry are implemented.
+MockBankAccount, Withdrawal and MockBankTransfer remain proposed. The implemented
+LedgerTransaction additionally stores a request fingerprint; its proposed
+`reverses_id` and business foreign keys are deferred. See the
+[implemented contract](../../../backend/docs/wallet/README.md).
+
+The diagram omits optional business foreign keys
 from LedgerTransaction for readability; posting records should reference the
 relevant payment attempt, settlement or withdrawal through protected relationships.
 
@@ -207,15 +213,16 @@ moves 10 from B pending to customer available; treasury stays unchanged.
 
 ## Current implementation gaps
 
-Existing models provide payment/reservation records but not the online workflow,
-wallets, journal, settlement, delivery timestamps or mock withdrawals. Current COD
+The wallet and USD journal foundation is implemented with atomic posting and
+read-only admin. Existing payment/reservation records still lack the online
+workflow, settlement, delivery timestamps and mock withdrawals. Current COD
 remains independent and must not create simulated treasury receipts on placement.
 Current paid/fulfillment status fields alone do not guarantee any posting or sold
 count update. Preview and COD reservation expiry filtering needs the coordinated
 fix documented in the process before Stripe payments can safely launch.
 
 The existing draw.io ERD and general-process draft remain unchanged. This proposal
-is a supplementary design for review, not evidence that those features exist.
+is a supplementary design; only the foundation explicitly identified above is implemented.
 
 ## Validation
 

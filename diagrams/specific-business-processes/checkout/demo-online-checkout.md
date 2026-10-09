@@ -1,6 +1,6 @@
 # Demo online checkout and USD wallets
 
-**Status: proposed design, not an implemented API or database contract.**
+**Status: proposed online workflow. The [wallet and USD ledger foundation](../../../../backend/docs/wallet/README.md) is implemented internally; payment, settlement and withdrawal integration remain future work.**
 
 One Stripe test payment buys from multiple stores. The platform records simulated
 USD funds and each store's pending share. Seven days after that store order is
@@ -278,7 +278,8 @@ balances, estimated conversions, pending funds and processing payment states.
 
 ## Validation
 
-Documentation only; no routes, migrations, services or UI are implemented here.
+The wallet/ledger foundation now has models, a migration, internal services and
+read-only admin. No online payment routes, settlement jobs or wallet UI exist yet.
 All four swimlanes and both linked ERD diagrams parsed and rendered with Mermaid
 12.0.0 in Chromium on 2026-10-09 and were visually inspected. Relative links were
 checked. The target Markdown host was not tested for `swimlane-beta` support.
