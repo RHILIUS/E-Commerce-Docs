@@ -235,3 +235,13 @@ PaymentAttempt now links one protected ledger receipt and stores immutable
 session-creation parameters. The ProviderEvent diagram shows its core fields; the
 implementation additionally stores session routing identifiers, retry/completion
 timestamps and safe error codes. No settlement allocation rows are created yet.
+
+
+## Implemented cancellation refund record
+
+OrderRefund now has a protected one-to-one Order relation, a protected
+PaymentAttempt relation, immutable reference and integer USD amount, unique
+nullable Stripe refund ID, provider status/recovery code, and a protected unique
+ledger reversal relation. It refunds the original test card, not a customer wallet.
+See [the implementation contract](../../../backend/docs/ecommerce/user-orders.md).
+The proposed return credits, settlement and withdrawal entities above remain deferred.

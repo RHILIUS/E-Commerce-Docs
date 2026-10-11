@@ -290,3 +290,19 @@ design proposals, not implemented delivery/settlement behavior.
 All four swimlanes and both linked ERD diagrams parsed and rendered with Mermaid
 12.0.0 in Chromium on 2026-10-09 and were visually inspected. Relative links were
 checked. The target Markdown host was not tested for `swimlane-beta` support.
+
+
+## Implemented customer cancellation and card refunds
+
+The customer Orders feature now supports cancellation of Pending, Accepted and
+Packed orders. Paid Stripe test orders refund their entire store-order share to
+the original test card, including partial refunds of multi-store checkout charges.
+This is separate from the proposed return-to-wallet flow above. No customer wallet
+UI, wallet credit, return workflow or automatic seven-day completion is included.
+
+A durable OrderRefund is committed with cancellation and one-time stock restoration
+before provider calls. Its stable idempotency key, saved provider ID and scheduled
+reconciliation command protect unknown outcomes. Verified success posts a linked
+compensating journal transaction from store pending to treasury. The original paid
+receipt remains immutable. See the [implemented API and recovery contract](../../../../backend/docs/ecommerce/user-orders.md)
+and [frontend handoff](../../../../frontend/docs/ecommerce/user-orders.md).
