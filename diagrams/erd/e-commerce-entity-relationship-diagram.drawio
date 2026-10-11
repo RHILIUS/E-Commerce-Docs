@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e" pages="3">
     <diagram name="All (INC)" id="9IABRp3VmV2uKprqtUD8">
-        <mxGraphModel dx="2524" dy="956" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1724" dy="619" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -402,7 +402,7 @@
                         <mxRectangle height="70" width="30" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="GHI6tvXvi_pXsVdc0Aab-69" parent="GHI6tvXvi_pXsVdc0Aab-67" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;whiteSpace=wrap;html=1;" value="status (pending, accepted, packed, shipment_arranged,&amp;nbsp; shipped, cancelled, delivered)" vertex="1">
+                <mxCell id="GHI6tvXvi_pXsVdc0Aab-69" parent="GHI6tvXvi_pXsVdc0Aab-67" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;whiteSpace=wrap;html=1;" value="status (pending, accepted, packed, shipment_arranged,&amp;nbsp; shipped, cancelled, delivered, completed)" vertex="1">
                     <mxGeometry height="70" width="190" x="30" as="geometry">
                         <mxRectangle height="70" width="190" as="alternateBounds"/>
                     </mxGeometry>
