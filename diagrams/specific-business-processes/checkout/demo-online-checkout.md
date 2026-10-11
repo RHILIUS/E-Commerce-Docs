@@ -1,6 +1,8 @@
 # Demo online checkout and USD wallets
 
-**Status: proposed online workflow. The [wallet and USD ledger foundation](../../../../backend/docs/wallet/README.md) is implemented internally; payment, settlement and withdrawal integration remain future work.**
+**Status: Stripe test checkout, recovery and pending wallet credits are implemented. Delivery, seven-day settlement, returns and withdrawals remain proposed.**
+
+Implementation contract and setup: [Stripe test checkout API](../../../../backend/docs/checkout/stripe-api.md). The [wallet foundation](../../../../backend/docs/wallet/README.md) records USD cents with zero demo fees.
 
 One Stripe test payment buys from multiple stores. The platform records simulated
 USD funds and each store's pending share. Seven days after that store order is
@@ -128,7 +130,7 @@ Redirects and a session-completed event alone are not proof of payment.
 In one database transaction, lock the checkout, reservations/products and financial
 accounts; mark every store order paid, consume reservations and decrement stock,
 clean up the frozen purchased cart quantities, post the balanced ledger receipt,
-create store settlements and complete the checkout. Roll back all local changes
+link the ledger receipt and complete the checkout. Store settlement records are deferred; the journal retains each store allocation. Roll back all local changes
 on failure and retry. Do not increment sold counts here.
 
 “Atomic multi-store payment” means one charge and all-or-nothing local finalization.
@@ -148,12 +150,14 @@ still collect payment and has not already succeeded. Unknown/processing results
 remain reserved and retry with backoff; persistent failures become visible to staff.
 A new purchase after terminal expiry needs a fresh review and request key.
 
-**Current implementation gap:** COD placement and preview count held reservations
-only while `expires_at > now`. Before enabling online checkout, every stock writer
-must also respect unresolved holds whose provider state is still uncertain.
-A local timeout is not evidence that Stripe can no longer collect payment.
+**Implemented inventory rule:** COD placement and preview count every unresolved
+held reservation, including past its local deadline. Cart writers freeze selected
+lines; product saves reject inventory below held quantities. A local timeout is
+not evidence that Stripe can no longer collect payment. Schedule `reconcile_stripe`
+every minute for abandoned-payment recovery; see the API guide for bounded retries
+and manual investigation when a session creation result remains unknown.
 
-## D. Delivery and seven-day release
+## D. Delivery and seven-day release (future)
 
 ```mermaid
 swimlane-beta TB
@@ -199,7 +203,7 @@ must be safe. Do not enqueue a task with a seven-day countdown: Celery documents
 memory and broker timeout concerns for distant ETA tasks.
 [Celery ETA guidance](https://docs.celeryq.dev/en/stable/userguide/calling.html#eta-and-countdown)
 
-## E. Mock withdrawal
+## E. Mock withdrawal (future)
 
 ```mermaid
 swimlane-beta TB
@@ -263,8 +267,8 @@ policy; never silently debit a store below zero. Return effects on historical
 ## Implementation sequence and acceptance cases
 
 1. Review this proposal and its ERD; settle the proposed defaults above.
-2. Implement the USD ledger, wallet ownership, posting invariants and read-only admin.
-3. Implement Stripe test checkout, holds, webhook inbox and recovery together.
+2. **Implemented:** USD ledger, wallet ownership, posting invariants and read-only admin.
+3. **Implemented:** Stripe test checkout, holds, webhook inbox, recovery command and frontend payment status. Actual Stripe-account setup is required to run it.
 4. Add authorized delivery, idempotent sold counts and periodic settlement.
 5. Add mock withdrawals and wallet views; implement returns as a later feature.
 
@@ -278,8 +282,11 @@ balances, estimated conversions, pending funds and processing payment states.
 
 ## Validation
 
-The wallet/ledger foundation now has models, a migration, internal services and
-read-only admin. No online payment routes, settlement jobs or wallet UI exist yet.
+Online payment routes, a migration, provider adapter, webhook inbox, recovery
+command, pending wallet credits and frontend payment flow now exist. Settlement
+jobs and wallet balance/withdrawal screens remain future work. See the API guide
+for current setup and verification; the diagrams below the payment phases remain
+design proposals, not implemented delivery/settlement behavior.
 All four swimlanes and both linked ERD diagrams parsed and rendered with Mermaid
 12.0.0 in Chromium on 2026-10-09 and were visually inspected. Relative links were
 checked. The target Markdown host was not tested for `swimlane-beta` support.
