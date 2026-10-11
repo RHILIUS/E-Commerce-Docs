@@ -245,3 +245,14 @@ nullable Stripe refund ID, provider status/recovery code, and a protected unique
 ledger reversal relation. It refunds the original test card, not a customer wallet.
 See [the implementation contract](../../../backend/docs/ecommerce/user-orders.md).
 The proposed return credits, settlement and withdrawal entities above remain deferred.
+
+
+## Implemented order timeline
+
+OrderEvent now stores immutable customer-visible milestones with a protected Order
+reference, optional protected User actor, actor role, event type and occurrence
+timestamp. Delivery and completion have separate event timestamps. Existing order
+creation/payment/conclusion and refund dates are backfilled without inventing
+intermediate history or actor identities. See the
+[persistent history contract](../../../backend/docs/ecommerce/user-orders.md#persistent-order-history).
+Seller fulfillment endpoints and seven-day automation remain deferred.
