@@ -13,3 +13,9 @@ for notation, placement and validation requirements.
 - [Cash on Delivery checkout](specific-business-processes/checkout/cod-checkout.md) — implemented purchase flow.
 - [Demo online checkout and USD wallets](specific-business-processes/checkout/demo-online-checkout.md) — implemented Stripe test payment and pending wallet credits; seven-day settlement and mock withdrawals remain proposed.
 - [Proposed wallet and settlement ERD](erd/demo-wallet-ledger.md) — wallet and USD journal foundation implemented; settlement, holds and withdrawals remain proposed.
+
+## Authentication
+
+- [User personal-address model](erd/user-address.md) — implemented ownership,
+  registration, authentication-country and pricing contract; supersedes the
+  personal-country placement in the historical draw.io ERD/UML.
