@@ -19,3 +19,9 @@ for notation, placement and validation requirements.
 - [User personal-address model](erd/user-address.md) — implemented ownership,
   registration, authentication-country and pricing contract; supersedes the
   personal-country placement in the historical draw.io ERD/UML.
+
+## Account
+
+- [Change Password with email OTP](specific-business-processes/account/change-password.md) — implemented verification, resend, atomic password change and session invalidation; migration 0004 must be applied.
+
+- [Password-change model](erd/password-change.md) — dedicated user challenge state, durable budgets and authentication version.
