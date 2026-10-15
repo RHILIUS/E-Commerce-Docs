@@ -22,3 +22,7 @@ for notation, placement and validation requirements.
 ## Development
 
 - [Reset development environment](specific-business-processes/development/reset-development.md) — guarded schema and media reset, migrations, taxonomy import and seed.
+
+## Authentication
+
+- [Registration OTP email](specific-business-processes/authentication/registration-otp-email.md) — Celery delivery, controlled retries and existing verification flow.
