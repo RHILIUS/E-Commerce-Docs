@@ -16,13 +16,13 @@ Stripe Connect accounts and real bank transfers are outside this demo.
 
 ## Scope and decisions
 
-| Category | Decision |
-| --- | --- |
-| Confirmed direction | One payment for multi-store checkout; USD simulated treasury; customer and store wallets; local-currency presentation; seven-day return window starting at delivery; release only when no unresolved return blocks it. |
-| Proposed first version | Hosted Stripe Checkout, cards only, charged in USD; zero commission and no simulated processor/FX fees; mock withdrawals only; one settlement per store order. |
-| Proposed timing | Seven days means 168 hours in UTC. Requests must be durably accepted before the deadline. Worker delay does not extend the window. |
-| Deferred | Return logistics, adjudication, partial refunds, customer wallet spending, real banking, Stripe Connect and live-mode payments. Customer wallet ownership is designed now; refund credits arrive with the return feature. |
-| Before implementation | Confirm delivery authority, the timing convention, fee policy, cancellation compensation and withdrawal permissions. These recommendations do not create approved endpoint contracts. |
+| Category               | Decision                                                                                                                                                                                                                  |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Confirmed direction    | One payment for multi-store checkout; USD simulated treasury; customer and store wallets; local-currency presentation; seven-day return window starting at delivery; release only when no unresolved return blocks it.    |
+| Proposed first version | Hosted Stripe Checkout, cards only, charged in USD; zero commission and no simulated processor/FX fees; mock withdrawals only; one settlement per store order.                                                            |
+| Proposed timing        | Seven days means 168 hours in UTC. Requests must be durably accepted before the deadline. Worker delay does not extend the window.                                                                                        |
+| Deferred               | Return logistics, adjudication, partial refunds, customer wallet spending, real banking, Stripe Connect and live-mode payments. Customer wallet ownership is designed now; refund credits arrive with the return feature. |
+| Before implementation  | Confirm delivery authority, the timing convention, fee policy, cancellation compensation and withdrawal permissions. These recommendations do not create approved endpoint contracts.                                     |
 
 Source: the **Online Checkout Process** page in the
 [general business-process draft](../../general-business-processes/e-commerce-general-business-process.drawio).
@@ -31,7 +31,7 @@ Its three-day seller review starts when the store receives the returned goods;
 a timely appeal must stop automatic refund while platform adjudication is pending.
 Those are future return requirements, not functionality delivered by this proposal.
 
-See the [proposed wallet ERD](../../erd/demo-wallet-ledger.md), the
+See the
 [current checkout models](../../../../backend/docs/checkout/models.md), and the
 [implemented COD flow](cod-checkout.md).
 
@@ -142,19 +142,79 @@ Out-of-order failure events must never regress an already paid checkout.
 
 ## C. Recover abandoned or uncertain payments
 
+**Implemented:** Beat dispatches payment recovery every 60 seconds through Redis;
+the worker calls `reconcile_stripe` with `limit=100`. The following is an
+activity-style Mermaid swimlane business-process flowchart, not strict UML.
+
+```mermaid
+swimlane-beta TB
+  subgraph C_BEAT["Celery Beat"]
+    C_tick(["Recovery interval due"])
+    C_send["Dispatch payment recovery task"]
+    C_tick --> C_send
+  end
+  subgraph C_REDIS["Redis broker"]
+    C_queue["Queue task for worker"]
+  end
+  subgraph C_WORK["Backend Celery worker"]
+    C_scan["Read bounded unfinished events and pending attempts"]
+    C_fetch["Reconcile next eligible row"]
+    C_check["Validate provider state and local snapshots"]
+    C_result{"Recovery result?"}
+    C_paid["Phase B transaction<br/>Finalize paid state once"]
+    C_terminal["Lock and recheck<br/>Release terminal unpaid holds"]
+    C_retry(["Retain state<br/>Retry on later scan"])
+    C_done(["Continue batch<br/>Then await next scan"])
+    C_scan -->|For each eligible row| C_fetch
+    C_check --> C_result
+    C_result -->|Paid and matching| C_paid
+    C_result -->|Confirmed terminal unpaid| C_terminal
+    C_result -->|Still pending, mismatch or provider error| C_retry
+    C_paid -->|Committed or already applied| C_done
+    C_paid -->|Failure: rollback| C_retry
+    C_terminal -->|Committed or already applied| C_done
+    C_terminal -->|Failure: rollback| C_retry
+    C_scan -->|No eligible rows| C_done
+  end
+  subgraph C_STRIPE["Stripe test environment"]
+    C_provider["Return session state<br/>or expiry result"]
+  end
+  C_send -->|Task message| C_queue
+  C_queue -->|Worker receives task| C_scan
+  C_fetch -->|Provider request outside database locks| C_provider
+  C_provider -->|Current session state| C_check
+  C_provider -->|Request failure| C_retry
+```
+
+| Handoff                   | Implemented contract                                                                                          |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| Beat → Redis → worker     | Task `apps.checkout.tasks.reconcile_stripe_payments`, no arguments, every 60 seconds.                         |
+| Worker → recovery command | `call_command("reconcile_stripe", limit=100)`; independently bounds events and attempts.                      |
+| Worker → Stripe           | Existing session retrieval/expiry outside database locks; provider uncertainty stays recoverable.             |
+| Recovery → persistence    | PostgreSQL retains inbox/attempt state; paid finalization uses phase B's transaction and unique posting keys. |
+
+Local development uses scheduled recovery without webhook delivery; the customer
+status check is another reconciliation entry point. Deployment should configure
+direct signed HTTPS webhook delivery and retain the periodic scan as recovery.
+Only one Beat instance should dispatch this schedule. Worker or broker downtime
+can delay execution; database scans resume when services return. A successful
+Celery task may still report unresolved operations because the command catches
+row-level errors. Refund recovery and settlement are excluded from this task.
+See the [implemented setup and verification](../../../../backend/docs/checkout/stripe-api.md#scheduled-payment-recovery).
+
 A periodic worker scans unresolved attempts, including those past their local
 deadline. It retrieves/expires the provider session outside locks, then locks and
 rechecks local state before changing stock. Provider-paid state routes through B.
 Release holds and unfreeze cart lines only after confirming the attempt cannot
 still collect payment and has not already succeeded. Unknown/processing results
-remain reserved and retry with backoff; persistent failures become visible to staff.
+remain reserved for later periodic scans; persistent failures become visible to staff.
 A new purchase after terminal expiry needs a fresh review and request key.
 
 **Implemented inventory rule:** COD placement and preview count every unresolved
 held reservation, including past its local deadline. Cart writers freeze selected
 lines; product saves reject inventory below held quantities. A local timeout is
-not evidence that Stripe can no longer collect payment. Schedule `reconcile_stripe`
-every minute for abandoned-payment recovery; see the API guide for bounded retries
+not evidence that Stripe can no longer collect payment. Beat schedules `reconcile_stripe`
+every 60 seconds for abandoned-payment recovery; see the API guide for bounded batches
 and manual investigation when a session creation result remains unknown.
 
 ## D. Delivery and seven-day release (future)
@@ -279,18 +339,6 @@ deadline; independently delivered stores; release racing a timely return hold;
 repeated delivery/settlement; concurrent withdrawals; adapter timeout after success;
 FX rounding and exact charge/allocation/ledger equality. UI must label simulated
 balances, estimated conversions, pending funds and processing payment states.
-
-## Validation
-
-Online payment routes, a migration, provider adapter, webhook inbox, recovery
-command, pending wallet credits and frontend payment flow now exist. Settlement
-jobs and wallet balance/withdrawal screens remain future work. See the API guide
-for current setup and verification; the diagrams below the payment phases remain
-design proposals, not implemented delivery/settlement behavior.
-All four swimlanes and both linked ERD diagrams parsed and rendered with Mermaid
-12.0.0 in Chromium on 2026-10-09 and were visually inspected. Relative links were
-checked. The target Markdown host was not tested for `swimlane-beta` support.
-
 
 ## Implemented customer cancellation and card refunds
 
