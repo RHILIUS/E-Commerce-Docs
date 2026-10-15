@@ -15,7 +15,7 @@ for notation, placement and validation requirements.
 
 ## Account
 
-- [Change Password with email OTP](specific-business-processes/account/change-password.md) — implemented verification, resend, atomic password change and session invalidation; migration 0004 must be applied.
+- [Change Password with email OTP](specific-business-processes/account/change-password.md) — implemented Celery OTP delivery, resend, atomic password change and session invalidation without a completion email; migration 0004 must be applied.
 
 - [Password-change model](erd/password-change.md) — dedicated user challenge state, durable budgets and authentication version.
 
