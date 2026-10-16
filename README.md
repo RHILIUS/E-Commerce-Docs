@@ -14,3 +14,7 @@ Documentation include diagrams like entity-relationship diagrams (ERDs), Unified
 See the [diagram index](diagrams/README.md) and
 [diagramming specification](diagrams/diagramming-specification.md). Specific
 business processes use Mermaid swimlane flowcharts.
+
+## Architecture
+
+See the [architecture documentation](architecture/README.md) for the proposed production deployment and stack.

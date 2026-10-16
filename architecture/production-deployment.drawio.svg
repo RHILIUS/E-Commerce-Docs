@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="1180" viewBox="0 0 1100 1180" content="&lt;mxfile&gt;&lt;diagram id=&quot;production&quot; name=&quot;Production architecture&quot;&gt;5ZrZdqM4EIafhss+RwizXcaOJ5lzOtOeONO5lkHGamPkEcJO+umnBMJmS9pxIMv0lU0hCam++ksLGNZk83AlyHZ1w0MaGxiFD4Z1aWBs2o4JP8ryqC3I9ApLJFiobUfDnP2kZUFtzVhI01pByXks2bZuDHiS0EDWbEQIvq8XW/K4/tQtiWjLMA9I3Lbes1CutNVE6HjjmrJoVT4a2/rOhpSltSFdkZDvKyZralgTwbks/m0eJjRW7isdo+sZ+I8nChw6J2giT6yD23V0M6l8LEcteJaEVNUwDWu8XzFJ51sSqLt7AA22ldzEcIXg75LF8YTHXOR1LdPDI8sDeyoFX9PKHWthIydQNXgiK/altyTL0q5DwHThmsQsSuAigK5SKDzeUSEZwLnQNzYsDFWfx8UIdiTO9AgmWSr5BipNseEhw/dTuL9Q8QA27Kh+qr7fUgJBg5HpK6dNsDF24c/d4xZiQLCtrFrLsrc8U70pnggdog8VN2qnX1F4uBSPUGRViQ5f49kfQ8kaaZtuxfL0tVaM7+hg1oEcHVqucYY/GnU3duv9sI8CzyFvhT3mWbiMYZRgn4E20wrs7zAeFQUZgyQAvlOh4Rh+np9YKpUvj4Wv7+5mc5UxBPSOJmGOIKUyPQu8abbJY69OflQHD3rphfyoKE/DVqJ7LhRgxBcqfSoMMQycBV1ovQWxA1uDaHtA0JhItqs/t2s4uuqMs0Q+LQVz1PBIyjMRUF2rkfYabZmNtjC2621JIiIqu9rKHXwY1Uk+t4dWG1qaCxx2IbFNlxD7NLVh9Dq1XdwrhUwnysySVJIEen+OPJyOxOiajcRo/4LgmfpwBs+MprkELXdNiI5tOfTEzOi9jtUlD9Zq1kITvtny9DxOdgcnx3HqnFxc5+R6vXByP20ec3F/eczz7FpbVrmgGySPeUNrQy1/7EUXEgf59mL5NquGvyKWPFTm/lm2iCFQMFKTRu5AjEYK2nExqJcHkzw6QiZg75EWl5c/SBLx3EUQNMHr1g0l7arezOayoR5dloV60Zv/efWG6hoZmY2Z4gV6a7U1GnLdUKL9vwvuoBEDw010lSUs4CKpSlCwHcmX61suZC5FhGq7sen8Dn4uZn8qGPn6fJGlLKGp2umJLKZvprhWTJypONP8tJKz7bpM7GYSeoHkWm05jemyX8nhT+t0z0G9Ob3V1rBOf8fjiLc8hZrxVEaCzv/+CnZorCu/2SMLVxPbjIqUpZLmdCopLSSSnJfRrFZGw779bEaznZ4y2uj34HwLS0DFqJuwY7n+k4QlSddGfjS5PvNQ8QS+rtlMqT3xHfyg42PwhWHT3O97Lta1A+S5FGyrIEuqThDBE4+bAixsCfiOli4dXrOO088+2xz+QORDMJ1uCIu7kAoagToFzMw8+UJ1qX8zmtGqiL/dzVRSpjEbEnJTuL1Bdn8PyAfhjimRFcbfEgUzDVY0hJ2CqG0sDrpFVP866Ly9hNveS/xKxa77zDLwJYAHP7r5GIBvWFQoFcw/+KKO+Eu64kUqjilJc+KSbodC2dRqbyj990P5lu/uLn5m+Wu7caw4ornkQr2cPxK9gVUWyUfdvHM4T9iQpHjphzZF4UORcfnuF6KBhJUS6J/br2e+1CvfSJz+Us/y+1l44cEPij6GvGEy3vFqdp7fqHn3QHX6AFM1SyLlGmj8mAsa83Q+jZ9JGbUpW7iZxWuUfbefI9jTjiI+P+XDIvr4BUaxmt7wsCrza9hOw0AxmqxosOZZ7fOM4iTwcHlPFyvO18Mxtzy3D+hwefwEqDhKOX5KZU3/Aw==&lt;/diagram&gt;&lt;/mxfile&gt;" role="img" aria-labelledby="title desc">
+  <title id="title">Proposed production architecture</title>
+  <desc id="desc">Cloudflare frontend, EC2 Docker Compose backend, Azure media, Brevo email, and Stripe test payments.</desc>
+  <rect width="1100" height="1180" fill="#0b1120" />
+  <text x="550" y="40" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#f8fafc" font-weight="700" text-anchor="middle">Proposed production architecture</text>
+  <text x="550" y="68" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#93c5fd" font-weight="400" text-anchor="middle">Demo / portfolio · Local production testing first</text>
+  <g data-cell-id="2">
+    <rect x="380.0" y="96.0" width="340.0" height="90.0" rx="12" fill="#182438" stroke="#3b506c" stroke-width="1.5" />
+  </g>
+  <text x="550.0" y="125.0" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#f8fafc" font-weight="700" text-anchor="middle">Customer’s browser</text>
+  <text x="550.0" y="148.0" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#b8c7da" font-weight="400" text-anchor="middle">React 19 · TypeScript · React Router</text>
+  <g data-cell-id="3">
+    <rect x="40.0" y="233.0" width="280.0" height="110.0" rx="12" fill="#182438" stroke="#4c86ac" stroke-width="1.5" />
+  </g>
+  <text x="180.0" y="262.0" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#f8fafc" font-weight="700" text-anchor="middle">Cloudflare Pages</text>
+  <text x="180.0" y="285.0" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#b8c7da" font-weight="400" text-anchor="middle">Vite build → dist/</text>
+  <text x="180.0" y="308.0" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#b8c7da" font-weight="400" text-anchor="middle">HTTPS frontend assets</text>
+  <path d="M380.0 143.0 L180.0 225.0" stroke="#8ba5c5" stroke-width="2" fill="none" />
+  <polygon points="180.0,225.0 185.04090628989684,218.7879742614443 187.95085270797094,225.88540454942992" fill="#8ba5c5" />
+  <g data-cell-id="5">
+    <rect x="350.0" y="225.0" width="710.0" height="690.0" rx="12" fill="#0f1b2d" stroke="#517aa5" stroke-width="1.5" />
+  </g>
+  <text x="705.0" y="254.0" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#f8fafc" font-weight="700" text-anchor="middle">AWS EC2 instance</text>
+  <g data-cell-id="6">
+    <rect x="372.0" y="278.0" width="666.0" height="590.0" rx="12" fill="#111f33" stroke="#36536e" stroke-width="1.5" />
+  </g>
+  <text x="705.0" y="307.0" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#f8fafc" font-weight="700" text-anchor="middle">Docker Compose</text>
+  <path d="M720.0 143.0 L885.0 322.0" stroke="#8ba5c5" stroke-width="2" fill="none" />
+  <polygon points="885.0,322.0 877.4215405007865,319.4373935887888 883.0616997981637,314.23836406886016" fill="#8ba5c5" />
+  <g data-cell-id="8">
+    <rect x="400.0" y="330.0" width="610.0" height="85.0" rx="12" fill="#23405b" stroke="#6095bf" stroke-width="1.5" />
+  </g>
+  <text x="705.0" y="359.0" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#f8fafc" font-weight="700" text-anchor="middle">Nginx</text>
+  <text x="705.0" y="382.0" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#b8c7da" font-weight="400" text-anchor="middle">Public 80 / 443 · HTTPS, redirects, Django static assets</text>
+  <path d="M705.0 415.0 L705.0 445.0" stroke="#8ba5c5" stroke-width="2" fill="none" />
+  <polygon points="705.0,445.0 701.1645956911664,437.97933950487703 708.8354043088336,437.97933950487703" fill="#8ba5c5" />
+  <g data-cell-id="10">
+    <rect x="400.0" y="445.0" width="610.0" height="85.0" rx="12" fill="#23405b" stroke="#6095bf" stroke-width="1.5" />
+  </g>
+  <text x="705.0" y="474.0" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#f8fafc" font-weight="700" text-anchor="middle">Django + Gunicorn</text>
+  <text x="705.0" y="497.0" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#b8c7da" font-weight="400" text-anchor="middle">Private port 8000 · REST API and business rules</text>
+  <path d="M555.0 530.0 L555.0 563.0" stroke="#8ba5c5" stroke-width="2" fill="none" />
+  <polygon points="555.0,563.0 551.1645956911664,555.979339504877 558.8354043088336,555.979339504877" fill="#8ba5c5" />
+  <path d="M860.0 530.0 L860.0 563.0" stroke="#8ba5c5" stroke-width="2" fill="none" />
+  <polygon points="860.0,563.0 856.1645956911664,555.979339504877 863.8354043088336,555.979339504877" fill="#8ba5c5" />
+  <g data-cell-id="13">
+    <rect x="400.0" y="565.0" width="295.0" height="83.0" rx="12" fill="#182438" stroke="#3b506c" stroke-width="1.5" />
+  </g>
+  <text x="547.5" y="594.0" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#f8fafc" font-weight="700" text-anchor="middle">PostgreSQL 17</text>
+  <text x="547.5" y="617.0" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#b8c7da" font-weight="400" text-anchor="middle">Private 5432 · Persistent business data</text>
+  <g data-cell-id="14">
+    <rect x="715.0" y="565.0" width="295.0" height="83.0" rx="12" fill="#182438" stroke="#3b506c" stroke-width="1.5" />
+  </g>
+  <text x="862.5" y="594.0" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#f8fafc" font-weight="700" text-anchor="middle">Redis 7</text>
+  <text x="862.5" y="617.0" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#b8c7da" font-weight="400" text-anchor="middle">Private 6379 · Persistent task broker</text>
+  <g data-cell-id="15">
+    <rect x="400.0" y="668.0" width="295.0" height="83.0" rx="12" fill="#182438" stroke="#3b506c" stroke-width="1.5" />
+  </g>
+  <text x="547.5" y="697.0" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#f8fafc" font-weight="700" text-anchor="middle">Celery worker</text>
+  <text x="547.5" y="720.0" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#b8c7da" font-weight="400" text-anchor="middle">Stripe test payment recovery</text>
+  <g data-cell-id="16">
+    <rect x="715.0" y="668.0" width="295.0" height="83.0" rx="12" fill="#182438" stroke="#3b506c" stroke-width="1.5" />
+  </g>
+  <text x="862.5" y="697.0" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#f8fafc" font-weight="700" text-anchor="middle">Email worker</text>
+  <text x="862.5" y="720.0" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#b8c7da" font-weight="400" text-anchor="middle">registration-email queue · OTP delivery</text>
+  <g data-cell-id="17">
+    <rect x="400.0" y="771.0" width="295.0" height="75.0" rx="12" fill="#182438" stroke="#3b506c" stroke-width="1.5" />
+  </g>
+  <text x="547.5" y="800.0" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#f8fafc" font-weight="700" text-anchor="middle">Celery Beat</text>
+  <text x="547.5" y="823.0" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#b8c7da" font-weight="400" text-anchor="middle">One scheduler · Recovery every 60s</text>
+  <g data-cell-id="18">
+    <rect x="715.0" y="771.0" width="295.0" height="75.0" rx="12" fill="#182438" stroke="#3b506c" stroke-width="1.5" />
+  </g>
+  <text x="862.5" y="800.0" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#f8fafc" font-weight="700" text-anchor="middle">Migration job</text>
+  <text x="862.5" y="823.0" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#b8c7da" font-weight="400" text-anchor="middle">One-shot release step</text>
+  <g data-cell-id="19">
+    <rect x="40.0" y="395.0" width="280.0" height="150.0" rx="12" fill="#182438" stroke="#4c86ac" stroke-width="1.5" />
+  </g>
+  <text x="180.0" y="424.0" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#f8fafc" font-weight="700" text-anchor="middle">Azure Blob Storage</text>
+  <text x="180.0" y="447.0" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#b8c7da" font-weight="400" text-anchor="middle">Media storage</text>
+  <text x="180.0" y="470.0" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#b8c7da" font-weight="400" text-anchor="middle">Django manages media</text>
+  <text x="180.0" y="493.0" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#b8c7da" font-weight="400" text-anchor="middle">Browser reads media URLs</text>
+  <g data-cell-id="20">
+    <rect x="40.0" y="970.0" width="325.0" height="100.0" rx="12" fill="#182438" stroke="#3b506c" stroke-width="1.5" />
+  </g>
+  <text x="202.5" y="999.0" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#f8fafc" font-weight="700" text-anchor="middle">Brevo · SMTP</text>
+  <text x="202.5" y="1022.0" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#b8c7da" font-weight="400" text-anchor="middle">Existing integration · OTP emails</text>
+  <g data-cell-id="21">
+    <rect x="387.0" y="970.0" width="325.0" height="100.0" rx="12" fill="#182438" stroke="#3b506c" stroke-width="1.5" />
+  </g>
+  <text x="549.5" y="999.0" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#f8fafc" font-weight="700" text-anchor="middle">Stripe · Test mode</text>
+  <text x="549.5" y="1022.0" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#b8c7da" font-weight="400" text-anchor="middle">Hosted Checkout · API · Webhooks</text>
+  <text x="550" y="1112" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#b8c7da" font-weight="400" text-anchor="middle">Only Nginx exposes public application ports. Other EC2 services remain private.</text>
+  <text x="550" y="1143" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#93c5fd" font-weight="400" text-anchor="middle">Public authentication requires same-site domains or verified proxy routing. Stripe is test-only.</text>
+</svg>
