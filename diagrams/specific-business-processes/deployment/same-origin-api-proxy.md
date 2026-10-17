@@ -1,18 +1,5 @@
 # Same-origin API proxy on Cloudflare Pages
 
-## Scope and implementation status
-
-Implemented in frontend source, not deployed or browser-verified: Pages Function
-`functions/api/[[path]].ts` forwards API requests to the configured HTTPS EC2
-backend. React remains CSR. The owner verified the EC2 public endpoint and
-certificate renewal at the configured backend HTTPS origin. No business API payload,
-authorization rule, data model or authentication-cookie policy changes here.
-
-These are activity-style Mermaid swimlane flowcharts, not strict UML activity
-diagrams. See the [diagramming specification](../../diagramming-specification.md).
-Use the assigned Pages hostname from deployment configuration when configuring
-EC2 origins and Stripe returns. Actual hostnames are not maintained in this document.
-
 ## A. Forward a browser API request
 
 ```mermaid
@@ -73,15 +60,15 @@ swimlane-beta TB
 
 ## Handoff contract and guards
 
-| Handoff | Verified source contract |
-| --- | --- |
-| Frontend to Pages | Build `VITE_API_URL=/`; existing `/api/...` routes; credentials enabled in Axios |
-| Function configuration | `API_ORIGIN=<BACKEND_HTTPS_ORIGIN>`, runtime binding, no path/credentials/query/fragment; must differ from Pages origin |
-| Function to EC2 | Same HTTP method, path/query, streaming body, Cookie, Authorization and Origin; upstream Host from target; HTTPS certificate verification remains enabled |
-| Nginx to Django | Private Gunicorn port; Nginx overwrites forwarded HTTPS/IP headers; Django retains backend hostname in ALLOWED_HOSTS |
-| Django to browser through Function | Existing status/body and separate Set-Cookie headers; current authentication cookies omit Domain and use Path=/, HttpOnly, SameSite=Lax and production Secure |
-| API redirect | Backend /api Location rewritten to Pages; redirects are never followed by Function fetch |
-| Failures | Invalid binding: non-cacheable 503; transport failure: non-cacheable 502 with uncertain outcome; backend validation/auth/permission failures retain their status and payload |
+| Handoff                            | Verified source contract                                                                                                                                                     |
+| ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Frontend to Pages                  | Build `VITE_API_URL=/`; existing `/api/...` routes; credentials enabled in Axios                                                                                             |
+| Function configuration             | `API_ORIGIN=<BACKEND_HTTPS_ORIGIN>`, runtime binding, no path/credentials/query/fragment; must differ from Pages origin                                                      |
+| Function to EC2                    | Same HTTP method, path/query, streaming body, Cookie, Authorization and Origin; upstream Host from target; HTTPS certificate verification remains enabled                    |
+| Nginx to Django                    | Private Gunicorn port; Nginx overwrites forwarded HTTPS/IP headers; Django retains backend hostname in ALLOWED_HOSTS                                                         |
+| Django to browser through Function | Existing status/body and separate Set-Cookie headers; current authentication cookies omit Domain and use Path=/, HttpOnly, SameSite=Lax and production Secure                |
+| API redirect                       | Backend /api Location rewritten to Pages; redirects are never followed by Function fetch                                                                                     |
+| Failures                           | Invalid binding: non-cacheable 503; transport failure: non-cacheable 502 with uncertain outcome; backend validation/auth/permission failures retain their status and payload |
 
 Frontend `/api` traffic alone invokes the Function through `_routes.json`.
 Assets and ordinary SPA routes stay static. Configure Functions quota failures to
@@ -121,14 +108,3 @@ quota exhaustion.
 - [Nginx configuration](../../../../backend/deploy/nginx.conf.template)
 - [Authentication views](../../../../backend/apps/authentication/views.py)
 - [Production architecture](../../../architecture/production-deployment.md)
-
-Twelve mocked Fetch tests passed for forwarding, independent cookies, multipart
-uploads, redirects, configuration rejection, validation errors and transport
-failures. Type-check/build and lint passed; the build retains its existing large
-JavaScript chunk warning. Cloudflare execution and browser checks are pending.
-Both Mermaid fences parsed successfully using Mermaid 12.0.0 with JSDOM.
-Rendering and visual inspection were not performed because no browser renderer
-is available; Markdown-host support remains unverified. Parsing does not establish
-visual validation. All 189 tests in 23 files passed with two Vitest workers; an
-unrestricted concurrent run had 15 timing/UI lookup failures. No unrelated UI
-code was changed.

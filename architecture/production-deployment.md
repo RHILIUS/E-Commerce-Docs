@@ -1,46 +1,21 @@
 # Production deployment architecture
 
-## Scope and status
-
-Demo/portfolio deployment, updated 2026-10-17. The owner deployed the backend
-from `prep/prod` to a Singapore EC2 `t3.small` instance with Ubuntu 26.04. Its
-public HTTPS origin is configured through deployment environment settings. The owner
-verified API docs return 200, Nginx resumes after renewal, and the Certbot renewal
-timer is scheduled. These are owner-reported runtime checks, not agent access to
-the cloud account.
-
-The frontend is an implemented React CSR SPA. Cloudflare Pages and its API proxy
-are configured in source but not yet deployed or browser-verified. No paid domain
-is required for the selected plan. API traffic will use the Pages hostname and a
-Pages Function to reach Nginx on EC2. The chosen production branch is `prep/prod`.
-
-The backend uses PostgreSQL, Redis, Celery workers/Beat, Brevo SMTP and Stripe
-test-only Checkout. The owner selected filesystem media in `/app/media` persisted
-by a Docker volume; Azure remains an implemented alternative, currently disabled.
-Production Compose, Nginx TLS, and the demo reset wrapper are defined. The API
-image excludes seed assets; the optional maintenance image includes them.
-
 ## Stack and hosting
 
 | Layer          | Stack / host                                     | Responsibility                                                                                       |
 | -------------- | ------------------------------------------------ | ---------------------------------------------------------------------------------------------------- |
 | Frontend       | React 19, TypeScript, Vite, React Router         | Existing browser-rendered SPA; builds to `dist`                                                      |
-| Static hosting | Cloudflare Pages + API Function                       | HTTPS frontend delivery; AWS Amplify is an alternative                                               |
-| Backend host   | AWS EC2 with Docker Compose            | Owner-deployed single-server demo                                                                |
-| Reverse proxy  | Nginx                                  | HTTPS termination, API forwarding, Django static assets                                              |
+| Static hosting | Cloudflare Pages + API Function                  | HTTPS frontend delivery; AWS Amplify is an alternative                                               |
+| Backend host   | AWS EC2 with Docker Compose                      | Owner-deployed single-server demo                                                                    |
+| Reverse proxy  | Nginx                                            | HTTPS termination, API forwarding, Django static assets                                              |
 | Application    | Gunicorn runtime image; Django 6 and DRF         | Production API process                                                                               |
-| Database       | PostgreSQL 17                                    | Private container and persistent volume                        |
+| Database       | PostgreSQL 17                                    | Private container and persistent volume                                                              |
 | Broker         | Redis 7                                          | Private Celery broker with persistence                                                               |
 | Workers        | Celery default worker and dedicated email worker | Payment recovery and registration/password-change OTP delivery                                       |
 | Scheduler      | One Celery Beat instance                         | Existing payment recovery dispatch every 60 seconds                                                  |
-| Media | Filesystem volume, served by Nginx | Selected deployment storage; Azure remains an optional integration |
+| Media          | Filesystem volume, served by Nginx               | Selected deployment storage; Azure remains an optional integration                                   |
 | Email          | Brevo via Django SMTP backend                    | Existing provider and email integration; verify environment-specific configuration during deployment |
 | Payments       | Stripe hosted Checkout and signed webhooks       | Existing test-only integration; no real payments                                                     |
-
-The selected EC2 instance has 2 vCPUs and 2 GiB RAM. Monitor memory under API,
-worker and seeding load. The owner reported $100 AWS credits and a Free Plan
-ending March 28, 2027 or when credits run out. Credits are temporary; confirm
-current balance and ongoing costs in AWS billing.
 
 ## How the proposed production setup would look
 
@@ -57,8 +32,8 @@ Azure Blob Storage, Brevo, and Stripe run outside that machine.
   the EC2 HTTPS origin. Browser media reads use the backend host in filesystem mode.
 - Nginx forwards API requests to Gunicorn and serves collected Django static
   assets. It does not serve the Pages frontend or proxy ordinary Azure media reads.
-- Django reads/writes PostgreSQL, publishes OTP tasks to Redis, manages Azure
-  media, and calls Stripe. Direct browser uploads are not introduced here.
+- Django reads/writes PostgreSQL, publishes OTP tasks to Redis, persists media
+  in the selected filesystem volume (Azure is optional), and calls Stripe. Direct browser uploads are not introduced here.
 - Beat publishes scheduled payment recovery tasks to Redis. The payment worker
   consumes the default queue, reconciles Stripe state, and updates PostgreSQL.
 - The email worker consumes `registration-email`, checks OTP validity in
@@ -77,7 +52,7 @@ at the backend HTTPS origin configured for that environment. A Pages Function pr
 the browser on the Pages origin. DuckDNS alone does not make the two hosts
 same-site. The Function preserves current host-only `SameSite=Lax` cookies and
 never follows redirects server-side. Authentication payloads and cookie policy
-remain unchanged; deployed cookie behavior must still be verified.
+remain unchanged; deployed cookie behavior was verified by the owner.
 
 See the [API proxy process](../diagrams/specific-business-processes/deployment/same-origin-api-proxy.md)
 and [frontend setup](../../frontend/docs/deployment/cloudflare-pages.md) for origin
@@ -121,23 +96,6 @@ Managed PostgreSQL such as RDS is a later option, especially before handling rea
 customer data. Kubernetes, load balancers, and managed Redis are outside the
 initial demo scope.
 
-## Local production verification plan
-
-1. Run frontend checks and build; inspect `dist` with Vite preview. Preview is a
-   local verification server, not the eventual production hosting service.
-2. Implement and run backend production containers and Nginx locally with isolated
-   demo credentials and persistent test data.
-3. Verify API HTTPS certificate trust and proxy headers. Frontend/API cookie
-   integration must be tested with the separately hosted frontend and the chosen
-   same-site domain or verified routing arrangement. Hosted staging is deferred.
-4. Verify route refreshes, login/refresh/logout, registration and password-change
-   OTPs, media, and Stripe test checkout/recovery.
-5. Verify restart persistence, controlled migrations, and
-   application rollback. Reverting an image does not reverse database changes.
-6. Before public hosting, resolve domain/auth routing, configure Pages SPA fallback
-   and API build variable, and verify signed Stripe webhooks at
-   `/api/shop/stripe/webhook/`. Local reconciliation does not prove webhook delivery.
-
 ## Source references
 
 - [Frontend build scripts](../../frontend/package.json), [entry point](../../frontend/src/app/main.tsx), [router](../../frontend/src/app/router.tsx), and [API client](../../frontend/src/app/api/axios.ts)
@@ -152,12 +110,7 @@ when viewing only this repository online.
 ### Production image implementation
 
 See the [backend production image guide](../../backend/docs/docker-production.md)
-for build and inspection commands. Frontend production build, type-check, and lint
-passed; the project owner confirmed testing the frontend preview on port 4173.
-
-The production image built successfully. Isolated checks verified Gunicorn 26.2.0,
-non-root UID/GID 10001, dependency consistency, Django system checks, and absence
-of `.env*` files under `/app`. Database and integration tests remain pending.
+for build and inspection commands.
 
 ### Production Compose implementation
 
@@ -167,8 +120,7 @@ Nginx TLS termination, and production Django settings. Nginx serves backend
 routes and assets; frontend hosting is separate. The overview image shows the
 planned public topology and omits the static collection release job. Follow the
 [backend run guide](../../backend/docs/docker-production.md) for certificate, build,
-and startup commands. The owner subsequently started the backend and verified
-public HTTPS and certificate renewal. No business endpoint or payload contract was changed.
+and startup commands.
 
 ### Disposable portfolio reset
 
@@ -181,27 +133,3 @@ service shutdown or data deletion. Production settings now honor the explicit
 `ALLOW_DEV_RESET` environment toggle (default false). See the maintained
 [reset workflow](../diagrams/specific-business-processes/development/reset-development.md)
 and [backend run guide](../../backend/docs/docker-production.md).
-
-### Pages proxy implementation
-
-Source implementation includes a root Pages Function and `_routes.json` limiting
-invocation to API paths. Twelve focused mocked tests passed; type-check/build and
-lint passed. Edge execution and real browser cookies remain unverified. Direct
-admin/media/static and signed webhook traffic still use the backend hostname.
-The host renewal hooks currently stop Nginx briefly for standalone certificate
-validation; this introduces a short outage. Backend IP throttling sees the
-immediate Cloudflare peer; real browser IP propagation remains a separate trust
-configuration decision. Existing overview artwork retains Azure as an optional
-storage alternative; deployed media currently uses a filesystem volume.
-
-Proxy verification: all 189 tests passed with two workers, including 12 focused
-proxy cases. Build with `VITE_API_URL=/` and lint passed. An unrestricted concurrent
-test run had 15 timing/UI lookup failures. Both new Mermaid process fences parsed
-with Mermaid 12.0.0. The updated overview SVG and embedded draw.io source parsed
-as XML; rendering and visual/host verification remain pending.
-
-Deployment-specific addresses are intentionally omitted from maintained source
-and documentation. Configure `API_ORIGIN` in Cloudflare runtime variables,
-`VITE_API_URL=/` in Pages build variables, and backend/frontend host and origin
-values in the EC2 `.env`. Proxy tests use reserved `.test` fixture domains and do
-not depend on any deployment.

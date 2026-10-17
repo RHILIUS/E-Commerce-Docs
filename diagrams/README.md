@@ -29,4 +29,4 @@ for notation, placement and validation requirements.
 
 ## Deployment
 
-- [Same-origin API proxy](specific-business-processes/deployment/same-origin-api-proxy.md) — Pages-to-EC2 API forwarding and host-only cookie behavior; implemented in source, deployment verification pending.
+- [Same-origin API proxy](specific-business-processes/deployment/same-origin-api-proxy.md)
