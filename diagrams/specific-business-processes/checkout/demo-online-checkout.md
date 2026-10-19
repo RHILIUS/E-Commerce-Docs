@@ -2,7 +2,7 @@
 
 **Status: Stripe test checkout, recovery and pending wallet credits are implemented. Delivery, seven-day settlement, returns and withdrawals remain proposed.**
 
-Implementation contract and setup: [Stripe test checkout API](../../../../backend/docs/checkout/stripe-api.md). The [wallet foundation](../../../../backend/docs/wallet/README.md) records USD cents with zero demo fees.
+Implementation contract and setup: [Stripe test checkout API](../../../../backend/docs/api/checkout/stripe.md). The [wallet foundation](../../../../backend/docs/architecture/wallet-ledger.md) records USD cents with zero demo fees.
 
 One Stripe test payment buys from multiple stores. The platform records simulated
 USD funds and each store's pending share. Seven days after that store order is
@@ -32,7 +32,7 @@ a timely appeal must stop automatic refund while platform adjudication is pendin
 Those are future return requirements, not functionality delivered by this proposal.
 
 See the
-[current checkout models](../../../../backend/docs/checkout/models.md), and the
+[current checkout models](../../../../backend/docs/architecture/checkout-models.md), and the
 [implemented COD flow](cod-checkout.md).
 
 ## Money and currency rules
@@ -200,7 +200,7 @@ Only one Beat instance should dispatch this schedule. Worker or broker downtime
 can delay execution; database scans resume when services return. A successful
 Celery task may still report unresolved operations because the command catches
 row-level errors. Refund recovery and settlement are excluded from this task.
-See the [implemented setup and verification](../../../../backend/docs/checkout/stripe-api.md#scheduled-payment-recovery).
+See the [implemented setup and verification](../../../../backend/docs/api/checkout/stripe.md#scheduled-payment-recovery).
 
 A periodic worker scans unresolved attempts, including those past their local
 deadline. It retrieves/expires the provider session outside locks, then locks and
@@ -352,5 +352,5 @@ A durable OrderRefund is committed with cancellation and one-time stock restorat
 before provider calls. Its stable idempotency key, saved provider ID and scheduled
 reconciliation command protect unknown outcomes. Verified success posts a linked
 compensating journal transaction from store pending to treasury. The original paid
-receipt remains immutable. See the [implemented API and recovery contract](../../../../backend/docs/ecommerce/user-orders.md)
+receipt remains immutable. See the [implemented API and recovery contract](../../../../backend/docs/api/ecommerce/user-orders.md)
 and [frontend handoff](../../../../frontend/docs/ecommerce/user-orders.md).

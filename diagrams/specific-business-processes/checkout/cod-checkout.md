@@ -15,7 +15,7 @@ recipient, review store totals, place an atomic COD purchase, and view confirmat
 Follow phases A → B → C → D. A blocked branch cannot advance to placement.
 API routes and payloads are listed below to keep decision nodes readable.
 
-Preview implementation and response details: [backend API contract](../../../../backend/docs/checkout/preview-api.md).
+Preview implementation and response details: [backend API contract](../../../../backend/docs/api/checkout/preview.md).
 
 ## A. Enter checkout and review prices
 
@@ -119,7 +119,7 @@ recipient is missing/incomplete or preview invalid/expired.
 
 ## C. Place the purchase exactly once
 
-[Placement and confirmation contract](../../../../backend/docs/checkout/cod-api.md).
+[Placement and confirmation contract](../../../../backend/docs/api/checkout/cash-on-delivery.md).
 
 ```mermaid
 swimlane-beta TB

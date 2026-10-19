@@ -3,7 +3,7 @@
 **Status:** Implemented in backend and frontend source. Apply backend migration
 `authentication.0004_user_authentication_version_passwordchangestate` before serving
 the new code. The Change Password tab is at `/account?tab=change-password`.
-See the [backend contract](../../../../backend/docs/account/change-password-api.md)
+See the [backend contract](../../../../backend/docs/api/account/change-password.md)
 and [frontend handoff](../../../../frontend/docs/account/change-password.md).
 
 ## Scope and notation
