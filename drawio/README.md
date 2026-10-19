@@ -1,7 +1,7 @@
 # Editable draw.io references
 
 These are the project's original editable visual references. They are kept apart
-from the maintained Mermaid guides so their role is clear. They may describe
+from the maintained business-process and per-app ERD guides so their role is clear. They may describe
 current behavior, partial work, or future direction; storage here does not mean a
 file is obsolete or approved as an implementation contract.
 
@@ -18,8 +18,9 @@ its editable draw.io content as well as the rendered SVG.
 | [Authentication processes](specific-business-processes/authentication/authentication.drawio)        | Login, signup, logout, token interception, and auth redirection |
 | [Ecommerce process](specific-business-processes/ecommerce/ecommerce.drawio)                         | Landing-page flow                                               |
 
-Use [the maintained diagram index](../diagrams/README.md) for reconciled Mermaid
-process explanations and [planning](../planning/README.md) for future policies.
+Use [the maintained diagram index](../diagrams/README.md) for current Mermaid
+business processes and per-app Draw.io ERDs with model/field explanations, and
+[planning](../planning/README.md) for future policies.
 When implementing an idea from these references, check the current request,
 relevant code, and API contracts first. A historical drawing alone does not add an
 endpoint, authorize a mutation, or settle an unresolved product decision.

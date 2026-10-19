@@ -24,7 +24,7 @@ that are not implemented.
 | Location        | Purpose                                                                                   |
 | --------------- | ----------------------------------------------------------------------------------------- |
 | `architecture/` | Implemented application and hosting boundaries, with explicit configuration limits        |
-| `diagrams/`     | Maintained Mermaid process and data-model explanations linked to current contracts        |
+| `diagrams/`     | Mermaid business processes and per-app Draw.io ERDs with model/field guides               |
 | `planning/`     | Proposed settlement, withdrawal, and return behavior; superseded ideas are archived       |
 | `drawio/`       | Editable visual references, whose pages can include current, partial, or planned behavior |
 

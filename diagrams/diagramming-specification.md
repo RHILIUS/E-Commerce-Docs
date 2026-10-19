@@ -1,6 +1,6 @@
-# Business Process Specification
+# System diagram specification
 
-## Decision
+## Business-process decision
 
 Use a swimlane business-process flowchart as the primary diagram for a specific
 business requirement.
@@ -64,6 +64,29 @@ A diagram update is reviewable when:
   Markdown host too when available; local rendering does not prove host compatibility.
 - Relative links resolve and the diagram index points at the maintained document.
 
-Update affected diagrams with changes to API contracts, payment, stock, ownership
-or cross-application flows. Maintain diagrams directly in Mermaid Markdown.
-Separate image exports are not required.
+Update affected business-process diagrams with changes to API contracts, payment,
+stock, ownership, or cross-application flows. Maintain those processes directly in
+Mermaid Markdown; separate process-image exports are not required.
+
+## Entity-relationship diagrams
+
+ERDs use editable Draw.io SVGs rather than Mermaid. Maintain one image at
+`erd/diagrams/{app_label}.drawio.svg` and one explanation at
+`erd/guides/{app_label}.md`, with the same lowercase Django app label for the
+file stem and the image’s single internal Draw.io page. Embed the image from its
+guide using `../diagrams/{app_label}.drawio.svg`; Markdown cannot select a page
+from the editable data of a multipage SVG.
+
+Full entities belong to their owning app. Cross-app relationships use name-only
+reference rectangles and links to the owning guide. Model database table names,
+concrete column names, inherited fields, primary/foreign keys, and Crow’s Foot
+cardinality must match the verified implementation. Explain every owned model and
+field, plus relationships, deletion behavior, model-level constraints, and relevant
+persistence/lifecycle rules in its guide. Keep proposed behavior separate.
+
+The SVG’s visible image and embedded editable document must describe the same
+app schema. Validate XML and graph references, inspect the exact rendered SVG,
+and check editability and intended Markdown embedding when available. Report
+unavailable checks accurately. Keep execution evidence in handoffs or PRs.
+The [diagram index](README.md#maintained-data-model-explanations) links the
+maintained app guides. Business-process diagrams continue to use Mermaid.
