@@ -8,8 +8,8 @@ business requirement.
 ## Swimlane conventions
 
 - Write fenced `mermaid` blocks using `swimlane-beta TB` and named `subgraph`
-  lanes for actual responsibility partitions. COD was validated with Mermaid
-  12.0.0. This newer syntax is not guaranteed to work in every Markdown host.
+  lanes for actual responsibility partitions. Record the Mermaid version used
+  during validation; this syntax is not guaranteed to work in every Markdown host.
   Ordinary `flowchart` subgraphs are an alternative only when grouped ownership
   is sufficient: cross-lane edges can prevent a rigid lane layout.
   Inspect the render and split large flows when necessary.

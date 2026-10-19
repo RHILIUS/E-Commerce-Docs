@@ -1,20 +1,56 @@
-# E-Commerce Project Documentation
+# E-Commerce system documentation
 
-This repository is the central documentation repository for the entire E-Commerce project. It contains the diagrams and written documentation that describe the project's requirements, business processes, system design, architecture, database structure, components, and interactions.
+This repository explains how the E-Commerce website, backend, database, and
+background services work together. Start here when you need the whole system's
+behavior rather than one application's implementation details.
 
-Documentation include diagrams like entity-relationship diagrams (ERDs), Unified Modeling Language (UML) diagrams, business process flow diagrams, technical documentation, and other supporting materials that explain how the complete system is designed and operates.
+The project also contains personal draw.io references and future design notes.
+They have separate homes so readers can distinguish current behavior from ideas
+that are not implemented.
 
-## Project Repositories
+## Start reading here
 
-- [Frontend Repository](https://github.com/RHILIUS/E-Commerce-API-Frontend)
-- [Backend Repository](https://github.com/RHILIUS/E-Commerce-API)
+1. Read the [system overview](system-overview.md) for the main parts, everyday
+   customer journey, and common terms.
+2. Read [architecture](architecture/README.md) to understand how those parts run
+   and communicate.
+3. Use the [maintained diagram index](diagrams/README.md) for a particular process
+   or data-model explanation.
+4. Use [planning](planning/README.md) only when researching future behavior, or
+   [draw.io references](drawio/README.md) to explore the editable visual notes.
 
-## Diagrams
+## Find the right kind of information
 
-See the [diagram index](diagrams/README.md) and
-[diagramming specification](diagrams/diagramming-specification.md). Specific
-business processes use Mermaid swimlane flowcharts.
+| Location        | Purpose                                                                                   |
+| --------------- | ----------------------------------------------------------------------------------------- |
+| `architecture/` | Implemented application and hosting boundaries, with explicit configuration limits        |
+| `diagrams/`     | Maintained Mermaid process and data-model explanations linked to current contracts        |
+| `planning/`     | Proposed settlement, withdrawal, and return behavior; superseded ideas are archived       |
+| `drawio/`       | Editable visual references, whose pages can include current, partial, or planned behavior |
 
-## Architecture
+A file's format or author does not prove it matches implementation. Maintained
+Markdown must still be checked against the code; a draw.io reference is not
+obsolete just because it is stored separately. Each guide states its own scope.
 
-See the [architecture documentation](architecture/README.md) for the proposed production deployment and stack.
+## Related repositories
+
+| Repository                                                         | What belongs there                                                            |
+| ------------------------------------------------------------------ | ----------------------------------------------------------------------------- |
+| [Frontend](https://github.com/RHILIUS/E-Commerce-API-Frontend)     | Customer screens, browser state, and UI implementation                        |
+| [Backend](https://github.com/RHILIUS/E-Commerce-API)               | Exact API contracts, models, business services, and operator commands         |
+| [System documentation](https://github.com/RHILIUS/E-Commerce-Docs) | This repository: cross-application architecture, processes, and relationships |
+
+Links assume the three repositories are checked out beside one another as
+`frontend/`, `backend/`, and `docs/`. This repository is the sibling `docs/`;
+the application repositories also have their own local `docs/` folders. When
+browsing on GitHub, open the relevant repository from the table to follow a
+sibling reference.
+
+## Maintaining the documentation
+
+Describe current behavior in plain language before introducing routes or model
+names. Keep proposals distinct, preserve actual limitations, and update related
+links and indexes when moving a guide. Follow the
+[diagramming specification](diagrams/diagramming-specification.md) for process
+notation and validation. Detailed API and operational instructions stay in the
+application repositories rather than being copied here.

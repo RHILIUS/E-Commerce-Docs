@@ -1,83 +1,123 @@
-# Demo online checkout and USD wallets
+# Stripe test checkout, recovery, and store credits
 
-**Status: Stripe test checkout, recovery and pending wallet credits are implemented. Delivery, seven-day settlement, returns and withdrawals remain proposed.**
+**Status: implemented in frontend and backend source.** Customers can buy from
+multiple stores with one hosted Stripe test payment. The backend saves each
+store's pending share in the demo USD ledger. No real money moves, and the browser
+return from Stripe does not establish payment success.
 
-Implementation contract and setup: [Stripe test checkout API](../../../../backend/docs/api/checkout/stripe.md). The [wallet foundation](../../../../backend/docs/architecture/wallet-ledger.md) records USD cents with zero demo fees.
+## Understand the flow first
 
-One Stripe test payment buys from multiple stores. The platform records simulated
-USD funds and each store's pending share. Seven days after that store order is
-delivered, its eligible share becomes available for mock withdrawal. Stores owned
-by the same seller retain separate wallets, including stores in different countries.
+1. Review USD prices and choose the delivery recipient.
+2. Save pending store orders and stock holds, then create or recover one hosted
+   payment session with a stable key.
+3. Check provider facts through signed webhooks or reconciliation.
+4. Verified payment finalizes stock, orders, cart cleanup, and one ledger receipt
+   in the same local transaction. Uncertain outcomes retain recovery.
+5. Read saved confirmation and order history. Eligible customer cancellation uses
+   the separate original-card refund path described at the end.
 
-This replaces the earlier Stripe Connect proposal. Stripe test transactions do not
-move real money ([Stripe testing](https://docs.stripe.com/testing)). The treasury,
-wallets and destination bank accounts described here are application simulations;
-Stripe Connect accounts and real bank transfers are outside this demo.
+A **hold** protects units while payment is unresolved. A **ledger receipt** records
+simulated treasury value and matching pending store liabilities. A **webhook** is
+a signed Stripe notification; **reconciliation** reads provider state and compares
+it with saved purchase facts. Stripe and PostgreSQL do not share a transaction.
 
-## Scope and decisions
+Delivery, seven-day settlement, returns, customer wallet spending, and withdrawals
+are not part of this implemented flow. Their separate
+[planning notes](../../../planning/settlement-and-withdrawals.md) retain unresolved
+decisions without implying current services.
 
-| Category               | Decision                                                                                                                                                                                                                  |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Confirmed direction    | One payment for multi-store checkout; USD simulated treasury; customer and store wallets; local-currency presentation; seven-day return window starting at delivery; release only when no unresolved return blocks it.    |
-| Proposed first version | Hosted Stripe Checkout, cards only, charged in USD; zero commission and no simulated processor/FX fees; mock withdrawals only; one settlement per store order.                                                            |
-| Proposed timing        | Seven days means 168 hours in UTC. Requests must be durably accepted before the deadline. Worker delay does not extend the window.                                                                                        |
-| Deferred               | Return logistics, adjudication, partial refunds, customer wallet spending, real banking, Stripe Connect and live-mode payments. Customer wallet ownership is designed now; refund credits arrive with the return feature. |
-| Before implementation  | Confirm delivery authority, the timing convention, fee policy, cancellation compensation and withdrawal permissions. These recommendations do not create approved endpoint contracts.                                     |
+## Scope, currency, and ownership
 
-Source: the **Online Checkout Process** page in the
-[general business-process draft](../../general-business-processes/e-commerce-general-business-process.drawio).
-The draft's seven-day branch must be guarded by absence of an unresolved return.
-Its three-day seller review starts when the store receives the returned goods;
-a timely appeal must stop automatic refund while platform adjudication is pending.
-Those are future return requirements, not functionality delivered by this proposal.
+This guide covers USD test-card checkout, durable stock holds, provider-event
+receipt, periodic payment recovery, and pending store credits. It does not create
+Stripe Connect accounts or make real transfers. Stores retain separate wallets
+even when they share members.
 
-See the
-[current checkout models](../../../../backend/docs/architecture/checkout-models.md), and the
-[implemented COD flow](cod-checkout.md).
+The backend derives ownership from authentication, validates recipient/cart
+ownership, and computes the accepted total. Prices use source-to-USD multipliers,
+round each unit half-up to cents, then multiply by quantity. Source currency,
+original price, dated rates, names, and delivery details are copied into purchase
+snapshots. Client totals cannot replace those values.
 
-## Money and currency rules
-
-- The ledger uses integer USD cents. Existing checkout Decimal fields can remain,
-  but online snapshots must be exactly representable in cents before calling Stripe.
-- For each item, multiply its source unit price by the saved source-to-USD rate,
-  round once to two decimals using the agreed rounding rule (proposed half-up),
-  then multiply by quantity. Sum these stored subtotals into order and checkout totals.
-  The total charge must equal the sum of all store allocations; no frontend totals.
-- Retain source currency, original price, rate and rate date on purchase snapshots.
-  Equal currencies use rate 1. A fresh quote is required if a source rate is missing.
-- Show the USD charge explicitly. User/store currency equivalents are labeled
-  estimates with rate time; changing display currency never changes USD balances.
-- A mock withdrawal snapshots its USD debit, destination currency, conversion rate,
-  rate time, rounding and destination amount. The fake bank receipt preserves those
-  terms, even if display rates later change. Conversion does not create ledger profit.
-- Store proceeds are platform liabilities, not platform revenue. With the proposed
-  zero-fee demo, every paid cent is allocated to stores; treasury assets back the
-  combined customer/store liabilities.
+See the [Stripe API contract](../../../../backend/docs/api/checkout/stripe.md),
+[checkout models](../../../../backend/docs/architecture/checkout-models.md), and
+[ledger service](../../../../backend/docs/architecture/wallet-ledger.md).
+The diagrams below are activity-style Mermaid swimlane flowcharts. Read
+[the notation](../../diagramming-specification.md) for their ownership conventions.
 
 ## A. Review, reserve and start payment
 
+### A1. Save or recover the pending purchase
+
 ```mermaid
 swimlane-beta TB
-  subgraph A_UI["Frontend"]
-    A_start(["Review all stores and USD total"])
-    A_error(["Show error or recover saved attempt"])
-    A_pay(["Open hosted test checkout"])
+  subgraph A1_UI["Frontend"]
+    A1_start(["Review USD total and choose recipient"])
+    A1_error(["Show input or conflict error<br/>Preserve recovery for an unknown outcome"])
   end
-  subgraph A_API["Backend"]
-    A_check{"Valid request and stock?"}
-    A_save["Commit pending orders and stock holds"]
-    A_session["Create session with stable attempt key"]
-    A_check -->|Yes| A_save --> A_session
+  subgraph A1_API["Backend"]
+    A1_valid{"Authentication and request shape valid?"}
+    A1_begin["Begin transaction and lock customer"]
+    A1_key{"Existing request key?"}
+    A1_same{"Same Stripe request fingerprint?"}
+    A1_check{"Signed preview, ownership and locked inventory valid?"}
+    A1_save["Commit pending checkout, orders, snapshots and holds"]
+    A1_reuse["End transaction and use saved attempt"]
+    A1_rollback["Roll back without a new purchase"]
+    A1_next(["Continue A2 with the saved attempt"])
+    A1_valid -->|Yes| A1_begin --> A1_key
+    A1_key -->|Yes| A1_same
+    A1_same -->|Yes| A1_reuse --> A1_next
+    A1_same -->|No| A1_rollback
+    A1_key -->|No| A1_check
+    A1_check -->|Yes| A1_save
+    A1_check -->|No| A1_rollback
+    A1_save -->|Committed| A1_next
+    A1_save -->|Write or commit failure| A1_rollback
   end
-  subgraph A_STRIPE["Stripe test environment"]
-    A_create{"Session creation result?"}
-  end
-  A_start -->|Submit reviewed selection and retry key| A_check
-  A_check -->|No: no purchase committed| A_error
-  A_session -->|Create or recover session| A_create
-  A_create -->|Known session URL| A_pay
-  A_create -->|Failure or uncertain: recover attempt| A_error
+  A1_start -->|POST placement with exact body and retry key| A1_valid
+  A1_valid -->|No: 400 or 401| A1_error
+  A1_rollback -->|Validation or conflict response| A1_error
 ```
+
+A1 saves or recovers one purchase. A2 works on that saved attempt; it never
+starts another purchase because a response or provider result is uncertain.
+
+### A2. Create or reconcile the hosted payment session
+
+```mermaid
+swimlane-beta TB
+  subgraph A2_API["Backend"]
+    A2_start(["From A1: saved attempt"])
+    A2_pending{"Attempt still pending?"}
+    A2_session["Create or reconcile with stable key and parameters<br/>No provider call holds database locks"]
+    A2_apply["Validate provider facts<br/>Use phase B or C local transaction"]
+    A2_close["Validate confirmed creation rejection<br/>Atomically close and release holds"]
+    A2_start --> A2_pending
+    A2_pending -->|Yes| A2_session
+  end
+  subgraph A2_STRIPE["Stripe test environment"]
+    A2_result{"Session creation or retrieval result?"}
+  end
+  subgraph A2_UI["Frontend"]
+    A2_pay(["Open hosted test checkout"])
+    A2_status(["Show saved receipt or recovery status"])
+    A2_error(["Show error and recover saved attempt<br/>Keep holds unless safe closure confirmed"])
+  end
+  A2_pending -->|No: saved terminal state| A2_status
+  A2_session -->|Create or retrieve session| A2_result
+  A2_result -->|Pending and hosted URL available| A2_pay
+  A2_result -->|Verified paid or terminal unpaid state| A2_apply
+  A2_apply -->|Saved result| A2_status
+  A2_apply -->|Mismatch or local failure| A2_error
+  A2_result -->|Confirmed unsupported-parameter creation rejection| A2_close
+  A2_close -->|Definitive 400 or unresolved mismatch| A2_error
+  A2_result -->|Request failure or uncertain result| A2_error
+```
+
+Only the narrowly verified pre-creation rejection can close that attempt as a
+definitive placement error. Other failures preserve recovery; they do not imply
+that payment failed or that its stock hold can be discarded.
 
 Within a database transaction, authorize customer/recipient/cart ownership,
 validate the signed preview and its USD total, lock products in stable order,
@@ -87,42 +127,84 @@ Replaying a request key returns the same attempt; changed contents conflict.
 
 Call Stripe outside database locks. Persist provider IDs and use the attempt's
 stable idempotency key to recover from timeouts. Do not create a second payable
-session while an earlier result is unknown. The proposed cart policy freezes
-selected cart quantities until resolution; unselected lines remain editable.
-This requires coordinated backend cart mutation rules and frontend feedback.
+session while an earlier result is unknown. Cart writers freeze selected lines until payment resolves; unselected lines
+remain editable. Successful finalization removes the purchased selected lines.
+A confirmed unpaid closure releases their holds without silently buying again.
 
 ## B. Confirm one payment for all stores
 
+### B1. Validate and retain the notification
+
 ```mermaid
 swimlane-beta TB
-  subgraph B_STRIPE["Stripe test environment"]
-    B_event(["Payment event"])
+  subgraph B1_STRIPE["Stripe test environment"]
+    B1_event(["Payment notification"])
   end
-  subgraph B_API["Backend"]
-    B_verify{"Signature and event valid?"}
-    B_reject(["Reject invalid delivery"])
-    B_inbox["Persist event uniquely"]
-    B_check{"Verified payment state?"}
-    B_wait(["Reconcile pending or mismatched state"])
-    B_commit["Commit all orders paid and ledger receipt"]
-    B_done(["Saved checkout completed"])
-    B_verify -->|No| B_reject
-    B_verify -->|Yes| B_inbox --> B_check
-    B_check -->|Paid and matching snapshots| B_commit --> B_done
-    B_check -->|Pending or mismatch| B_wait
+  subgraph B1_API["Backend"]
+    B1_verify{"Raw signature and test mode valid?"}
+    B1_supported{"Supported event type?"}
+    B1_routing{"Required routing identifiers valid?"}
+    B1_reject(["Reject invalid delivery"])
+    B1_ignore(["Acknowledge unsupported type<br/>No purchase change"])
+    B1_inbox["Persist event uniquely for recovery"]
+    B1_processed{"Event already processed?"}
+    B1_ack(["Acknowledge previously handled event"])
+    B1_next(["Continue B2 with saved event and attempt"])
+    B1_verify -->|No| B1_reject
+    B1_verify -->|Yes| B1_supported
+    B1_supported -->|No| B1_ignore
+    B1_supported -->|Yes| B1_routing
+    B1_routing -->|No| B1_reject
+    B1_routing -->|Yes| B1_inbox --> B1_processed
+    B1_processed -->|Yes| B1_ack
+    B1_processed -->|No| B1_next
   end
-  subgraph B_UI["Frontend"]
-    B_show(["Read saved confirmation or show processing"])
+  B1_event -->|Raw event and Stripe-Signature| B1_verify
+```
+
+### B2. Reconcile and finalize the local result
+
+```mermaid
+swimlane-beta TB
+  subgraph B2_API["Backend"]
+    B2_start(["From B1: durable event and saved attempt"])
+    B2_fetch["Retrieve provider state outside database locks"]
+    B2_check{"Current matching provider state?"}
+    B2_commit["Transaction: lock and recheck purchase and holds<br/>Post receipt, deduct stock, consume holds<br/>Mark orders paid, clean cart and complete checkout"]
+    B2_close["Use phase C safe-unpaid-closure transaction"]
+    B2_done(["Local result committed or already applied"])
+    B2_rollback["Roll back local finalization changes"]
+    B2_wait(["Keep pending attempt<br/>Retain failed inbox when processing failed"])
+    B2_start --> B2_fetch
+    B2_check -->|Verified paid| B2_commit
+    B2_check -->|Confirmed terminal unpaid| B2_close
+    B2_check -->|Pending or mismatched| B2_wait
+    B2_commit -->|Committed or replay| B2_done
+    B2_commit -->|Write or commit failure| B2_rollback --> B2_wait
+    B2_close -->|Committed or replay| B2_done
+    B2_close -->|Mismatch or local failure| B2_wait
   end
-  B_event -->|Signed webhook| B_verify
-  B_done -->|Authorized status response| B_show
-  B_wait -->|Pending status response| B_show
+  subgraph B2_STRIPE["Stripe test environment"]
+    B2_state["Return current session and intent state"]
+  end
+  subgraph B2_UI["Frontend"]
+    B2_show(["Show saved confirmation or recovery status"])
+  end
+  B2_fetch -->|Session retrieval| B2_state
+  B2_state -->|Provider facts| B2_check
+  B2_state -->|Provider failure| B2_wait
+  B2_done -->|Later authorized status read| B2_show
+  B2_wait -->|Later authorized read: no invented success| B2_show
 ```
 
 Verify the raw-body signature and test environment. Durably deduplicate provider
 event IDs; retries of the same payment through different events must also resolve
-to one business operation. Acknowledge only after durable receipt and recover
-unprocessed events through a periodic database scan. Retrieve provider state where
+to one business operation. Acknowledge accepted events only after durable receipt and the processing
+attempt. Processing failures are caught so the accepted notification can still
+return 200 and remain recoverable. An unsupported event type is acknowledged
+without a purchase change. A processed notification is not proof of a paid
+purchase; a pending attempt can still need later reconciliation. Recover
+unprocessed events and pending attempts through the periodic scan. Retrieve provider state where
 needed and match session/intent, checkout, amount, currency and paid status.
 Redirects and a session-completed event alone are not proof of payment.
 [Stripe fulfillment guidance](https://docs.stripe.com/checkout/fulfillment)
@@ -137,7 +219,9 @@ on failure and retry. Do not increment sold counts here.
 Stripe and PostgreSQL do not share a transaction: a successful charge may temporarily
 show as processing while recovery retries local finalization. Never charge again
 because that transaction failed. A paid attempt whose holds were already released
-requires reconciliation and compensation, not unchecked stock consumption.
+requires investigation, not unchecked stock consumption. Automatic compensation
+for payment mismatches is not implemented; it is distinct from the eligible
+customer cancellation-refund workflow.
 Out-of-order failure events must never regress an already paid checkout.
 
 ## C. Recover abandoned or uncertain payments
@@ -200,7 +284,7 @@ Only one Beat instance should dispatch this schedule. Worker or broker downtime
 can delay execution; database scans resume when services return. A successful
 Celery task may still report unresolved operations because the command catches
 row-level errors. Refund recovery and settlement are excluded from this task.
-See the [implemented setup and verification](../../../../backend/docs/api/checkout/stripe.md#scheduled-payment-recovery).
+See the [implemented payment-recovery contract](../../../../backend/docs/api/checkout/stripe.md#scheduled-payment-recovery).
 
 A periodic worker scans unresolved attempts, including those past their local
 deadline. It retrieves/expires the provider session outside locks, then locks and
@@ -217,128 +301,29 @@ not evidence that Stripe can no longer collect payment. Beat schedules `reconcil
 every 60 seconds for abandoned-payment recovery; see the API guide for bounded batches
 and manual investigation when a session creation result remains unknown.
 
-## D. Delivery and seven-day release (future)
+## API handoffs and recovery boundaries
 
-```mermaid
-swimlane-beta TB
-  subgraph D_OPS["Authorized fulfillment actor"]
-    D_deliver(["Confirm store order delivered"])
-  end
-  subgraph D_API["Backend"]
-    D_record["Save first delivery and release deadline"]
-    D_pending(["Store share remains pending"])
-  end
-  subgraph D_WORK["Settlement worker"]
-    D_scan["Scan due settlements"]
-    D_ready{"Paid, delivered, due and no hold?"}
-    D_retry(["Leave pending and retry when eligible"])
-    D_release["Commit pending to available once"]
-    D_done(["Store can request mock withdrawal"])
-    D_scan --> D_ready
-    D_ready -->|No| D_retry
-    D_ready -->|Yes| D_release --> D_done
-  end
-  D_deliver -->|Authorized delivery command| D_record
-  D_record --> D_pending
-  D_record -->|Persisted deadline discovered by scan| D_scan
-```
+| Operation              | Exact contract                                                                                                              | Outcome                                                                                               |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| Review                 | `POST /api/shop/checkout/preview/` with product/cart selection and `payment_method: "stripe"`                               | USD total, blocking issues or signed token; creates no purchase                                       |
+| Place/replay           | `POST /api/shop/checkouts/stripe/` with `preview_token`, `recipient_id`, `payment_method: "stripe"`, UUID `idempotency_key` | 200 saved payment state; identical body/key recovers the same purchase                                |
+| Read status            | `GET /api/shop/checkouts/{reference}/payment/`                                                                              | Owner-only saved state, no provider call                                                              |
+| Reconcile              | `POST /api/shop/checkouts/{reference}/payment/` with empty body                                                             | Owner-only provider reconciliation, no new purchase                                                   |
+| Cancel pending payment | `POST /api/shop/checkouts/{reference}/payment/cancel/` with empty body                                                      | Save cancellation intent and release only after confirmed safe unpaid closure                         |
+| Provider notification  | `POST /api/shop/stripe/webhook/` with raw event and `Stripe-Signature`                                                      | Signature-authenticated test event; 200 after durable receipt; processing failures remain recoverable |
 
-Persist `delivered_at` on the first validated delivery transition, plus
-`eligible_at = delivered_at + 168 hours`. Repeated notifications must neither
-reset this deadline nor increment delivered-unit `sold_count` twice. Existing
-`concluded_at` also covers other conclusions, so it must not be treated as proof
-of delivery. Proposed first scope assumes the whole store order is delivered
-at once; split deliveries require allocation-level deadlines later.
+Missing/invalid customer authentication returns 401; foreign or missing references
+return 404. Input failures and the narrowly confirmed session-creation rejection
+return 400; stale reviews and key/cart conflicts return 409. Provider uncertainty,
+misconfiguration, or mismatches can return 503. After an interrupted placement or
+uncertain 503, retain its original body/key and holds. A key conflict must be
+resolved, not bypassed with a new key.
 
-Each store order has its own clock. One store's delayed shipment or return must
-not prevent another store's eligible share from becoming available. Settlement
-moves a liability from pending to available; treasury assets do not change and
-no Stripe transfer occurs. Pending funds cannot be spent or withdrawn.
-
-Store durable deadlines in PostgreSQL. Celery Beat can scan due rows periodically
-(proposed every minute), with Celery workers performing short idempotent jobs and
-Redis acting as the broker. Lock/recheck settlement and account rows during each
-posting. Scans recover after outages and publication failures; overlapping jobs
-must be safe. Do not enqueue a task with a seven-day countdown: Celery documents
-memory and broker timeout concerns for distant ETA tasks.
-[Celery ETA guidance](https://docs.celeryq.dev/en/stable/userguide/calling.html#eta-and-countdown)
-
-## E. Mock withdrawal (future)
-
-```mermaid
-swimlane-beta TB
-  subgraph E_UI["Wallet owner"]
-    E_start(["Request withdrawal"])
-    E_error(["Show validation error"])
-    E_done(["Show saved receipt or failure"])
-  end
-  subgraph E_API["Backend"]
-    E_check{"Authorized and sufficient available funds?"}
-    E_reserve["Commit withdrawal and reserve balance"]
-    E_finish["Commit success or restore reservation"]
-    E_wait(["Keep reserved and reconcile"])
-    E_check -->|Yes| E_reserve
-  end
-  subgraph E_BANK["Mock bank adapter"]
-    E_result{"Transfer result for withdrawal key?"}
-  end
-  E_start -->|Amount, owned destination and retry key| E_check
-  E_check -->|No| E_error
-  E_reserve -->|Idempotent simulated transfer| E_result
-  E_result -->|Success or definitive failure| E_finish
-  E_result -->|Unknown| E_wait
-  E_finish -->|Persisted withdrawal status| E_done
-```
-
-Store withdrawal permission must be an explicit server-side role check, proposed
-store administrators only. Customer withdrawals require ownership. Protect against
-concurrent requests by locking accounts and reserving the amount before calling
-the adapter. Amounts must be positive cents and within available funds; destinations
-must belong to that wallet. Do not collect real bank credentials.
-
-The mock adapter records one durable receipt per withdrawal reference. A timeout
-must recover that receipt or retry the same key. Success reduces the simulated treasury asset exactly once; definite
-failure restores available funds exactly once. An uncertain result stays reserved
-until reconciled. Never generate a fresh transfer key on retry.
-
-## Future returns and customer credits
-
-An accepted return request must atomically lock the same settlement used by the
-release worker and create a hold before the deadline. Request acceptance uses the
-server's transactional acceptance time; simply opening a form does not reserve
-eligibility. Release at or after the deadline must respect every already accepted
-hold, even if review finishes weeks later. Return submission closes at the deadline.
-
-Initially, a future return can conservatively hold the entire store settlement.
-Partial adjudication can credit the approved USD amount to the customer wallet,
-then release the remaining store amount after all holds resolve and the original
-deadline passes. Persist item/quantity allocations and cumulative refund limits
-when implementing returns. A rejected return removes its hold; it must not start
-a new seven-day window. The draft's three-day review and appeal need their own
-durable deadlines and mutually exclusive resolution operations.
-
-Internal customer credit reallocates a liability from store pending to customer
-available, leaving treasury unchanged. It does not also issue a Stripe refund.
-Any future original-payment refund needs a separate coordinated accounting path
-to prevent double reimbursement. Post-release disputes need an explicit recovery
-policy; never silently debit a store below zero. Return effects on historical
-`sold_count` remain a product decision.
-
-## Implementation sequence and acceptance cases
-
-1. Review this proposal and its ERD; settle the proposed defaults above.
-2. **Implemented:** USD ledger, wallet ownership, posting invariants and read-only admin.
-3. **Implemented:** Stripe test checkout, holds, webhook inbox, recovery command and frontend payment status. Actual Stripe-account setup is required to run it.
-4. Add authorized delivery, idempotent sold counts and periodic settlement.
-5. Add mock withdrawals and wallet views; implement returns as a later feature.
-
-Required future tests: all-store rollback on stock failure; duplicate/concurrent
-webhooks; provider success with local transaction failure; lost session response;
-expiry racing payment; stale holds respected by COD; no release before delivery or
-deadline; independently delivered stores; release racing a timely return hold;
-repeated delivery/settlement; concurrent withdrawals; adapter timeout after success;
-FX rounding and exact charge/allocation/ledger equality. UI must label simulated
-balances, estimated conversions, pending funds and processing payment states.
+A local deadline never authorizes releasing a hold by itself. Payment already
+confirmed during cancellation completes the purchase instead. Unknown creation
+beyond the service's 23-hour guard requires evidence-based investigation, not a
+new provider request or arbitrary stock release. See the backend contract for
+all limits and exception rules.
 
 ## Implemented customer cancellation and card refunds
 
@@ -349,8 +334,10 @@ This is separate from the proposed return-to-wallet flow above. No customer wall
 UI, wallet credit, return workflow or automatic seven-day completion is included.
 
 A durable OrderRefund is committed with cancellation and one-time stock restoration
-before provider calls. Its stable idempotency key, saved provider ID and scheduled
-reconciliation command protect unknown outcomes. Verified success posts a linked
+before provider calls. Its stable idempotency key and saved provider ID protect
+unknown outcomes. `reconcile_order_refunds` can recover unfinished refunds, but
+the current Celery Beat schedule does not dispatch that command. Scheduling it
+is a separate operator responsibility; customer status checks use the same service. Verified success posts a linked
 compensating journal transaction from store pending to treasury. The original paid
 receipt remains immutable. See the [implemented API and recovery contract](../../../../backend/docs/api/ecommerce/user-orders.md)
 and [frontend handoff](../../../../frontend/docs/ecommerce/user-orders.md).

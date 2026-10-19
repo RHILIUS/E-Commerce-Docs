@@ -1,32 +1,44 @@
-# E-Commerce diagrams
+# Maintained system diagrams
 
-Specific business processes (SBPs) use **Mermaid flowcharts grouped into swimlanes**
-to show responsibility, decisions, validation and recovery. **UML sequence diagrams**
-are supplementary views for request ordering and interactions.
+These guides explain cross-application behavior and the data that supports it.
+Each document states its scope and implementation status. Read the
+[system overview](../system-overview.md) first if the project is unfamiliar.
 
-Read the [diagramming specification](diagramming-specification.md)
-for notation, placement and validation requirements.
+Processes use activity-style Mermaid swimlane flowcharts to show actual owners,
+decisions, requests, persistence, and recovery. They are not strict UML activity
+diagrams. Sequence diagrams can supplement request ordering. ERDs explain stored
+entities and relationships. Follow the [diagramming specification](diagramming-specification.md)
+when editing them.
 
-## Checkout
+## Implemented processes
 
-- [Cash on Delivery checkout](specific-business-processes/checkout/cod-checkout.md) — implemented purchase flow.
-- [Demo online checkout and USD wallets](specific-business-processes/checkout/demo-online-checkout.md) — implemented Stripe test payment, Celery payment recovery and pending wallet credits; seven-day settlement and mock withdrawals remain proposed.
-- [Proposed wallet and settlement ERD](erd/demo-wallet-ledger.md) — wallet and USD journal foundation implemented; settlement, holds and withdrawals remain proposed.
+| Area           | Guide                                                                                      | Scope                                                                          |
+| -------------- | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| Authentication | [Registration email](specific-business-processes/authentication/registration-otp-email.md) | Code issuance, background delivery, verification, and account-creation handoff |
+| Account        | [Change password](specific-business-processes/account/change-password.md)                  | Challenge, resend, queued email, confirmation, and session invalidation        |
+| Checkout       | [Cash on delivery](specific-business-processes/checkout/cod-checkout.md)                   | Review, recipient selection, atomic placement, and saved confirmation          |
+| Checkout       | [Stripe test checkout](specific-business-processes/checkout/demo-online-checkout.md)       | Pending orders/holds, verified payment, store credits, and payment recovery    |
+| Deployment     | [Same-origin API proxy](specific-business-processes/deployment/same-origin-api-proxy.md)   | Browser requests and cookies across Pages, Nginx, and Django                   |
 
-## Account
+## Maintained data-model explanations
 
-- [Change Password with email OTP](specific-business-processes/account/change-password.md) — implemented Celery OTP delivery, resend, atomic password change and session invalidation without a completion email; migration 0004 must be applied.
+- [Password-change model](erd/password-change.md): the user authentication version,
+  dedicated challenge record, account budgets, and lifecycle.
+- [Backend checkout models](../../backend/docs/architecture/checkout-models.md)
+  and [wallet ledger](../../backend/docs/architecture/wallet-ledger.md) explain
+  implemented purchase/accounting records. There is no maintained Markdown wallet
+  ERD in this repository yet; the [editable ERD](../drawio/data-models/e-commerce-entity-relationship-diagram.drawio)
+  is a separate visual reference, not a substitute for a verified field contract.
 
-- [Password-change model](erd/password-change.md) — dedicated user challenge state, durable budgets and authentication version.
+## Related references and planning
 
-## Development
+- [Future settlement, withdrawals, and returns](../planning/settlement-and-withdrawals.md)
+  describes proposals, separately from implemented payment phases.
+- [Editable draw.io index](../drawio/README.md) lists personal visual references.
+- [Backend disposable reset guide](../../backend/docs/operations/reset-environment.md)
+  describes implemented operator behavior. This repository does not currently
+  contain the formerly indexed reset-process Markdown document.
 
-- [Reset development environment](specific-business-processes/development/reset-development.md) — guarded schema and media reset, migrations, taxonomy import and seed.
-
-## Authentication
-
-- [Registration OTP email](specific-business-processes/authentication/registration-otp-email.md) — Celery delivery, controlled retries and existing verification flow.
-
-## Deployment
-
-- [Same-origin API proxy](specific-business-processes/deployment/same-origin-api-proxy.md)
+A missing guide is not evidence that a workflow is implemented or absent. Use the
+current code and maintained application contracts, and add a scoped document when
+that work is actually requested. Do not keep index links to nonexistent documents.

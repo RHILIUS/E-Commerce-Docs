@@ -1,5 +1,14 @@
 # Same-origin API proxy on Cloudflare Pages
 
+The frontend and backend run on different hosts. The Pages Function lets the
+browser send API requests to the website's own hostname while forwarding the
+work to Django. That keeps host-only authentication cookies associated with the
+frontend response host without changing the backend's business contracts.
+
+A **proxy** forwards a request and response. It does not decide whether an order
+succeeded, save business records, or safely retry an uncertain mutation. Read A
+for forwarding and B for the returned response and cookies.
+
 ## A. Forward a browser API request
 
 ```mermaid
@@ -100,7 +109,7 @@ propagation remains unresolved and must not be implemented by trusting arbitrary
 forwarded headers. The proxy does not solve backend availability or free-tier
 quota exhaustion.
 
-## References and validation
+## Implementation references
 
 - [Function](../../../../frontend/functions/api/[[path]].ts)
 - [Deployment guide](../../../../frontend/docs/deployment/cloudflare-pages.md)

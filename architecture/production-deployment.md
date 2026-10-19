@@ -1,11 +1,30 @@
 # Production deployment architecture
 
+This guide explains the implemented hosting configuration: the browser downloads
+the website from Cloudflare Pages, and backend services run on one EC2 server.
+It describes source configuration, not evidence that any particular live server
+has the right credentials, DNS, certificates, or healthy services.
+
+## Follow one request
+
+1. The browser loads frontend assets from Pages.
+2. A request to the website's `/api/...` path reaches its Pages Function, which
+   forwards it to the configured backend HTTPS origin.
+3. Nginx accepts HTTPS and forwards the API request to Gunicorn/Django privately.
+4. Django checks permissions and business rules, then reads or changes PostgreSQL.
+5. The response returns through Nginx and Pages. The browser sees the frontend
+   hostname, including for host-only authentication cookies.
+
+A **reverse proxy** receives public requests on behalf of another service. A
+**container** runs a service from its built image. A **volume** retains data when
+a container is replaced; it does not protect against losing the server.
+
 ## Stack and hosting
 
 | Layer          | Stack / host                                     | Responsibility                                                                                       |
 | -------------- | ------------------------------------------------ | ---------------------------------------------------------------------------------------------------- |
 | Frontend       | React 19, TypeScript, Vite, React Router         | Existing browser-rendered SPA; builds to `dist`                                                      |
-| Static hosting | Cloudflare Pages + API Function                  | HTTPS frontend delivery; AWS Amplify is an alternative                                               |
+| Static hosting | Cloudflare Pages + API Function                  | Selected frontend hosting and same-origin API forwarding                                             |
 | Backend host   | AWS EC2 with Docker Compose                      | Owner-deployed single-server demo                                                                    |
 | Reverse proxy  | Nginx                                            | HTTPS termination, API forwarding, Django static assets                                              |
 | Application    | Gunicorn runtime image; Django 6 and DRF         | Production API process                                                                               |
@@ -17,13 +36,13 @@
 | Email          | Brevo via Django SMTP backend                    | Existing provider and email integration; verify environment-specific configuration during deployment |
 | Payments       | Stripe hosted Checkout and signed webhooks       | Existing test-only integration; no real payments                                                     |
 
-## How the proposed production setup would look
+## Hosting boundaries
 
 Each enclosing box represents a hosting boundary. Everything inside Docker
 Compose runs as containers on the same EC2 virtual machine. Cloudflare Pages,
 Azure Blob Storage, Brevo, and Stripe run outside that machine.
 
-![Proposed production architecture showing Cloudflare, EC2 container boundaries, Azure, and external services](production-deployment.drawio.svg)
+![Architecture reference showing Cloudflare, EC2 container boundaries, Azure, and external services](../drawio/architecture/production-deployment.drawio.svg)
 
 **Connections between the boundaries**
 
@@ -50,9 +69,9 @@ configuration below must be applied before frontend deployment.
 Selected free layout: frontend at the assigned `*.pages.dev` hostname; API origin
 at the backend HTTPS origin configured for that environment. A Pages Function proxies `/api/*`, keeping
 the browser on the Pages origin. DuckDNS alone does not make the two hosts
-same-site. The Function preserves current host-only `SameSite=Lax` cookies and
-never follows redirects server-side. Authentication payloads and cookie policy
-remain unchanged; deployed cookie behavior was verified by the owner.
+same-site. The Function preserves host-only `SameSite=Lax` cookies and does not follow
+redirects server-side. It forwards existing authentication payloads and cookie
+policies; target-environment cookie checks remain part of deployment setup.
 
 See the [API proxy process](../diagrams/specific-business-processes/deployment/same-origin-api-proxy.md)
 and [frontend setup](../../frontend/docs/deployment/cloudflare-pages.md) for origin
@@ -65,8 +84,8 @@ and registration cookies through the proxy.
 
 ## Container and operational boundaries
 
-Retain backend `Dockerfile.dev` and `compose.dev.yaml`. `Dockerfile.prod` now
-defines the runtime image; `compose.prod.yaml` and `deploy/nginx.conf.template` now define orchestration
+Local development uses `Dockerfile.dev` and `compose.dev.yaml`. `Dockerfile.prod`
+defines the runtime image; `compose.prod.yaml` and `deploy/nginx.conf.template` define orchestration
 and HTTPS proxying. Frontend hosting remains separate on Pages. A separate
 `collectstatic` job prepares the static volume before Nginx starts. Reuse one versioned
 backend image for API, workers, Beat, and a controlled one-shot migration job.
@@ -92,9 +111,9 @@ restart policies, bounded logs, and queue monitoring.
 
 This single-host setup accepts backend downtime during host failure or some
 releases. It does not offer high availability or automatic horizontal scaling.
-Managed PostgreSQL such as RDS is a later option, especially before handling real
-customer data. Kubernetes, load balancers, and managed Redis are outside the
-initial demo scope.
+Managed PostgreSQL, Kubernetes, load balancers, and managed Redis are not part
+of this configuration. High availability, backups, and monitoring need their own
+operational design; the selected stack does not imply those capabilities.
 
 ## Source references
 
@@ -118,7 +137,7 @@ The backend defines production Compose with separate development/production
 projects and volumes, private service ports, migration/static collection jobs,
 Nginx TLS termination, and production Django settings. Nginx serves backend
 routes and assets; frontend hosting is separate. The overview image shows the
-planned public topology and omits the static collection release job. Follow the
+high-level public topology and omits the static collection release job. Follow the
 [backend run guide](../../backend/docs/operations/deployment.md#technical-appendix-production-docker-reference) for certificate, build,
 and startup commands.
 
@@ -129,7 +148,7 @@ API images exclude them. The `reset-demo.sh` wrapper validates targets, asks for
 confirmation, stops application services, clears the dedicated broker, resets and
 reseeds the schema/media, and restarts services only after success. `--dry-run`
 performs preflight without
-service shutdown or data deletion. Production settings now honor the explicit
+service shutdown or data deletion. Production settings honor the explicit
 `ALLOW_DEV_RESET` environment toggle (default false). See the maintained
 [reset instructions](../../backend/docs/operations/reset-environment.md)
 and [backend run guide](../../backend/docs/operations/deployment.md#technical-appendix-production-docker-reference).

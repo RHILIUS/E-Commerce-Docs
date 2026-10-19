@@ -1,5 +1,14 @@
 # Registration OTP email delivery
 
+An emailed one-time password (OTP) proves access to the customer's email before
+creating an account. The API saves a code and queues delivery; the worker sends
+it later. A queued response does not guarantee an inbox message, and a later
+worker failure cannot change a response the browser already received.
+
+Read A for issuance, B for worker delivery, and C for the existing verification
+and account-creation handoff. Code replacement, expiry, and failed attempts belong
+to the backend; email transport does not decide whether registration is allowed.
+
 **Status:** Implemented in source. Run a consumer for the `registration-email` queue.
 No database migration is required. Email delivery uses Celery; OTP verification
 and account creation retain their existing contracts.
@@ -129,8 +138,9 @@ an email grants no registration authorization.
   transport where required and avoid payload logging or unprotected snapshots.
 - Queue routing isolates email from payment recovery. A dedicated consumer must
   run; broker acceptance alone does not establish consumer health.
-- Password-change emails, forgot-password flows, outbox persistence and delivery
-  status polling are outside this change.
+- Password-change email uses the [separate password-change process](../account/change-password.md)
+  on the same dedicated queue. Forgot-password flows, outbox persistence, and
+  delivery-status polling are not implemented by registration delivery.
 
 ## Implementation references
 

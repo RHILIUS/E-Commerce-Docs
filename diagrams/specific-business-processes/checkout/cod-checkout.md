@@ -1,12 +1,22 @@
 # Cash on Delivery checkout
 
+Cash on delivery places the purchase now and leaves payment unpaid. A customer
+reviews current prices, chooses a delivery recipient, and submits one request.
+The backend saves one order per store, deducts stock, and cleans selected cart
+lines together. If the response is lost, the same request/key recovers that purchase.
+
+An **idempotency key** identifies that original request. A **snapshot** preserves
+the names, delivery details, and prices accepted then, even if those live records
+later change. Checkout completed means placement, not payment or delivery.
+
 **Status:** Implemented COD workflow. Saved-recipient listing/creation/editing, checkout
 preview, atomic COD placement, owner-only confirmation APIs, and frontend checkout
 and confirmation pages are implemented. See the
 [frontend handoff](../../../../frontend/docs/checkout/README.md) for UI behavior,
 recovery and verification. The request-fingerprint migration exists in the backend
 repository and must be applied to the target database before placement is used.
-Stripe, delivery and payment collection remain outside the implemented scope.
+Stripe test payments are implemented in the [separate online flow](demo-online-checkout.md).
+Delivery and COD payment collection remain outside this flow.
 
 ## Scope and notation
 
@@ -121,44 +131,72 @@ recipient is missing/incomplete or preview invalid/expired.
 
 [Placement and confirmation contract](../../../../backend/docs/api/checkout/cash-on-delivery.md).
 
+### C1. Serialize submissions and recover an existing purchase
+
 ```mermaid
 swimlane-beta TB
-    subgraph C_UI["Frontend"]
-        C_send["Place Order: retain payload and UUID key<br/>Disable repeated clicks"]
-        C_retry["Response unknown: retry identical<br/>payload with the same key"]
-        C_error(["Show error and resolve it<br/>Fresh reviewed purchase uses a new key"])
-        C_done(["201 created or 200 replay<br/>Open confirmation → phase D"])
-        C_send -.->|Network outcome unknown| C_retry
-        C_retry --> C_send
+    subgraph C1_UI["Frontend"]
+        C1_send(["Submit exact placement body and UUID key<br/>Block duplicate clicks"])
+        C1_retry(["Outcome unknown<br/>Offer retry of original body and key"])
+        C1_error(["Show input or key-conflict error"])
+        C1_done(["Open confirmation in phase D"])
+        C1_send -.->|Response lost in C1 or C2| C1_retry
+        C1_retry -->|Customer retries| C1_send
     end
-    subgraph C_API["Backend"]
-        C_auth["Authenticate and validate request shape"]
-        C_key{"Successful request for this<br/>customer and idempotency key?"}
-        C_same{"Same payload?"}
-        C_check{"Signature, expiry and<br/>owned complete recipient valid?"}
-        C_begin["Begin transaction and serialize submissions<br/>Recheck key under lock before mutations"]
-        C_stock{"Locked cart quantities, prices<br/>and available stock still valid?"}
-        C_write["Create Checkout and one Order per store<br/>Save item, recipient and price snapshots<br/>Deduct stock and clean selected cart quantities"]
-        C_commit["Commit all changes together<br/>Checkout completed, orders pending and unpaid"]
-        C_rollback["Roll back all transaction work"]
-        C_auth --> C_key
-        C_key -->|Yes| C_same
-        C_key -->|No| C_check
-        C_check -->|Yes| C_begin
-        C_begin -->|New key| C_stock
-        C_begin -->|Concurrent success found| C_same
-        C_stock -->|Yes| C_write
-        C_stock -->|No| C_rollback
-        C_write -->|Success| C_commit
-        C_write -->|Failure| C_rollback
+    subgraph C1_API["Backend"]
+        C1_auth{"Authentication and request shape valid?"}
+        C1_begin["Begin transaction and lock customer"]
+        C1_key{"Customer already used this key?"}
+        C1_same{"Matching completed COD purchase?"}
+        C1_replay["End transaction and return original purchase"]
+        C1_rollback["Roll back transaction"]
+        C1_next(["Continue C2 within this transaction<br/>Customer lock remains held"])
+        C1_auth -->|Yes| C1_begin --> C1_key
+        C1_key -->|Yes| C1_same
+        C1_key -->|No| C1_next
+        C1_same -->|Yes| C1_replay
+        C1_same -->|No: key conflict| C1_rollback
     end
-    C_send -->|POST placement| C_auth
-    C_same -->|Yes: 200 existing checkout| C_done
-    C_same -->|No: 409 conflict| C_error
-    C_check -->|No: validation or expiry error| C_error
-    C_rollback -->|Failure: no partial purchase| C_error
-    C_commit -->|201 with reference| C_done
+    C1_send -->|POST placement| C1_auth
+    C1_auth -->|No: 400 or 401| C1_error
+    C1_rollback -->|409 conflict| C1_error
+    C1_replay -->|200 original purchase| C1_done
 ```
+
+The continuation to C2 is not a commit. Existing-key lookup happens while the
+customer lock is held and before validating preview expiry or cleaned-up cart lines.
+
+### C2. Validate and commit a new purchase
+
+```mermaid
+swimlane-beta TB
+    subgraph C2_API["Backend"]
+        C2_start(["From C1: new key and locked customer<br/>Same open transaction"])
+        C2_check{"Signed preview and owned recipient valid?"}
+        C2_lock["Lock products, stores and selected cart lines<br/>Recheck review expiry and accepted terms"]
+        C2_stock{"Current terms and available stock valid?"}
+        C2_write["Create checkout, store orders and snapshots<br/>Deduct stock and clean purchased cart lines"]
+        C2_commit["Commit all local changes together"]
+        C2_rollback["Roll back transaction<br/>No partial purchase"]
+        C2_start --> C2_check
+        C2_check -->|Yes| C2_lock --> C2_stock
+        C2_check -->|No| C2_rollback
+        C2_stock -->|No| C2_rollback
+        C2_stock -->|Yes| C2_write
+        C2_write -->|Write succeeded| C2_commit
+        C2_write -->|Failure| C2_rollback
+        C2_commit -->|Commit failed| C2_rollback
+    end
+    subgraph C2_UI["Frontend"]
+        C2_error(["Show error and review again when required<br/>Resolve key conflicts before a new request"])
+        C2_done(["Open saved confirmation in phase D"])
+    end
+    C2_rollback -->|Validation, conflict or server error| C2_error
+    C2_commit -->|201 completed checkout and unpaid orders| C2_done
+```
+
+A response lost after commit returns to C1 with the original body/key. An
+uncertain response does not authorize the frontend to create another purchase.
 
 Successful replay lookup precedes preview expiry/cart revalidation: a retry must
 return the original checkout even after cart cleanup or token expiry. Database
@@ -168,7 +206,8 @@ commit outcome is uncertain to the client, retry the same request/key to discove
 its result rather than create another purchase.
 
 Lock relevant customer, cart and product rows and revalidate inside the transaction.
-Available stock must account for active holds once Stripe reservations exist.
+Available stock subtracts every unresolved Stripe hold, even after its local
+deadline. Selected cart lines held by pending payment cannot be purchased again.
 Price, cart quantity, stock or expiry conflicts require resolving the issue and
 reviewing a fresh preview before a new placement. An idempotency payload conflict
 requires resolving the conflicting submission, not blindly retrying a new key.
@@ -206,7 +245,7 @@ These common guards apply to every diagram, including the request-shape guard in
 | Operation            | Endpoint                               | Request / result                                                                                                    |
 | -------------------- | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
 | List recipients      | `GET /api/account/recipients/`         | Own saved recipients, default first                                                                                 |
-| Edit recipient       | `PATCH /api/account/recipients/{id}/` | Partial contact/address/default changes → 200 saved recipient; owner-only |
+| Edit recipient       | `PATCH /api/account/recipients/{id}/`  | Partial contact/address/default changes → 200 saved recipient; owner-only                                           |
 | Add recipient        | `POST /api/account/recipients/`        | Name, E.164 phone, country/address fields, optional default flag → 201 recipient                                    |
 | Preview product      | `POST /api/shop/checkout/preview/`     | `source: "product"`, `product_id`, `quantity`                                                                       |
 | Preview cart         | Same preview route                     | `source: "cart"`, `item_ids` containing selected cart-line IDs                                                      |

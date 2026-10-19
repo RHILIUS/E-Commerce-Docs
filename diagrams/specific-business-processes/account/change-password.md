@@ -1,5 +1,14 @@
 # Change Password with email OTP
 
+Customers change their password by proving both the current password and access
+to their account email. The backend issues a short-lived challenge, sends its
+one-time code through a worker, and commits the password change only after all
+checks pass. Success invalidates existing access and refresh sessions.
+
+A **challenge** is the saved state for this change, not a proposed new password.
+A **cooldown** is the delay before another code can be sent. Account budgets
+survive replacing a challenge so restarting the form cannot bypass them.
+
 **Status:** Implemented in backend and frontend source. Apply backend migration
 `authentication.0004_user_authentication_version_passwordchangestate` before serving
 the new code. The Change Password tab is at `/account?tab=change-password`.
@@ -238,24 +247,25 @@ issue password-change authorization.
 
 ## Rules and recovery
 
-| Rule or condition                     | Required behavior                                                                                          |
-| ------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| OTP policy                            | Six random digits, protected storage, five-minute expiry, single use                                       |
-| Resend limits                         | 60-second cooldown, five sends per account per 15 minutes; account/IP throttling                           |
-| Verification limits                   | Five incorrect attempts per challenge plus account/IP throttling                                           |
-| Restart or resend                     | Account limits survive challenge replacement; resend preserves failed-attempt budget                       |
-| Challenge binding                     | User, purpose, destination email and account credential state; one active challenge per user               |
-| Email or password changed since issue | Invalidate challenge and restart A                                                                         |
-| Invalid current/new password          | Field validation error, not authentication-expired HTTP 401                                                |
-| Invalid OTP                           | Commit attempt counter; retry C if eligible, otherwise restart A                                           |
-| Expired code                          | Resend B only if challenge remains eligible; otherwise restart A                                           |
-| Authentication expired                | Existing refresh/sign-in flow; restart A if sign-in is required                                            |
-| Queuing unavailable                   | Retain challenge and rate limits, display 503 and cooldown, permit controlled retry                        |
-| Worker delivery failure               | Retry temporary transport failures within expiry; no new API response, controlled resend remains available |
-| Unknown confirmation outcome          | Do not automatically replay mutation or claim failure; direct to sign in                                   |
-| Leave tab, refresh or sign out        | Clear in-memory passwords and OTP; server challenge expires normally                                       |
-| Old sessions after success            | Reject old access and refresh tokens through authentication-version checks                                 |
-| Pending frontend refresh              | Prevent late refresh responses from restoring authentication after success                                 |
+| Rule or condition                                        | Required behavior                                                                                          |
+| -------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| OTP policy                                               | Six random digits, protected storage, five-minute expiry, single use                                       |
+| Resend limits                                            | 60-second cooldown, five sends per account per 15 minutes; account/IP throttling                           |
+| Verification limits                                      | Five incorrect attempts per challenge plus account/IP throttling                                           |
+| Restart or resend                                        | Account limits survive challenge replacement; resend preserves failed-attempt budget                       |
+| Challenge binding                                        | User, purpose, destination email and account credential state; one active challenge per user               |
+| Email or password changed since issue                    | Invalidate challenge and restart A                                                                         |
+| Invalid current/new password                             | Field validation error, not authentication-expired HTTP 401                                                |
+| Invalid OTP                                              | Commit attempt counter; retry C if eligible, otherwise restart A                                           |
+| Expired code                                             | Resend B only if challenge remains eligible; otherwise restart A                                           |
+| Authentication expired                                   | Existing refresh/sign-in flow; restart A if sign-in is required                                            |
+| Queuing unavailable                                      | Retain challenge and rate limits, display 503 and cooldown, permit controlled retry                        |
+| Worker delivery failure                                  | Retry temporary transport failures within expiry; no new API response, controlled resend remains available |
+| Unknown confirmation outcome                             | Do not automatically replay mutation or claim failure; direct to sign in                                   |
+| Switch account tabs                                      | Keep the mounted password panel, entered values, challenge step, and original timer deadlines              |
+| Leave account page, reload, sign out, or change accounts | Clear in-memory passwords and OTP; server challenge expires normally                                       |
+| Old sessions after success                               | Reject old access and refresh tokens through authentication-version checks                                 |
+| Pending frontend refresh                                 | Prevent late refresh responses from restoring authentication after success                                 |
 
 Incrementing the authentication version must invalidate tokens on both protected
 requests and refresh. Legacy tokens without a version claim work only while the account version is
