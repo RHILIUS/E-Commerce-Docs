@@ -99,9 +99,9 @@ initial demo scope.
 ## Source references
 
 - [Frontend build scripts](../../frontend/package.json), [entry point](../../frontend/src/app/main.tsx), [router](../../frontend/src/app/router.tsx), and [API client](../../frontend/src/app/api/axios.ts)
-- [Backend development Compose](../../backend/compose.dev.yaml) and [Docker guide](../../backend/docs/docker-development.md)
+- [Backend development Compose](../../backend/compose.dev.yaml) and [Docker guide](../../backend/docs/development/docker.md)
 - [Backend settings](../../backend/ecommerce_backend/settings.py) and [authentication views](../../backend/apps/authentication/views.py)
-- [Stripe test contract](../../backend/docs/checkout/stripe-api.md)
+- [Stripe test contract](../../backend/docs/api/checkout/stripe.md)
 - [Diagram index](../diagrams/README.md) and [diagramming specification](../diagrams/diagramming-specification.md)
 
 Source links assume sibling frontend/backend/docs checkouts and may not resolve
@@ -109,7 +109,7 @@ when viewing only this repository online.
 
 ### Production image implementation
 
-See the [backend production image guide](../../backend/docs/docker-production.md)
+See the [backend production image guide](../../backend/docs/operations/deployment.md#technical-appendix-production-docker-reference)
 for build and inspection commands.
 
 ### Production Compose implementation
@@ -119,7 +119,7 @@ projects and volumes, private service ports, migration/static collection jobs,
 Nginx TLS termination, and production Django settings. Nginx serves backend
 routes and assets; frontend hosting is separate. The overview image shows the
 planned public topology and omits the static collection release job. Follow the
-[backend run guide](../../backend/docs/docker-production.md) for certificate, build,
+[backend run guide](../../backend/docs/operations/deployment.md#technical-appendix-production-docker-reference) for certificate, build,
 and startup commands.
 
 ### Disposable portfolio reset
@@ -131,5 +131,5 @@ reseeds the schema/media, and restarts services only after success. `--dry-run`
 performs preflight without
 service shutdown or data deletion. Production settings now honor the explicit
 `ALLOW_DEV_RESET` environment toggle (default false). See the maintained
-[reset workflow](../diagrams/specific-business-processes/development/reset-development.md)
-and [backend run guide](../../backend/docs/docker-production.md).
+[reset instructions](../../backend/docs/operations/reset-environment.md)
+and [backend run guide](../../backend/docs/operations/deployment.md#technical-appendix-production-docker-reference).

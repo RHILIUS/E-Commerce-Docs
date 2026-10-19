@@ -137,5 +137,5 @@ an email grants no registration authorization.
 - [Issuance](../../../../backend/apps/authentication/services/otp_service.py)
 - [Post-commit publishing](../../../../backend/apps/authentication/services/otp_delivery.py)
 - [Worker](../../../../backend/apps/authentication/tasks.py)
-- [API contract](../../../../backend/docs/authentication/registration-otp-api.md)
+- [API contract](../../../../backend/docs/api/authentication/registration-otp.md)
 - [Frontend OTP page](../../../../frontend/src/authentication/pages/RegisterOTPPage.tsx)
