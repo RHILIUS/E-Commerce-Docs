@@ -22,29 +22,15 @@ Follow the [diagramming specification](diagramming-specification.md) when editin
 
 ## Maintained data-model explanations
 
-Each app has a guide in `erd/guides/` and a matching editable SVG in
-`erd/diagrams/`. The guide renders the diagram and explains every owned model,
-column, relationship, constraint, and relevant lifecycle. Name-only rectangles
-refer to entities defined by another app. Open each SVG in Draw.io to edit its
-single app-named page; Markdown displays that file’s exported image.
+The backend owns the [per-app ERD guides and editable Draw.io diagrams](../../backend/docs/erd/README.md),
+alongside its models and migrations. Each guide explains the app’s models, fields,
+relationships, constraints, and lifecycle. Keep the app list and schema details in
+that backend index instead of maintaining a second copy here.
 
-| App            | Guide                                          | Scope                                                                                                  |
-| -------------- | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| Authentication | [Authentication](erd/guides/authentication.md) | Accounts, personal addresses, registration verification, password-change budgets, and permission joins |
-| Account        | [Account](erd/guides/account.md)               | Saved delivery recipients, default selection, and soft deletion                                        |
-| Store          | [Store](erd/guides/store.md)                   | Store identity/currency, addresses, and account membership                                             |
-| Ecommerce      | [Ecommerce](erd/guides/ecommerce.md)           | Taxonomy, specifications, catalog, carts, purchase snapshots, and order milestones                     |
-| Checkout       | [Checkout](erd/guides/checkout.md)             | Purchase identity, Stripe test attempts/events, and store-order refunds                                |
-| Inventory      | [Inventory](erd/guides/inventory.md)           | Per-line inventory holds and payment resolution                                                        |
-| Wallet         | [Wallet](erd/guides/wallet.md)                 | Simulated USD ownership, accounting buckets, and immutable journal                                     |
-
-The [backend checkout architecture](../../backend/docs/architecture/checkout-models.md)
-and [wallet ledger contract](../../backend/docs/architecture/wallet-ledger.md)
-provide deeper service rules. The [original editable ERD](../drawio/data-models/e-commerce-entity-relationship-diagram.drawio)
-is a separate historical visual reference; it is not the maintained per-app field
-contract. Built-in Django auth/session/admin/token tables are outside the owned
-schema of these seven project apps; authentication’s generated user-permission
-join tables are included in its guide.
+[Backend checkout architecture](../../backend/docs/architecture/checkout-models.md)
+and the [wallet ledger contract](../../backend/docs/architecture/wallet-ledger.md)
+explain deeper service rules. The [original editable ERD](../drawio/data-models/e-commerce-entity-relationship-diagram.drawio)
+remains a separate historical visual reference, not the maintained field contract.
 
 ## Related references and planning
 

@@ -291,7 +291,7 @@ replacing its challenge UUID preserves account send/request/verification counter
 It stores the email snapshot, a keyed credential-state digest, OTP hash, code
 expiry, last-send time, consumed state, failed attempts and independent window
 start times. It stores no proposed password and shares no registration OTP state.
-See the [authentication data-model guide](../../erd/guides/authentication.md#passwordchangestate).
+See the [authentication data-model guide](../../../../backend/docs/erd/guides/authentication.md#passwordchangestate).
 
 Account request and verification budgets each allow 20 operations per 15 minutes,
 including failed password checks or stale identifiers. These database budgets
