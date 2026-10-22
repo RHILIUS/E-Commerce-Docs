@@ -14,7 +14,6 @@ application is unfamiliar.
 - [Frontend architecture](../../frontend/docs/architecture.md) explains routing,
   browser state, and API calls inside the website.
 
-The [editable architecture visual](../drawio/architecture/production-deployment.drawio.svg)
-is stored with the draw.io references and embedded by the production guide. Its
-content is unchanged by this reorganization; it is a high-level visual, not a
-complete service or release-job inventory.
+The [editable architecture visual](asset/production-deployment.drawio.svg)
+is stored in `architecture/asset/` and embedded by the production guide. It is a
+high-level visual, not a complete service or release-job inventory.

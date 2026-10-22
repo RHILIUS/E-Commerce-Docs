@@ -42,7 +42,7 @@ Each enclosing box represents a hosting boundary. Everything inside Docker
 Compose runs as containers on the same EC2 virtual machine. Cloudflare Pages,
 Azure Blob Storage, Brevo, and Stripe run outside that machine.
 
-![Architecture reference showing Cloudflare, EC2 container boundaries, Azure, and external services](../drawio/architecture/production-deployment.drawio.svg)
+![Architecture reference showing Cloudflare, EC2 container boundaries, Azure, and external services](asset/production-deployment.drawio.svg)
 
 **Connections between the boundaries**
 

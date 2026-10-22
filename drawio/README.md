@@ -6,12 +6,12 @@ current behavior, partial work, or future direction; storage here does not mean 
 file is obsolete or approved as an implementation contract.
 
 The files retain their original bytes and internal pages. Open `.drawio` files
-with diagrams.net or a compatible editor. The architecture `.drawio.svg` includes
+with diagrams.net or a compatible editor. The architecture `.drawio.svg`, stored in `../architecture/asset/`, includes
 its editable draw.io content as well as the rendered SVG.
 
 | Reference                                                                                           | Contents                                                        |
 | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
-| [Production architecture](architecture/production-deployment.drawio.svg)                            | Hosting visual embedded by the architecture guide               |
+| [Production architecture](../architecture/asset/production-deployment.drawio.svg)                            | Hosting visual embedded by the architecture guide               |
 | [Class diagrams](class-diagrams/e-commerce-class-diagram.drawio)                                    | General, checkout, store, and shipment pages                    |
 | [Data models](data-models/e-commerce-entity-relationship-diagram.drawio)                            | Full-system and feature ERD pages, including partial views      |
 | [General business processes](general-business-processes/e-commerce-general-business-process.drawio) | Order, signup, and online-checkout design flows                 |
