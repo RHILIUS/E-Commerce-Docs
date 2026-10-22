@@ -8,7 +8,7 @@ walkthrough, then open the matching diagram to follow the decisions and arrows.
 
 | Module                                           | Processes                                                                                               |
 | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------- |
-| [Authentication](guide/authentication/README.md) | Login, signup, logout, JWT interceptor, and approved Forgot Password recovery (implementation pending). |
+| [Authentication](guide/authentication/README.md) | Login, signup, logout, JWT interceptor, and Forgot Password recovery. |
 | [Ecommerce](guide/ecommerce/README.md)           | Landing-page catalog flow.                                                                              |
 
 Module indexes link both the guide and diagram for every process. They separate

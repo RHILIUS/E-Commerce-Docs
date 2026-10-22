@@ -1,6 +1,6 @@
 # Forgot Password
 
-**Status: Approved design; implementation pending.**
+**Status: Implemented in frontend and backend source.**
 
 Customers who cannot sign in can verify access to their account email and choose
 a new password. The [editable flowchart](../../diagrams/authentication/forgot-password.drawio.svg) covers this
@@ -32,7 +32,7 @@ arrows communicate across environments. Bracketed notes explain their step.
 5. After a confirmed save, return to Login with a success message. Existing
    sessions are invalidated, and a password-changed notification is queued.
 
-## Approved authorization and recovery rules
+## Authorization and recovery rules
 
 Registration codes, account change-password challenges, and password-reset
 challenges remain separate. Request and resend apply IP and durable account
@@ -63,16 +63,14 @@ password entry. After an uncertain final response, return to Login without
 claiming success or failure and without automatically replaying the mutation.
 The notification is queued after commit and cannot roll back a completed reset.
 
-## Details to finalize during implementation
+## Implemented policy and contract
 
-Exact endpoint paths, payloads, response codes, cookie attributes, CSRF handling,
-and authorization expiry will be established in the backend API contract. The
-diagram uses operation names rather than invented routes. The approved starting
-policy is a six-digit code, five-minute expiry, a 60-second resend cooldown, and
-five incorrect attempts per challenge, with durable send and verification limits.
+Codes contain six digits and expire after five minutes. Resend is available after 60 seconds and rotates both the code and challenge identifier. Five incorrect codes block verification and new issuance until the shared 15-minute email window ends. Resending or restarting does not reset that budget. The window also limits requests to 20, sends to 5 and verifications to 20. All recovery endpoints share an IP limit of 20 requests per minute.
 
-Reuse existing UI controls and email infrastructure where suitable; preserve the
-current password policy and session-version checks. This diagram does not
-authorize changes to Account → Change Password.
+Before each POST, the browser obtains a CSRF token from `GET /api/auth/forgot-password/`. The POST operations use `request/`, `resend/`, `verify/` and `confirm/` under that prefix. Successful verification sets ten-minute reset permission in a scoped HttpOnly, SameSite=Lax cookie, Secure outside development DEBUG mode. Unknown and inactive emails use the same public challenge preparation and task publication; the worker skips delivery when no eligible account exists.
+
+A queue failure can occur after challenge commit; customers wait before retrying. There is no durable email outbox or automatic purge of recovery-state rows. These limitations do not change the atomic password save. The database migration must be applied and email workers must run the matching source before the feature is used.
+
+Read the [frontend guide](../../../../frontend/docs/authentication/forgot-password.md) for screen behavior and the [backend contract](../../../../backend/docs/api/authentication/forgot-password.md) for exact fields, errors and security rules. Sibling links assume the three repositories share a parent checkout directory.
 
 Return to the [authentication SBPs](README.md).

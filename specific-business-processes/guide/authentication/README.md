@@ -12,10 +12,8 @@ The guides distinguish current behavior from older diagram details.
 | Logout          | [Explanation](logout.md)          | [Flowchart](../../diagrams/authentication/logout.drawio.svg)          | Immediate browser sign-out, refresh-token cleanup and page navigation.           |
 | JWT interceptor | [Explanation](jwt-interceptor.md) | [Flowchart](../../diagrams/authentication/jwt-interceptor.drawio.svg) | Access-token refresh and request retry; guide identifies older diagram details.  |
 
-## Approved designs awaiting implementation
-
-| Process         | Guide                             | Diagram                                                               | Purpose                                                                                                                   |
-| --------------- | --------------------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| Forgot Password | [Explanation](forgot-password.md) | [Flowchart](../../diagrams/authentication/forgot-password.drawio.svg) | Email OTP recovery, temporary reset permission, password save and session invalidation; approved, implementation pending. |
+| Process         | Guide                             | Diagram                                                               | Purpose                                                                                                                             |
+| --------------- | --------------------------------- | --------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| Forgot Password | [Explanation](forgot-password.md) | [Flowchart](../../diagrams/authentication/forgot-password.drawio.svg) | Email OTP recovery, temporary reset permission, password save and session invalidation; implemented in frontend and backend source. |
 
 Return to the [SBP index](../../README.md) for other modules and maintenance conventions.
