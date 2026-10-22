@@ -24,7 +24,7 @@ that are not implemented.
 | Location        | Purpose                                                                                   |
 | --------------- | ----------------------------------------------------------------------------------------- |
 | `architecture/` | Implemented application and hosting boundaries, with explicit configuration limits        |
-| `general-business-processes/` | System-wide BPMN planning diagrams used to plan business flows before the corresponding features are built |
+| [General business processes](general-business-processes/README.md) | System-wide BPMN planning diagrams used to plan business flows before the corresponding features are built |
 | [Specific business processes](specific-business-processes/README.md) | Feature-specific flowcharts showing detailed business-process steps and decisions |
 | `diagrams/`     | Mermaid business processes and links to backend-owned ERD guides                          |
 | `planning/`     | Proposed settlement, withdrawal, and return behavior; superseded ideas are archived       |
