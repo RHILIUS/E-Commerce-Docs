@@ -1,630 +1,301 @@
-<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" style="background: transparent; background-color: transparent; color-scheme: light;" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1142px" height="1132px" viewBox="0 0 1142 1132" id="ge-svg-K_J9-tVJv1k30U0KR3U_" content="&lt;mxfile&gt;&lt;diagram id=&quot;reRHmb4gnRiJkF6ubvYW&quot; name=&quot;Page-1&quot;&gt;3Vxdc5s4FP01nuk+xCMQYHh0nKTb3WzaabLt9qkjg2xoMHKFnNj59SuBMAhIgjGEJPFMAhch8Dn36n5wyQjOVtuPFK39f4iHw5EOvO0Ino10XZtAyP8IyU5KgG2mkiUNPCnLBdfBA84GSukm8HCsDGSEhCxYq0KXRBF2mSJDlJJ7ddiChOpV12iJK4JrF4VV6ffAY34qtU2Qy//EwdLPrqwBeWSFssFSEPvII/cFETwfwRklhKVbq+0MhwK9DJf0vItHju5vjOKINTlhuT3fXd1eug/+Bfi92Jgnn2/DE1idRU4cs12GASWbyMNiGjCCp/d+wPD1Grni6D2nnct8tgr5nsY307PvULiRZ0sBpgxvC1eQN/kRkxVmdMeH+AqOUMJ2n6OuaYYUyomsDFupXbol95FkfbmfPQeGb0hsDsDJaIIT/4JMBaMOq5hRcotnJCSUCyMS8WOniyAMSyIUBsuI77r8ipjLTwWEAdfMqTywCjxPXPpU5ccnNHggEUNPMGKFyY3yr2AtxdYlWQYRH/SFEhfHcTaAQ5WPyYRecFcWzWlZws9UxrVQAbNGAWyVf03TVAWARl8KYHZuKK7gKIgEtcnwBjR94zrhBUwgNfOxe/sITy3AtuF4YucfuwK9MVGhn1imgrwB+kLeGgL5FhBOgDXWtcKniiFQMbRhCUOVBacnQCfvBtDndPJl8LTfCJ5GzYr6SlTSeSMQwsnhEDrwRSDMPCH2KgFtFVSyoS5+arIq+mLea7lLKPPJkkQoPM+lpTAkH3NJyFqy8gsztpNBPtowonJWDIJGOlwsFrrrViImfsSz5pZp7VlliC4xe+rr6LX0V7mmOEQsuFMB7J6qJ5jJAU+/dZZ06CpUPJlYi3Gr7VIkXuNFSO5dH1E2jjka7OdjwWfZLNpCXhOmzLMA5N+YT68DssYRjyRBKGPLJNPKA5b5UfHKRBvbWuEDK2apmapZOrpqliZwxo4zMfcfqy+29UZsS0L5KBSGmING0arEeUUh1pgG/CYTNpUTv+QHatUgN1UxMaKutElNzBqn22Csw340RirIuchrhIbMKPY4NAEK42pGgSJPpPdh4N5isUWELmX5yumGMSFoqUHViILLx6a6nNs8ClFVZ592dq8rjfLxZ1xfVU+epLsHgq9x5Aliv3y+vklW1d8bHDOxUhNOK1qJG47m8To5F6B1wMHi7sDnf+RqcdGKU6smZdRLy4ChZowTA4wByBcSvS9mjS7ds/6+3DN8Xe65+1xfqcmAg5J/PVsIL75+vro5vzorJv36UU60LiF4HSmV1n3S3wUFp9PZ350yUJdPPMPAS6UTb6VK0CSr1fRh0lptkNJAuWr4KY43KOLz8eBpwX/99f2m28Kh04KA3sqF2pupJViivHU4dMkC0JfG6odUEV40+uBXp7v/krzEzHZ/FI+dbeXk6d6uQNYRkYQ89QsJIlYgxQCQh435T4misnanEZ2cJKfo6HnT0Koyb0L9/tseoQ3aAdrwXNCamclAaqMVlaagQ4+oTc+1qGM1ckop2hUGrIUKxE8o7L4ckuWwplXSmHTKbvXnbZc+yjpgu7heB+a2KcKQukzYJ/ei1EEpodXaxodP0Z14pKfWQP5o5U5qIknNKrkSMFGVwNb68sI67HDlyPLD1+FwwFArR1aF6i5NfmStAKCkJq3dWXkmx0qKrvvIu1Rz7duddVmDydgYSilfiTuDw7gzrlhjYCi6pen6XtavVzuwPvTYs5gCrWgek3DD8DR3R6pzMmqdYAel2htf5IVJPf1bgIWvWqc9QEmxPWCtfJH9vC9ySq1bjtmbK7K6tPrJEFbfn/VaR1rvccw0qjE9YzqleG4wQyqa0CLg7IoLcgoS+6I4XpMo5kOn1ShQG/MR11gsbygZu+DD/Z+MX1k843IJuQ3EJB9i7G4o35oJgNAKxxwYvhmibSrzGeNXCXftAkjHHlerETpQn4Zp0ATjUlLan+XaHVouHCT97M9yjUEtV9afZNc1mmeQgipBT1JbYuMSzXFYco3N22C5QTzIWxF0ySCCT26ejsyzOqP9gePGtlKLrDzlhGeMhuEodnHSPPDOhpDFIsa9hL6wy+6gd2ZKR6dRR5kSVF9gONyUMmoHNqUr0pUlQRNOXpPpNCpiUZ+s5pv4+VC/g1DjW7VmNILtOiZqIvVyjz2w1Ehd23fhd28LXVaNoPGuVinoDLpKNXoB5o3kvB9xhCliwveDJMoWGx+mbvrqC0g7zr6mYXi7WLru3RUDqnYFbU21K723amz2BLEbu7KGsKu2j/+SvcIzgZ6rYZMjjfSxx4KmXsq6rLKy9Fw7hY06clr2LHuIxz1IpMe1i0aHTcqtXl4b4tS0KIDukkUKZUtTVhNIml/T0sIKr4jQnfK0enECWVMoz7AvLfxCtOZeYXGKjezqnv8Sr9mmrZzyFqYb5s9IlLz+2N37f1qTFwChVTaMSW+dJbBRuaqXtv0+2vS/Yi+gnMuk0JuwGXLPF0TLUce9+nVdueUmFwNAhUVT1/tisdOikjOEL2zojPRjndFxODfqw3ojxd2p5+1XuycWwn2Zt9f6qxo1AlsbO9WOoQP45Lv5fyFI44X8nznA8/8B&lt;/diagram&gt;&lt;/mxfile&gt;">
-    <style type="text/css">
-        @supports (color: light-dark(#000, #fff)) { #ge-svg-K_J9-tVJv1k30U0KR3U_ { --ge-adaptive-bg: light-dark(#ffffff, var(--ge-dark-color, #121212)); } }
-    </style>
-    <defs/>
-    <g>
-        <g data-cell-id="0">
-            <g data-cell-id="1">
-                <g data-cell-id="gxEyNkLczhF0qfu5-Okl-3">
-                    <g transform="translate(0.5,0.5)">
-                        <rect x="0" y="0" width="1140" height="1130" fill="#ffffff" stroke="#000000" pointer-events="all" style="fill: var(--ge-adaptive-bg, #ffffff); stroke: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));"/>
-                    </g>
-                </g>
-                <g data-cell-id="gxEyNkLczhF0qfu5-Okl-4">
-                    <g>
-                        <rect x="490" y="80" width="180" height="50" fill="none" stroke="none" pointer-events="all"/>
-                    </g>
-                    <g>
-                        <g>
-                            <switch>
-                                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-                                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 178px; height: 1px; padding-top: 105px; margin-left: 491px;">
-                                        <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; ">
-                                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
-                                                <h1>
-                                                    Login Process
-                                                </h1>
-                                                <div>
-                                                    <br/>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </foreignObject>
-                                <text x="580" y="102" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" style="fill: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));">
-                                    <tspan x="580" y="102">
-                                        Login Process
-                                    </tspan>
-                                    <tspan x="580" y="116"></tspan>
-                                </text>
-                            </switch>
-                        </g>
-                    </g>
-                </g>
-                <g data-cell-id="gxEyNkLczhF0qfu5-Okl-5">
-                    <g transform="translate(0.5,0.5)">
-                        <rect x="145" y="140" width="470" height="83.79" fill="#ffffff" stroke="#000000" pointer-events="all" style="fill: var(--ge-adaptive-bg, #ffffff); stroke: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));"/>
-                    </g>
-                    <g>
-                        <g>
-                            <switch>
-                                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-                                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 468px; height: 1px; padding-top: 182px; margin-left: 146px;">
-                                        <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; ">
-                                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
-                                                <h1>
-                                                    Validity Check
-                                                </h1>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </foreignObject>
-                                <text x="380" y="185" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" style="fill: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));">
-                                    Validity Check
-                                </text>
-                            </switch>
-                        </g>
-                    </g>
-                </g>
-                <g data-cell-id="gxEyNkLczhF0qfu5-Okl-6">
-                    <g transform="translate(0.5,0.5)">
-                        <rect x="215" y="223.79" width="400" height="706.21" fill="#ffffff" stroke="#000000" pointer-events="all" style="fill: var(--ge-adaptive-bg, #ffffff); stroke: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));"/>
-                    </g>
-                </g>
-                <g data-cell-id="gxEyNkLczhF0qfu5-Okl-7">
-                    <g transform="translate(0.5,0.5)">
-                        <rect x="145" y="223.79" width="70" height="706.21" fill="#ffffff" stroke="#000000" pointer-events="all" style="fill: var(--ge-adaptive-bg, #ffffff); stroke: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));"/>
-                    </g>
-                </g>
-                <g data-cell-id="gxEyNkLczhF0qfu5-Okl-8">
-                    <g transform="translate(0.5,0.5)">
-                        <rect x="215" y="223.79" width="400" height="450" fill="#ffffff" stroke="#000000" pointer-events="all" style="fill: var(--ge-adaptive-bg, #ffffff); stroke: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));"/>
-                    </g>
-                </g>
-                <g data-cell-id="gxEyNkLczhF0qfu5-Okl-9">
-                    <g transform="translate(0.5,0.5)">
-                        <rect x="215" y="673.79" width="400" height="370" fill="#ffffff" stroke="#000000" pointer-events="all" style="fill: var(--ge-adaptive-bg, #ffffff); stroke: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));"/>
-                    </g>
-                </g>
-                <g data-cell-id="gxEyNkLczhF0qfu5-Okl-10">
-                    <g transform="translate(0.5,0.5)">
-                        <path d="M 380 321.82 L 380 341.8 L 380.07 353.63" fill="none" stroke="#d6b656" stroke-miterlimit="10" pointer-events="stroke" style="stroke: light-dark(rgb(214, 182, 86), rgb(109, 81, 0));"/>
-                        <path d="M 380.09 358.88 L 376.56 351.9 L 380.07 353.63 L 383.56 351.86 Z" fill="#d6b656" stroke="#d6b656" stroke-miterlimit="10" pointer-events="all" style="fill: light-dark(rgb(214, 182, 86), rgb(109, 81, 0)); stroke: light-dark(rgb(214, 182, 86), rgb(109, 81, 0));"/>
-                    </g>
-                </g>
-                <g data-cell-id="gxEyNkLczhF0qfu5-Okl-11">
-                    <g>
-                        <ellipse cx="380" cy="285.91" rx="75" ry="35.91" fill="#fff2cc" stroke="#d6b656" stroke-width="2" pointer-events="all" style="fill: light-dark(rgb(255, 242, 204), rgb(40, 29, 0)); stroke: light-dark(rgb(214, 182, 86), rgb(109, 81, 0));"/>
-                    </g>
-                    <g>
-                        <g>
-                            <switch>
-                                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-                                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 148px; height: 1px; padding-top: 286px; margin-left: 306px;">
-                                        <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; ">
-                                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
-                                                <b>
-                                                    User opens login page
-                                                </b>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </foreignObject>
-                                <text x="380" y="290" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" style="fill: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));">
-                                    User opens login page
-                                </text>
-                            </switch>
-                        </g>
-                    </g>
-                </g>
-                <g data-cell-id="gxEyNkLczhF0qfu5-Okl-12">
-                    <g>
-                        <path d="M 353.84 431.82 L 272.25 431.82 Q 266.25 431.82 269.78 426.97 L 315.04 364.85 Q 318.57 360 324.57 360 L 487.75 360 Q 493.75 360 490.22 364.85 L 444.96 426.97 Q 441.43 431.82 435.43 431.82 Z" fill="#fff2cc" stroke="#d6b656" stroke-width="2" stroke-miterlimit="10" pointer-events="all" style="fill: light-dark(rgb(255, 242, 204), rgb(40, 29, 0)); stroke: light-dark(rgb(214, 182, 86), rgb(109, 81, 0));"/>
-                    </g>
-                    <g>
-                        <g>
-                            <switch>
-                                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-                                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 226px; height: 1px; padding-top: 396px; margin-left: 267px;">
-                                        <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; ">
-                                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
-                                                User Enters Credentials
-                                                <br/>
-                                                and clicked on Login Button
-                                            </div>
-                                        </div>
-                                    </div>
-                                </foreignObject>
-                                <text x="380" y="393" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" style="fill: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));">
-                                    <tspan x="380" y="393">
-                                        User Enters Credentials
-                                    </tspan>
-                                    <tspan x="380" y="407">
-                                        and clicked on Login Button
-                                    </tspan>
-                                </text>
-                            </switch>
-                        </g>
-                    </g>
-                </g>
-                <g data-cell-id="gxEyNkLczhF0qfu5-Okl-13">
-                    <g>
-                        <rect x="320" y="480" width="120" height="60" rx="7.2" ry="7.2" fill="#fff2cc" stroke="#d6b656" stroke-width="2" pointer-events="all" style="fill: light-dark(rgb(255, 242, 204), rgb(40, 29, 0)); stroke: light-dark(rgb(214, 182, 86), rgb(109, 81, 0));"/>
-                    </g>
-                    <g>
-                        <g>
-                            <switch>
-                                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-                                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 510px; margin-left: 321px;">
-                                        <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; ">
-                                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
-                                                Sends POST request to  api/auth/login/
-                                            </div>
-                                        </div>
-                                    </div>
-                                </foreignObject>
-                                <text x="380" y="507" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" style="fill: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));">
-                                    <tspan x="380" y="507">
-                                        Sends POST request
-                                    </tspan>
-                                    <tspan x="380" y="521">
-                                        to api/auth/login/
-                                    </tspan>
-                                </text>
-                            </switch>
-                        </g>
-                    </g>
-                </g>
-                <g data-cell-id="gxEyNkLczhF0qfu5-Okl-14">
-                    <g transform="translate(0.5,0.5)">
-                        <path d="M 380.1 431.82 L 380.1 455.9 L 380.03 473.63" fill="none" stroke="#d6b656" stroke-miterlimit="10" pointer-events="stroke" style="stroke: light-dark(rgb(214, 182, 86), rgb(109, 81, 0));"/>
-                        <path d="M 380 478.88 L 376.53 471.87 L 380.03 473.63 L 383.53 471.9 Z" fill="#d6b656" stroke="#d6b656" stroke-miterlimit="10" pointer-events="all" style="fill: light-dark(rgb(214, 182, 86), rgb(109, 81, 0)); stroke: light-dark(rgb(214, 182, 86), rgb(109, 81, 0));"/>
-                    </g>
-                </g>
-                <g data-cell-id="gxEyNkLczhF0qfu5-Okl-15">
-                    <g transform="translate(0.5,0.5)">
-                        <rect x="145" y="223.79" width="70" height="450" fill="#ffffff" stroke="#000000" pointer-events="all" style="fill: var(--ge-adaptive-bg, #ffffff); stroke: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));"/>
-                    </g>
-                    <g>
-                        <g transform="rotate(-90 180 448.79)">
-                            <switch>
-                                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-                                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 448px; height: 1px; padding-top: 449px; margin-left: -44px;">
-                                        <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; ">
-                                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
-                                                <h2>
-                                                    FRONTEND
-                                                </h2>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </foreignObject>
-                                <text x="180" y="452" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" style="fill: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));">
-                                    FRONTEND
-                                </text>
-                            </switch>
-                        </g>
-                    </g>
-                </g>
-                <g data-cell-id="gxEyNkLczhF0qfu5-Okl-16">
-                    <g transform="translate(0.5,0.5)">
-                        <rect x="145" y="673.79" width="70" height="370" fill="#ffffff" stroke="#000000" pointer-events="all" style="fill: var(--ge-adaptive-bg, #ffffff); stroke: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));"/>
-                    </g>
-                    <g>
-                        <g transform="rotate(-90 180 858.79)">
-                            <switch>
-                                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-                                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 368px; height: 1px; padding-top: 859px; margin-left: -4px;">
-                                        <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; ">
-                                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
-                                                <h2>
-                                                    BACKEND
-                                                </h2>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </foreignObject>
-                                <text x="180" y="862" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" style="fill: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));">
-                                    BACKEND
-                                </text>
-                            </switch>
-                        </g>
-                    </g>
-                </g>
-                <g data-cell-id="gxEyNkLczhF0qfu5-Okl-17">
-                    <g transform="translate(0.5,0.5)">
-                        <rect x="615" y="223.79" width="400" height="450" fill="#ffffff" stroke="#000000" pointer-events="all" style="fill: var(--ge-adaptive-bg, #ffffff); stroke: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));"/>
-                    </g>
-                </g>
-                <g data-cell-id="gxEyNkLczhF0qfu5-Okl-18">
-                    <g transform="translate(0.5,0.5)">
-                        <rect x="615" y="140" width="400" height="83.79" fill="#ffffff" stroke="#000000" pointer-events="all" style="fill: var(--ge-adaptive-bg, #ffffff); stroke: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));"/>
-                    </g>
-                    <g>
-                        <g>
-                            <switch>
-                                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-                                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 398px; height: 1px; padding-top: 182px; margin-left: 616px;">
-                                        <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; ">
-                                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
-                                                <h1>
-                                                    Issuance of JWT
-                                                </h1>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </foreignObject>
-                                <text x="815" y="185" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" style="fill: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));">
-                                    Issuance of JWT
-                                </text>
-                            </switch>
-                        </g>
-                    </g>
-                </g>
-                <g data-cell-id="gxEyNkLczhF0qfu5-Okl-19">
-                    <g transform="translate(0.5,0.5)">
-                        <rect x="615" y="673.79" width="400" height="366.21" fill="#ffffff" stroke="#000000" pointer-events="all" style="fill: var(--ge-adaptive-bg, #ffffff); stroke: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));"/>
-                    </g>
-                </g>
-                <g data-cell-id="gxEyNkLczhF0qfu5-Okl-20">
-                    <g transform="translate(0.5,0.5)"/>
-                </g>
-                <g data-cell-id="gxEyNkLczhF0qfu5-Okl-21">
-                    <g transform="translate(0.5,0.5)">
-                        <path d="M 530 550 L 530 395.9 L 473.96 395.91" fill="none" stroke="#d6b656" stroke-miterlimit="10" pointer-events="stroke" style="stroke: light-dark(rgb(214, 182, 86), rgb(109, 81, 0));"/>
-                        <path d="M 468.71 395.91 L 475.7 392.41 L 473.96 395.91 L 475.71 399.41 Z" fill="#d6b656" stroke="#d6b656" stroke-miterlimit="10" pointer-events="all" style="fill: light-dark(rgb(214, 182, 86), rgb(109, 81, 0)); stroke: light-dark(rgb(214, 182, 86), rgb(109, 81, 0));"/>
-                    </g>
-                </g>
-                <g data-cell-id="gxEyNkLczhF0qfu5-Okl-22">
-                    <g>
-                        <path d="M 511.6 620 L 456 620 Q 450 620 452.79 614.69 L 484.01 555.31 Q 486.8 550 492.8 550 L 604 550 Q 610 550 607.21 555.31 L 575.99 614.69 Q 573.2 620 567.2 620 Z" fill="#f8cecc" stroke="#b85450" stroke-width="2" stroke-miterlimit="10" pointer-events="all" style="fill: light-dark(rgb(248, 206, 204), rgb(81, 45, 43)); stroke: light-dark(rgb(184, 84, 80), rgb(215, 129, 126));"/>
-                    </g>
-                    <g>
-                        <g>
-                            <switch>
-                                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-                                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 158px; height: 1px; padding-top: 585px; margin-left: 451px;">
-                                        <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; ">
-                                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
-                                                Show Error
-                                                <br/>
-                                                (Invalid Credentials)
-                                            </div>
-                                        </div>
-                                    </div>
-                                </foreignObject>
-                                <text x="530" y="582" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" style="fill: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));">
-                                    <tspan x="530" y="582">
-                                        Show Error
-                                    </tspan>
-                                    <tspan x="530" y="596">
-                                        (Invalid Credentials)
-                                    </tspan>
-                                </text>
-                            </switch>
-                        </g>
-                    </g>
-                </g>
-                <g data-cell-id="gxEyNkLczhF0qfu5-Okl-23">
-                    <g transform="translate(0.5,0.5)">
-                        <path d="M 380 540 L 380 683.63" fill="none" stroke="#d6b656" stroke-miterlimit="10" pointer-events="stroke" style="stroke: light-dark(rgb(214, 182, 86), rgb(109, 81, 0));"/>
-                        <path d="M 380 688.88 L 376.5 681.88 L 380 683.63 L 383.5 681.88 Z" fill="#d6b656" stroke="#d6b656" stroke-miterlimit="10" pointer-events="all" style="fill: light-dark(rgb(214, 182, 86), rgb(109, 81, 0)); stroke: light-dark(rgb(214, 182, 86), rgb(109, 81, 0));"/>
-                    </g>
-                </g>
-                <g data-cell-id="gxEyNkLczhF0qfu5-Okl-24">
-                    <g transform="translate(0.5,0.5)">
-                        <path d="M 380 770 L 380 960 L 433.63 960" fill="none" stroke="#d6b656" stroke-miterlimit="10" pointer-events="stroke" style="stroke: light-dark(rgb(214, 182, 86), rgb(109, 81, 0));"/>
-                        <path d="M 438.88 960 L 431.88 963.5 L 433.63 960 L 431.88 956.5 Z" fill="#d6b656" stroke="#d6b656" stroke-miterlimit="10" pointer-events="all" style="fill: light-dark(rgb(214, 182, 86), rgb(109, 81, 0)); stroke: light-dark(rgb(214, 182, 86), rgb(109, 81, 0));"/>
-                    </g>
-                </g>
-                <g data-cell-id="gxEyNkLczhF0qfu5-Okl-25">
-                    <g>
-                        <rect x="300" y="690" width="160" height="80" rx="7" ry="7" fill="#fff2cc" stroke="#d6b656" stroke-width="2" pointer-events="all" style="fill: light-dark(rgb(255, 242, 204), rgb(40, 29, 0)); stroke: light-dark(rgb(214, 182, 86), rgb(109, 81, 0));"/>
-                    </g>
-                    <g>
-                        <g>
-                            <switch>
-                                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-                                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 158px; height: 1px; padding-top: 730px; margin-left: 301px;">
-                                        <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; ">
-                                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
-                                                The LoginView processed it
-                                            </div>
-                                        </div>
-                                    </div>
-                                </foreignObject>
-                                <text x="380" y="734" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" style="fill: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));">
-                                    The LoginView processed it
-                                </text>
-                            </switch>
-                        </g>
-                    </g>
-                </g>
-                <g data-cell-id="gxEyNkLczhF0qfu5-Okl-26">
-                    <g transform="translate(0.5,0.5)">
-                        <path d="M 833 690 L 833 640 L 832.56 596.37" fill="none" stroke="#d6b656" stroke-miterlimit="10" pointer-events="stroke" style="stroke: light-dark(rgb(214, 182, 86), rgb(109, 81, 0));"/>
-                        <path d="M 832.51 591.12 L 836.08 598.08 L 832.56 596.37 L 829.08 598.15 Z" fill="#d6b656" stroke="#d6b656" stroke-miterlimit="10" pointer-events="all" style="fill: light-dark(rgb(214, 182, 86), rgb(109, 81, 0)); stroke: light-dark(rgb(214, 182, 86), rgb(109, 81, 0));"/>
-                    </g>
-                </g>
-                <g data-cell-id="gxEyNkLczhF0qfu5-Okl-27">
-                    <g>
-                        <rect x="730.5" y="690" width="205" height="98.1" rx="7" ry="7" fill="#fff2cc" stroke="#d6b656" stroke-width="2" pointer-events="all" style="fill: light-dark(rgb(255, 242, 204), rgb(40, 29, 0)); stroke: light-dark(rgb(214, 182, 86), rgb(109, 81, 0));"/>
-                    </g>
-                    <g>
-                        <g>
-                            <switch>
-                                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-                                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 203px; height: 1px; padding-top: 739px; margin-left: 732px;">
-                                        <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; ">
-                                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
-                                                LoginView finalize the response:
-                                                <br/>
-                                                1. Set a refresh_token cookie (secure, samesite lax, httponly)
-                                            </div>
-                                        </div>
-                                    </div>
-                                </foreignObject>
-                                <text x="833" y="729" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" style="fill: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));">
-                                    <tspan x="833" y="729">
-                                        LoginView finalize the response:
-                                    </tspan>
-                                    <tspan x="833" y="743">
-                                        1. Set a refresh_token cookie (secure,
-                                    </tspan>
-                                    <tspan x="833" y="757">
-                                        samesite lax, httponly)
-                                    </tspan>
-                                </text>
-                            </switch>
-                        </g>
-                    </g>
-                </g>
-                <g data-cell-id="gxEyNkLczhF0qfu5-Okl-28">
-                    <g transform="translate(0.5,0.5)">
-                        <path d="M 520 960 L 640.5 960 L 640.5 975 L 754.63 975" fill="none" stroke="#d6b656" stroke-miterlimit="10" pointer-events="stroke" style="stroke: light-dark(rgb(214, 182, 86), rgb(109, 81, 0));"/>
-                        <path d="M 759.88 975 L 752.88 978.5 L 754.63 975 L 752.88 971.5 Z" fill="#d6b656" stroke="#d6b656" stroke-miterlimit="10" pointer-events="all" style="fill: light-dark(rgb(214, 182, 86), rgb(109, 81, 0)); stroke: light-dark(rgb(214, 182, 86), rgb(109, 81, 0));"/>
-                    </g>
-                    <g data-cell-id="gxEyNkLczhF0qfu5-Okl-29">
-                        <g>
-                            <g>
-                                <switch>
-                                    <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-                                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 962px; margin-left: 618px;">
-                                            <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; background-color: #ffffff; ">
-                                                <div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; background-color: var(--ge-adaptive-bg, #ffffff); white-space: nowrap; ">
-                                                    Yes
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </foreignObject>
-                                    <text x="618" y="965" fill="#000000" font-family="Helvetica" font-size="11px" text-anchor="middle" style="fill: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));">
-                                        Yes
-                                    </text>
-                                </switch>
-                            </g>
-                        </g>
-                    </g>
-                </g>
-                <g data-cell-id="gxEyNkLczhF0qfu5-Okl-30">
-                    <g transform="translate(0.5,0.5)">
-                        <path d="M 480 920 L 480 770 L 530 770 L 530 626.37" fill="none" stroke="#d6b656" stroke-miterlimit="10" pointer-events="stroke" style="stroke: light-dark(rgb(214, 182, 86), rgb(109, 81, 0));"/>
-                        <path d="M 530 621.12 L 533.5 628.12 L 530 626.37 L 526.5 628.12 Z" fill="#d6b656" stroke="#d6b656" stroke-miterlimit="10" pointer-events="all" style="fill: light-dark(rgb(214, 182, 86), rgb(109, 81, 0)); stroke: light-dark(rgb(214, 182, 86), rgb(109, 81, 0));"/>
-                    </g>
-                    <g data-cell-id="gxEyNkLczhF0qfu5-Okl-31">
-                        <g>
-                            <g>
-                                <switch>
-                                    <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-                                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 808px; margin-left: 481px;">
-                                            <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; background-color: #ffffff; ">
-                                                <div style="display: inline-block; font-size: 11px; font-family: Helvetica; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; background-color: var(--ge-adaptive-bg, #ffffff); white-space: nowrap; ">
-                                                    No
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </foreignObject>
-                                    <text x="481" y="811" fill="#000000" font-family="Helvetica" font-size="11px" text-anchor="middle" style="fill: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));">
-                                        No
-                                    </text>
-                                </switch>
-                            </g>
-                        </g>
-                    </g>
-                </g>
-                <g data-cell-id="gxEyNkLczhF0qfu5-Okl-32">
-                    <g transform="translate(0.5,0.5)">
-                        <path d="M 480 920 L 520 960 L 480 1000 L 440 960 Z" fill="#fff2cc" stroke="#d6b656" stroke-miterlimit="10" pointer-events="all" style="fill: light-dark(rgb(255, 242, 204), rgb(40, 29, 0)); stroke: light-dark(rgb(214, 182, 86), rgb(109, 81, 0));"/>
-                    </g>
-                    <g>
-                        <g>
-                            <switch>
-                                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-                                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 78px; height: 1px; padding-top: 960px; margin-left: 441px;">
-                                        <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; ">
-                                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
-                                                Valid Credentials?
-                                            </div>
-                                        </div>
-                                    </div>
-                                </foreignObject>
-                                <text x="480" y="957" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" style="fill: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));">
-                                    <tspan x="480" y="957">
-                                        Valid
-                                    </tspan>
-                                    <tspan x="480" y="971">
-                                        Credentials?
-                                    </tspan>
-                                </text>
-                            </switch>
-                        </g>
-                    </g>
-                </g>
-                <g data-cell-id="gxEyNkLczhF0qfu5-Okl-33">
-                    <g transform="translate(0.5,0.5)">
-                        <path d="M 832.5 950 L 832.5 930 L 832.5 940 L 832.5 926.37" fill="none" stroke="#d6b656" stroke-miterlimit="10" pointer-events="stroke" style="stroke: light-dark(rgb(214, 182, 86), rgb(109, 81, 0));"/>
-                        <path d="M 832.5 921.12 L 836 928.12 L 832.5 926.37 L 829 928.12 Z" fill="#d6b656" stroke="#d6b656" stroke-miterlimit="10" pointer-events="all" style="fill: light-dark(rgb(214, 182, 86), rgb(109, 81, 0)); stroke: light-dark(rgb(214, 182, 86), rgb(109, 81, 0));"/>
-                    </g>
-                </g>
-                <g data-cell-id="gxEyNkLczhF0qfu5-Okl-34">
-                    <g>
-                        <rect x="761" y="950" width="143" height="50" rx="7" ry="7" fill="#fff2cc" stroke="#d6b656" stroke-width="2" pointer-events="all" style="fill: light-dark(rgb(255, 242, 204), rgb(40, 29, 0)); stroke: light-dark(rgb(214, 182, 86), rgb(109, 81, 0));"/>
-                    </g>
-                    <g>
-                        <g>
-                            <switch>
-                                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-                                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 141px; height: 1px; padding-top: 975px; margin-left: 762px;">
-                                        <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; ">
-                                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
-                                                Generates tokens (Access and Refresh)
-                                            </div>
-                                        </div>
-                                    </div>
-                                </foreignObject>
-                                <text x="833" y="972" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" style="fill: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));">
-                                    <tspan x="833" y="972">
-                                        Generates tokens (Access
-                                    </tspan>
-                                    <tspan x="833" y="986">
-                                        and Refresh)
-                                    </tspan>
-                                </text>
-                            </switch>
-                        </g>
-                    </g>
-                </g>
-                <g data-cell-id="gxEyNkLczhF0qfu5-Okl-35">
-                    <g transform="translate(0.5,0.5)">
-                        <path d="M 832.5 440 L 832.5 381 L 832.95 328.37" fill="none" stroke="#d6b656" stroke-miterlimit="10" pointer-events="stroke" style="stroke: light-dark(rgb(214, 182, 86), rgb(109, 81, 0));"/>
-                        <path d="M 832.99 323.12 L 836.43 330.15 L 832.95 328.37 L 829.43 330.09 Z" fill="#d6b656" stroke="#d6b656" stroke-miterlimit="10" pointer-events="all" style="fill: light-dark(rgb(214, 182, 86), rgb(109, 81, 0)); stroke: light-dark(rgb(214, 182, 86), rgb(109, 81, 0));"/>
-                    </g>
-                </g>
-                <g data-cell-id="gxEyNkLczhF0qfu5-Okl-36">
-                    <g>
-                        <path d="M 742.5 565 L 742.5 465 C 742.5 451.19 782.79 440 832.5 440 C 882.21 440 922.5 451.19 922.5 465 L 922.5 565 C 922.5 578.81 882.21 590 832.5 590 C 782.79 590 742.5 578.81 742.5 565 Z" fill="#fff2cc" stroke="#d6b656" stroke-width="2" stroke-miterlimit="10" pointer-events="all" style="fill: light-dark(rgb(255, 242, 204), rgb(40, 29, 0)); stroke: light-dark(rgb(214, 182, 86), rgb(109, 81, 0));"/>
-                        <path d="M 742.5 465 C 742.5 478.81 782.79 490 832.5 490 C 882.21 490 922.5 478.81 922.5 465" fill="none" stroke="#d6b656" stroke-width="2" stroke-miterlimit="10" pointer-events="all" style="stroke: light-dark(rgb(214, 182, 86), rgb(109, 81, 0));"/>
-                    </g>
-                    <g>
-                        <g>
-                            <switch>
-                                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-                                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 178px; height: 1px; padding-top: 515px; margin-left: 744px;">
-                                        <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; ">
-                                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
-                                                <div>
-                                                    <br/>
-                                                </div>
-                                                <div>
-                                                    <br/>
-                                                </div>
-                                                <div>
-                                                    <br/>
-                                                </div>
-                                                1. Saves access token in the memory
-                                                <br/>
-                                                2. Saves refresh token in cookie jar
-                                                <div>
-                                                    3. Saves user object to the AuthContext
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </foreignObject>
-                                <text x="833" y="470" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" style="fill: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));">
-                                    <tspan x="833" y="470"></tspan>
-                                    <tspan x="833" y="484"></tspan>
-                                    <tspan x="833" y="498">
-                                        1. Saves access token in the
-                                    </tspan>
-                                    <tspan x="833" y="512">
-                                        memory
-                                    </tspan>
-                                    <tspan x="833" y="526">
-                                        2. Saves refresh token in cookie
-                                    </tspan>
-                                    <tspan x="833" y="540">
-                                        jar
-                                    </tspan>
-                                    <tspan x="833" y="554">
-                                        3. Saves user object to the
-                                    </tspan>
-                                    <tspan x="833" y="568">
-                                        AuthContext
-                                    </tspan>
-                                </text>
-                            </switch>
-                        </g>
-                    </g>
-                </g>
-                <g data-cell-id="gxEyNkLczhF0qfu5-Okl-37">
-                    <g>
-                        <ellipse cx="833" cy="292" rx="50" ry="30" fill="#fff2cc" stroke="#d6b656" stroke-width="2" pointer-events="all" style="fill: light-dark(rgb(255, 242, 204), rgb(40, 29, 0)); stroke: light-dark(rgb(214, 182, 86), rgb(109, 81, 0));"/>
-                    </g>
-                    <g>
-                        <g>
-                            <switch>
-                                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-                                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 98px; height: 1px; padding-top: 292px; margin-left: 784px;">
-                                        <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; ">
-                                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
-                                                <b>
-                                                    Redirected to landing page
-                                                </b>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </foreignObject>
-                                <text x="833" y="289" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" style="fill: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));">
-                                    <tspan x="833" y="289">
-                                        Redirected to
-                                    </tspan>
-                                    <tspan x="833" y="303">
-                                        landing page
-                                    </tspan>
-                                </text>
-                            </switch>
-                        </g>
-                    </g>
-                </g>
-                <g data-cell-id="gxEyNkLczhF0qfu5-Okl-38">
-                    <g transform="translate(0.5,0.5)">
-                        <path d="M 832.5 821.9 L 832.5 801.9 L 832.77 794.46" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke" style="stroke: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));"/>
-                        <path d="M 832.96 789.22 L 836.2 796.34 L 832.77 794.46 L 829.21 796.09 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all" style="fill: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); stroke: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));"/>
-                    </g>
-                </g>
-                <g data-cell-id="gxEyNkLczhF0qfu5-Okl-39">
-                    <g>
-                        <rect x="730" y="821.9" width="205" height="98.1" rx="7" ry="7" fill="#fff2cc" stroke="#d6b656" stroke-width="2" pointer-events="all" style="fill: light-dark(rgb(255, 242, 204), rgb(40, 29, 0)); stroke: light-dark(rgb(214, 182, 86), rgb(109, 81, 0));"/>
-                    </g>
-                    <g>
-                        <g>
-                            <switch>
-                                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-                                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 203px; height: 1px; padding-top: 871px; margin-left: 731px;">
-                                        <div style="box-sizing: border-box; font-size: 0; text-align: center; color: #000000; ">
-                                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: light-dark(#000000, #ffffff); line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
-                                                Add the user object to the response
-                                            </div>
-                                        </div>
-                                    </div>
-                                </foreignObject>
-                                <text x="833" y="875" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" style="fill: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));">
-                                    Add the user object to the response
-                                </text>
-                            </switch>
-                        </g>
-                    </g>
-                </g>
-            </g>
-        </g>
-    </g>
-    <switch>
-        <g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/>
-        <a transform="translate(0,-5)" xlink:href="https://www.drawio.com/doc/faq/svg-export-text-problems" target="_blank">
-            <text text-anchor="middle" font-size="10px" x="50%" y="100%">
-                Text is not SVG - cannot display
-            </text>
-        </a>
-    </switch>
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" width="2944" height="2494" viewBox="0 0 2944 2494" version="1.1" content="&lt;mxfile&gt;&lt;diagram id=&quot;reRHmb4gnRiJkF6ubvYW&quot; name=&quot;Page-1&quot;&gt;&lt;mxGraphModel dx=&quot;2864&quot; dy=&quot;2414&quot; grid=&quot;1&quot; gridSize=&quot;10&quot; guides=&quot;1&quot; connect=&quot;1&quot; arrows=&quot;1&quot; page=&quot;0&quot; math=&quot;0&quot; shadow=&quot;0&quot;&gt;&lt;root&gt;&lt;mxCell id=&quot;0&quot; /&gt;&lt;mxCell id=&quot;1&quot; parent=&quot;0&quot; /&gt;&lt;mxCell id=&quot;gxEyNkLczhF0qfu5-Okl-3&quot; value=&quot;Login Process&quot; style=&quot;shape=table;childLayout=tableLayout;startSize=64;collapsible=0;recursiveResize=0;expand=0;fontSize=34;fontStyle=1;fontColor=#18212c;align=center;verticalAlign=middle;fillColor=#eef1f4;strokeColor=#8fa4bc;&quot; parent=&quot;1&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;40&quot; y=&quot;40&quot; width=&quot;2864&quot; height=&quot;2414&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;gxEyNkLczhF0qfu5-Okl-15&quot; value=&quot;Frontend&quot; style=&quot;shape=tableRow;horizontal=0;swimlaneHead=0;swimlaneBody=0;startSize=64;collapsible=0;recursiveResize=0;expand=0;fontSize=31;fontStyle=1;fontColor=#18212c;fillColor=none;strokeColor=inherit;&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-3&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;0&quot; y=&quot;64&quot; width=&quot;2864&quot; height=&quot;1120&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;login-frontend-phase-1&quot; value=&quot;Enter Credentials&quot; style=&quot;swimlane;shape=swimlane;horizontal=1;startSize=52;collapsible=0;recursiveResize=0;expand=0;fontSize=22;fontStyle=1;fontColor=#18212c;align=center;fillColor=#f4f5f6;swimlaneFillColor=#ffffff;strokeColor=#8fa4bc;&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-15&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;64&quot; y=&quot;0&quot; width=&quot;700&quot; height=&quot;1120&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;login-frontend-phase-2&quot; value=&quot;Validate Credentials&quot; style=&quot;swimlane;shape=swimlane;horizontal=1;startSize=52;collapsible=0;recursiveResize=0;expand=0;fontSize=31;fontStyle=1;fontColor=#18212c;align=center;fillColor=#f4f5f6;swimlaneFillColor=#ffffff;strokeColor=#8fa4bc;&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-15&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;764&quot; y=&quot;0&quot; width=&quot;1100&quot; height=&quot;1120&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;login-frontend-phase-3&quot; value=&quot;Establish Session&quot; style=&quot;swimlane;shape=swimlane;horizontal=1;startSize=52;collapsible=0;recursiveResize=0;expand=0;fontSize=28;fontStyle=1;fontColor=#18212c;align=center;fillColor=#f4f5f6;swimlaneFillColor=#ffffff;strokeColor=#8fa4bc;&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-15&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;1864&quot; y=&quot;0&quot; width=&quot;1000&quot; height=&quot;1120&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;gxEyNkLczhF0qfu5-Okl-16&quot; value=&quot;Backend&quot; style=&quot;shape=tableRow;horizontal=0;swimlaneHead=0;swimlaneBody=0;startSize=64;collapsible=0;recursiveResize=0;expand=0;fontSize=31;fontStyle=1;fontColor=#18212c;fillColor=none;strokeColor=inherit;&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-3&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;0&quot; y=&quot;1184&quot; width=&quot;2864&quot; height=&quot;1230&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;login-backend-phase-1&quot; value=&quot;&quot; style=&quot;swimlane;shape=swimlane;horizontal=1;startSize=0;collapsible=0;recursiveResize=0;expand=0;fontSize=22;fontStyle=1;fontColor=#18212c;align=center;fillColor=#f4f5f6;swimlaneFillColor=#ffffff;strokeColor=#8fa4bc;&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-16&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;64&quot; y=&quot;0&quot; width=&quot;700&quot; height=&quot;1230&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;login-backend-phase-2&quot; value=&quot;&quot; style=&quot;swimlane;shape=swimlane;horizontal=1;startSize=0;collapsible=0;recursiveResize=0;expand=0;fontSize=31;fontStyle=1;fontColor=#18212c;align=center;fillColor=#f4f5f6;swimlaneFillColor=#ffffff;strokeColor=#8fa4bc;&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-16&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;764&quot; y=&quot;0&quot; width=&quot;1100&quot; height=&quot;1230&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;login-backend-phase-3&quot; value=&quot;&quot; style=&quot;swimlane;shape=swimlane;horizontal=1;startSize=0;collapsible=0;recursiveResize=0;expand=0;fontSize=28;fontStyle=1;fontColor=#18212c;align=center;fillColor=#f4f5f6;swimlaneFillColor=#ffffff;strokeColor=#8fa4bc;&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-16&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;1864&quot; y=&quot;0&quot; width=&quot;1000&quot; height=&quot;1230&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;login-start&quot; value=&quot;&amp;lt;div style=&amp;quot;font-weight:700;line-height:1.3&amp;quot;&amp;gt;Start&amp;lt;/div&amp;gt;&quot; style=&quot;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;html=1;fontSize=20;fontFamily=Arial;fontColor=#18212c;fontStyle=1;spacing=15;fillColor=#eef1f4;strokeColor=#586574;strokeWidth=2;&quot; parent=&quot;login-frontend-phase-1&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;190&quot; y=&quot;126&quot; width=&quot;120&quot; height=&quot;60&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;gxEyNkLczhF0qfu5-Okl-11-group&quot; value=&quot;&quot; style=&quot;group&quot; parent=&quot;login-frontend-phase-1&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;110&quot; y=&quot;249.2&quot; width=&quot;490&quot; height=&quot;123.6&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;gxEyNkLczhF0qfu5-Okl-11&quot; value=&quot;&amp;lt;div style=&amp;quot;font-weight:600;line-height:1.3&amp;quot;&amp;gt;Open login page&amp;lt;/div&amp;gt;&quot; style=&quot;shape=mxgraph.flowchart.display;whiteSpace=wrap;html=1;fontSize=20;fontFamily=Arial;fontColor=#18212c;fontStyle=1;spacing=15;fillColor=#f0f7f8;strokeColor=#91adb0;strokeWidth=2;&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-11-group&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;0&quot; y=&quot;6.799999999999997&quot; width=&quot;280&quot; height=&quot;110&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;gxEyNkLczhF0qfu5-Okl-11-annotation&quot; value=&quot;&amp;lt;div style=&amp;quot;line-height:1.3&amp;quot;&amp;gt;Route: /login&amp;lt;br&amp;gt;Direct visit or&amp;lt;br&amp;gt;protected-route&amp;lt;br&amp;gt;redirect&amp;lt;/div&amp;gt;&quot; style=&quot;shape=mxgraph.flowchart.annotation_1;whiteSpace=wrap;html=1;align=left;spacingLeft=15;fontSize=18;fontFamily=Arial;fontColor=#18212c;fillColor=none;strokeColor=#91adb0;&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-11-group&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;300&quot; y=&quot;0.0&quot; width=&quot;190&quot; height=&quot;123.6&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;gxEyNkLczhF0qfu5-Okl-11-annotation-link&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-11-group&quot; source=&quot;gxEyNkLczhF0qfu5-Okl-11&quot; target=&quot;gxEyNkLczhF0qfu5-Okl-11-annotation&quot; edge=&quot;1&quot; style=&quot;dashed=1;endArrow=none;startArrow=none;strokeColor=#91adb0;&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;gxEyNkLczhF0qfu5-Okl-12-group&quot; value=&quot;&quot; style=&quot;group&quot; parent=&quot;login-frontend-phase-1&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;110&quot; y=&quot;439.2&quot; width=&quot;490&quot; height=&quot;123.6&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;gxEyNkLczhF0qfu5-Okl-12&quot; value=&quot;&amp;lt;div style=&amp;quot;font-weight:600;line-height:1.3&amp;quot;&amp;gt;Enter email and&amp;lt;br&amp;gt;password; select Login&amp;lt;/div&amp;gt;&quot; style=&quot;shape=manualInput;whiteSpace=wrap;html=1;fontSize=20;fontFamily=Arial;fontColor=#18212c;fontStyle=1;spacing=15;fillColor=#f6f2fa;strokeColor=#a99bb8;strokeWidth=2;&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-12-group&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;0&quot; y=&quot;6.799999999999997&quot; width=&quot;280&quot; height=&quot;110&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;gxEyNkLczhF0qfu5-Okl-12-annotation&quot; value=&quot;&amp;lt;div style=&amp;quot;line-height:1.3&amp;quot;&amp;gt;Required fields;&amp;lt;br&amp;gt;browser checks email&amp;lt;br&amp;gt;format before&amp;lt;br&amp;gt;submission&amp;lt;/div&amp;gt;&quot; style=&quot;shape=mxgraph.flowchart.annotation_1;whiteSpace=wrap;html=1;align=left;spacingLeft=15;fontSize=18;fontFamily=Arial;fontColor=#18212c;fillColor=none;strokeColor=#a99bb8;&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-12-group&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;300&quot; y=&quot;0.0&quot; width=&quot;190&quot; height=&quot;123.6&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;gxEyNkLczhF0qfu5-Okl-12-annotation-link&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-12-group&quot; source=&quot;gxEyNkLczhF0qfu5-Okl-12&quot; target=&quot;gxEyNkLczhF0qfu5-Okl-12-annotation&quot; edge=&quot;1&quot; style=&quot;dashed=1;endArrow=none;startArrow=none;strokeColor=#a99bb8;&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;login-prepare-group&quot; value=&quot;&quot; style=&quot;group&quot; parent=&quot;login-frontend-phase-1&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;110&quot; y=&quot;697.5&quot; width=&quot;490&quot; height=&quot;147.0&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;login-prepare&quot; value=&quot;&amp;lt;div style=&amp;quot;font-weight:600;line-height:1.3&amp;quot;&amp;gt;Begin login attempt&amp;lt;/div&amp;gt;&quot; style=&quot;rounded=1;arcSize=14;whiteSpace=wrap;html=1;fontSize=20;fontFamily=Arial;fontColor=#18212c;fontStyle=1;spacing=15;fillColor=#f3f6fb;strokeColor=#8fa4bc;strokeWidth=2;&quot; parent=&quot;login-prepare-group&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;0&quot; y=&quot;18.5&quot; width=&quot;280&quot; height=&quot;110&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;login-prepare-annotation&quot; value=&quot;&amp;lt;div style=&amp;quot;line-height:1.3&amp;quot;&amp;gt;Disable repeat&amp;lt;br&amp;gt;submits;&amp;lt;br&amp;gt;clear old access&amp;lt;br&amp;gt;token&amp;lt;br&amp;gt;and user from memory&amp;lt;/div&amp;gt;&quot; style=&quot;shape=mxgraph.flowchart.annotation_1;whiteSpace=wrap;html=1;align=left;spacingLeft=15;fontSize=18;fontFamily=Arial;fontColor=#18212c;fillColor=none;strokeColor=#8fa4bc;&quot; parent=&quot;login-prepare-group&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;300&quot; y=&quot;0.0&quot; width=&quot;190&quot; height=&quot;147.0&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;login-prepare-annotation-link&quot; parent=&quot;login-prepare-group&quot; source=&quot;login-prepare&quot; target=&quot;login-prepare-annotation&quot; edge=&quot;1&quot; style=&quot;dashed=1;endArrow=none;startArrow=none;strokeColor=#8fa4bc;&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;gxEyNkLczhF0qfu5-Okl-13-group&quot; value=&quot;&quot; style=&quot;group&quot; parent=&quot;login-frontend-phase-2&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;110&quot; y=&quot;709.2&quot; width=&quot;490&quot; height=&quot;123.6&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;gxEyNkLczhF0qfu5-Okl-13&quot; value=&quot;&amp;lt;div style=&amp;quot;font-weight:600;line-height:1.3&amp;quot;&amp;gt;Send login request&amp;lt;/div&amp;gt;&quot; style=&quot;shape=parallelogram;whiteSpace=wrap;html=1;fontSize=20;fontFamily=Arial;fontColor=#18212c;fontStyle=1;spacing=15;fillColor=#f4f5f6;strokeColor=#a4abb2;strokeWidth=2;&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-13-group&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;0&quot; y=&quot;6.799999999999997&quot; width=&quot;280&quot; height=&quot;110&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;gxEyNkLczhF0qfu5-Okl-13-annotation&quot; value=&quot;&amp;lt;div style=&amp;quot;line-height:1.3&amp;quot;&amp;gt;POST&amp;lt;br&amp;gt;/api/auth/login/&amp;lt;br&amp;gt;Body: email,&amp;lt;br&amp;gt;password&amp;lt;/div&amp;gt;&quot; style=&quot;shape=mxgraph.flowchart.annotation_1;whiteSpace=wrap;html=1;align=left;spacingLeft=15;fontSize=18;fontFamily=Arial;fontColor=#18212c;fillColor=none;strokeColor=#a4abb2;&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-13-group&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;300&quot; y=&quot;0.0&quot; width=&quot;190&quot; height=&quot;123.6&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;gxEyNkLczhF0qfu5-Okl-13-annotation-link&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-13-group&quot; source=&quot;gxEyNkLczhF0qfu5-Okl-13&quot; target=&quot;gxEyNkLczhF0qfu5-Okl-13-annotation&quot; edge=&quot;1&quot; style=&quot;dashed=1;endArrow=none;startArrow=none;strokeColor=#a4abb2;&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;gxEyNkLczhF0qfu5-Okl-22-group&quot; value=&quot;&quot; style=&quot;group&quot; parent=&quot;login-frontend-phase-2&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;630&quot; y=&quot;714.2&quot; width=&quot;450&quot; height=&quot;123.6&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;gxEyNkLczhF0qfu5-Okl-22&quot; value=&quot;&amp;lt;div style=&amp;quot;font-weight:600;line-height:1.3&amp;quot;&amp;gt;Show login error&amp;lt;br&amp;gt;and allow retry&amp;lt;/div&amp;gt;&quot; style=&quot;shape=mxgraph.flowchart.display;whiteSpace=wrap;html=1;fontSize=20;fontFamily=Arial;fontColor=#18212c;fontStyle=1;spacing=15;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-22-group&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;0&quot; y=&quot;1.7999999999999972&quot; width=&quot;240&quot; height=&quot;120&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;gxEyNkLczhF0qfu5-Okl-22-annotation&quot; value=&quot;&amp;lt;div style=&amp;quot;line-height:1.3&amp;quot;&amp;gt;401: invalid email&amp;lt;br&amp;gt;or password&amp;lt;br&amp;gt;Other errors: try&amp;lt;br&amp;gt;again&amp;lt;/div&amp;gt;&quot; style=&quot;shape=mxgraph.flowchart.annotation_1;whiteSpace=wrap;html=1;align=left;spacingLeft=15;fontSize=18;fontFamily=Arial;fontColor=#18212c;fillColor=none;strokeColor=#b85450;&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-22-group&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;260&quot; y=&quot;0.0&quot; width=&quot;190&quot; height=&quot;123.6&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;gxEyNkLczhF0qfu5-Okl-22-annotation-link&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-22-group&quot; source=&quot;gxEyNkLczhF0qfu5-Okl-22&quot; target=&quot;gxEyNkLczhF0qfu5-Okl-22-annotation&quot; edge=&quot;1&quot; style=&quot;dashed=1;endArrow=none;startArrow=none;strokeColor=#b85450;&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;login-cookie-group&quot; value=&quot;&quot; style=&quot;group&quot; parent=&quot;login-frontend-phase-3&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;110&quot; y=&quot;149.2&quot; width=&quot;490&quot; height=&quot;123.6&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;login-cookie&quot; value=&quot;&amp;lt;div style=&amp;quot;font-weight:600;line-height:1.3&amp;quot;&amp;gt;Browser stores&amp;lt;br&amp;gt;refresh-token cookie&amp;lt;/div&amp;gt;&quot; style=&quot;shape=dataStorage;size=0.15;whiteSpace=wrap;html=1;fontSize=20;fontFamily=Arial;fontColor=#18212c;fontStyle=1;spacing=15;fillColor=#f4f5f6;strokeColor=#a4abb2;strokeWidth=2;&quot; parent=&quot;login-cookie-group&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;0&quot; y=&quot;6.799999999999997&quot; width=&quot;280&quot; height=&quot;110&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;login-cookie-annotation&quot; value=&quot;&amp;lt;div style=&amp;quot;line-height:1.3&amp;quot;&amp;gt;HttpOnly; Path=/&amp;lt;br&amp;gt;SameSite=Lax&amp;lt;br&amp;gt;Secure in production&amp;lt;br&amp;gt;Not localStorage&amp;lt;/div&amp;gt;&quot; style=&quot;shape=mxgraph.flowchart.annotation_1;whiteSpace=wrap;html=1;align=left;spacingLeft=15;fontSize=18;fontFamily=Arial;fontColor=#18212c;fillColor=none;strokeColor=#a4abb2;&quot; parent=&quot;login-cookie-group&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;300&quot; y=&quot;0.0&quot; width=&quot;190&quot; height=&quot;123.6&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;login-cookie-annotation-link&quot; parent=&quot;login-cookie-group&quot; source=&quot;login-cookie&quot; target=&quot;login-cookie-annotation&quot; edge=&quot;1&quot; style=&quot;dashed=1;endArrow=none;startArrow=none;strokeColor=#a4abb2;&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;gxEyNkLczhF0qfu5-Okl-36-group&quot; value=&quot;&quot; style=&quot;group&quot; parent=&quot;login-frontend-phase-3&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;110&quot; y=&quot;347.5&quot; width=&quot;490&quot; height=&quot;147.0&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;gxEyNkLczhF0qfu5-Okl-36&quot; value=&quot;&amp;lt;div style=&amp;quot;font-weight:600;line-height:1.3&amp;quot;&amp;gt;Save access token and&amp;lt;br&amp;gt;user in memory&amp;lt;/div&amp;gt;&quot; style=&quot;rounded=1;arcSize=14;whiteSpace=wrap;html=1;fontSize=20;fontFamily=Arial;fontColor=#18212c;fontStyle=1;spacing=15;fillColor=#f3f6fb;strokeColor=#8fa4bc;strokeWidth=2;&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-36-group&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;0&quot; y=&quot;18.5&quot; width=&quot;280&quot; height=&quot;110&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;gxEyNkLczhF0qfu5-Okl-36-annotation&quot; value=&quot;&amp;lt;div style=&amp;quot;line-height:1.3&amp;quot;&amp;gt;AuthContext state&amp;lt;br&amp;gt;Clear intentional-&amp;lt;br&amp;gt;logout&amp;lt;br&amp;gt;flag after login&amp;lt;br&amp;gt;succeeds&amp;lt;/div&amp;gt;&quot; style=&quot;shape=mxgraph.flowchart.annotation_1;whiteSpace=wrap;html=1;align=left;spacingLeft=15;fontSize=18;fontFamily=Arial;fontColor=#18212c;fillColor=none;strokeColor=#8fa4bc;&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-36-group&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;300&quot; y=&quot;0.0&quot; width=&quot;190&quot; height=&quot;147.0&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;gxEyNkLczhF0qfu5-Okl-36-annotation-link&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-36-group&quot; source=&quot;gxEyNkLczhF0qfu5-Okl-36&quot; target=&quot;gxEyNkLczhF0qfu5-Okl-36-annotation&quot; edge=&quot;1&quot; style=&quot;dashed=1;endArrow=none;startArrow=none;strokeColor=#8fa4bc;&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;login-return-group&quot; value=&quot;&quot; style=&quot;group&quot; parent=&quot;login-frontend-phase-3&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;110&quot; y=&quot;569.2&quot; width=&quot;490&quot; height=&quot;123.6&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;login-return&quot; value=&quot;&amp;lt;div style=&amp;quot;font-weight:600;line-height:1.3&amp;quot;&amp;gt;Resolve return path&amp;lt;/div&amp;gt;&quot; style=&quot;rounded=1;arcSize=14;whiteSpace=wrap;html=1;fontSize=20;fontFamily=Arial;fontColor=#18212c;fontStyle=1;spacing=15;fillColor=#f3f6fb;strokeColor=#8fa4bc;strokeWidth=2;&quot; parent=&quot;login-return-group&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;0&quot; y=&quot;6.799999999999997&quot; width=&quot;280&quot; height=&quot;110&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;login-return-annotation&quot; value=&quot;&amp;lt;div style=&amp;quot;line-height:1.3&amp;quot;&amp;gt;Saved local pathname&amp;lt;br&amp;gt;and query, when&amp;lt;br&amp;gt;safe;&amp;lt;br&amp;gt;otherwise use /&amp;lt;/div&amp;gt;&quot; style=&quot;shape=mxgraph.flowchart.annotation_1;whiteSpace=wrap;html=1;align=left;spacingLeft=15;fontSize=18;fontFamily=Arial;fontColor=#18212c;fillColor=none;strokeColor=#8fa4bc;&quot; parent=&quot;login-return-group&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;300&quot; y=&quot;0.0&quot; width=&quot;190&quot; height=&quot;123.6&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;login-return-annotation-link&quot; parent=&quot;login-return-group&quot; source=&quot;login-return&quot; target=&quot;login-return-annotation&quot; edge=&quot;1&quot; style=&quot;dashed=1;endArrow=none;startArrow=none;strokeColor=#8fa4bc;&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;gxEyNkLczhF0qfu5-Okl-37&quot; value=&quot;&amp;lt;div style=&amp;quot;font-weight:600;line-height:1.3&amp;quot;&amp;gt;Open destination page&amp;lt;/div&amp;gt;&quot; style=&quot;shape=mxgraph.flowchart.display;whiteSpace=wrap;html=1;fontSize=20;fontFamily=Arial;fontColor=#18212c;fontStyle=1;spacing=15;fillColor=#f0f7f8;strokeColor=#91adb0;strokeWidth=2;&quot; parent=&quot;login-frontend-phase-3&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;110&quot; y=&quot;786&quot; width=&quot;280&quot; height=&quot;110&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;login-end&quot; value=&quot;&amp;lt;div style=&amp;quot;font-weight:700;line-height:1.3&amp;quot;&amp;gt;End&amp;lt;/div&amp;gt;&quot; style=&quot;shape=mxgraph.flowchart.start_1;whiteSpace=wrap;html=1;fontSize=20;fontFamily=Arial;fontColor=#18212c;fontStyle=1;spacing=15;fillColor=#eef1f4;strokeColor=#586574;strokeWidth=2;&quot; parent=&quot;login-frontend-phase-3&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;190&quot; y=&quot;996&quot; width=&quot;120&quot; height=&quot;60&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;login-account-group&quot; value=&quot;&quot; style=&quot;group&quot; parent=&quot;login-backend-phase-2&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;110&quot; y=&quot;447.5&quot; width=&quot;490&quot; height=&quot;147.0&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;login-account&quot; value=&quot;&amp;lt;div style=&amp;quot;font-weight:600;line-height:1.3&amp;quot;&amp;gt;Read account and&amp;lt;br&amp;gt;check credentials&amp;lt;/div&amp;gt;&quot; style=&quot;shape=cylinder3;size=15;whiteSpace=wrap;html=1;fontSize=20;fontFamily=Arial;fontColor=#18212c;fontStyle=1;spacing=15;fillColor=#f4f5f6;strokeColor=#a4abb2;strokeWidth=2;&quot; parent=&quot;login-account-group&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;0&quot; y=&quot;18.5&quot; width=&quot;280&quot; height=&quot;110&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;login-account-annotation&quot; value=&quot;&amp;lt;div style=&amp;quot;line-height:1.3&amp;quot;&amp;gt;Backend user&amp;lt;br&amp;gt;database&amp;lt;br&amp;gt;Check password hash&amp;lt;br&amp;gt;and account&amp;lt;br&amp;gt;eligibility&amp;lt;/div&amp;gt;&quot; style=&quot;shape=mxgraph.flowchart.annotation_1;whiteSpace=wrap;html=1;align=left;spacingLeft=15;fontSize=18;fontFamily=Arial;fontColor=#18212c;fillColor=none;strokeColor=#a4abb2;&quot; parent=&quot;login-account-group&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;300&quot; y=&quot;0.0&quot; width=&quot;190&quot; height=&quot;147.0&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;login-account-annotation-link&quot; parent=&quot;login-account-group&quot; source=&quot;login-account&quot; target=&quot;login-account-annotation&quot; edge=&quot;1&quot; style=&quot;dashed=1;endArrow=none;startArrow=none;strokeColor=#a4abb2;&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;gxEyNkLczhF0qfu5-Okl-25-group&quot; value=&quot;&quot; style=&quot;group&quot; parent=&quot;login-backend-phase-2&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;110&quot; y=&quot;109.2&quot; width=&quot;490&quot; height=&quot;123.6&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;gxEyNkLczhF0qfu5-Okl-25&quot; value=&quot;&amp;lt;div style=&amp;quot;font-weight:600;line-height:1.3&amp;quot;&amp;gt;Validate login input&amp;lt;/div&amp;gt;&quot; style=&quot;rounded=1;arcSize=14;whiteSpace=wrap;html=1;fontSize=20;fontFamily=Arial;fontColor=#18212c;fontStyle=1;spacing=15;fillColor=#f3f6fb;strokeColor=#8fa4bc;strokeWidth=2;&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-25-group&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;0&quot; y=&quot;6.799999999999997&quot; width=&quot;280&quot; height=&quot;110&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;gxEyNkLczhF0qfu5-Okl-25-annotation&quot; value=&quot;&amp;lt;div style=&amp;quot;line-height:1.3&amp;quot;&amp;gt;Require&amp;lt;br&amp;gt;email/password;&amp;lt;br&amp;gt;validate request&amp;lt;br&amp;gt;fields&amp;lt;/div&amp;gt;&quot; style=&quot;shape=mxgraph.flowchart.annotation_1;whiteSpace=wrap;html=1;align=left;spacingLeft=15;fontSize=18;fontFamily=Arial;fontColor=#18212c;fillColor=none;strokeColor=#8fa4bc;&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-25-group&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;300&quot; y=&quot;0.0&quot; width=&quot;190&quot; height=&quot;123.6&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;gxEyNkLczhF0qfu5-Okl-25-annotation-link&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-25-group&quot; source=&quot;gxEyNkLczhF0qfu5-Okl-25&quot; target=&quot;gxEyNkLczhF0qfu5-Okl-25-annotation&quot; edge=&quot;1&quot; style=&quot;dashed=1;endArrow=none;startArrow=none;strokeColor=#8fa4bc;&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;login-input-valid&quot; value=&quot;&amp;lt;div style=&amp;quot;font-weight:700;line-height:1.3&amp;quot;&amp;gt;Input valid?&amp;lt;/div&amp;gt;&quot; style=&quot;shape=mxgraph.flowchart.decision;whiteSpace=wrap;html=1;fontSize=20;fontFamily=Arial;fontColor=#18212c;fontStyle=1;spacing=15;fillColor=#fff8e8;strokeColor=#b9aa82;strokeWidth=2;&quot; parent=&quot;login-backend-phase-2&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;110&quot; y=&quot;276&quot; width=&quot;280&quot; height=&quot;130&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;gxEyNkLczhF0qfu5-Okl-32&quot; value=&quot;&amp;lt;div style=&amp;quot;font-weight:700;line-height:1.3&amp;quot;&amp;gt;Credentials accepted?&amp;lt;/div&amp;gt;&quot; style=&quot;shape=mxgraph.flowchart.decision;whiteSpace=wrap;html=1;fontSize=20;fontFamily=Arial;fontColor=#18212c;fontStyle=1;spacing=15;fillColor=#fff8e8;strokeColor=#b9aa82;strokeWidth=2;&quot; parent=&quot;login-backend-phase-2&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;110&quot; y=&quot;656&quot; width=&quot;280&quot; height=&quot;150&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;login-reject-group&quot; value=&quot;&quot; style=&quot;group&quot; parent=&quot;login-backend-phase-2&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;110&quot; y=&quot;949.2&quot; width=&quot;490&quot; height=&quot;123.6&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;login-reject&quot; value=&quot;&amp;lt;div style=&amp;quot;font-weight:600;line-height:1.3&amp;quot;&amp;gt;Return login error&amp;lt;/div&amp;gt;&quot; style=&quot;shape=parallelogram;whiteSpace=wrap;html=1;fontSize=20;fontFamily=Arial;fontColor=#18212c;fontStyle=1;spacing=15;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;&quot; parent=&quot;login-reject-group&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;0&quot; y=&quot;6.799999999999997&quot; width=&quot;280&quot; height=&quot;110&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;login-reject-annotation&quot; value=&quot;&amp;lt;div style=&amp;quot;line-height:1.3&amp;quot;&amp;gt;400: invalid input&amp;lt;br&amp;gt;401: invalid login&amp;lt;br&amp;gt;No session&amp;lt;br&amp;gt;established&amp;lt;/div&amp;gt;&quot; style=&quot;shape=mxgraph.flowchart.annotation_1;whiteSpace=wrap;html=1;align=left;spacingLeft=15;fontSize=18;fontFamily=Arial;fontColor=#18212c;fillColor=none;strokeColor=#b85450;&quot; parent=&quot;login-reject-group&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;300&quot; y=&quot;0.0&quot; width=&quot;190&quot; height=&quot;123.6&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;login-reject-annotation-link&quot; parent=&quot;login-reject-group&quot; source=&quot;login-reject&quot; target=&quot;login-reject-annotation&quot; edge=&quot;1&quot; style=&quot;dashed=1;endArrow=none;startArrow=none;strokeColor=#b85450;&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;gxEyNkLczhF0qfu5-Okl-34-group&quot; value=&quot;&quot; style=&quot;group&quot; parent=&quot;login-backend-phase-3&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;110&quot; y=&quot;657.5&quot; width=&quot;490&quot; height=&quot;147.0&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;gxEyNkLczhF0qfu5-Okl-34&quot; value=&quot;&amp;lt;div style=&amp;quot;font-weight:600;line-height:1.3&amp;quot;&amp;gt;Issue access and&amp;lt;br&amp;gt;refresh tokens&amp;lt;/div&amp;gt;&quot; style=&quot;rounded=1;arcSize=14;whiteSpace=wrap;html=1;fontSize=20;fontFamily=Arial;fontColor=#18212c;fontStyle=1;spacing=15;fillColor=#f3f6fb;strokeColor=#8fa4bc;strokeWidth=2;&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-34-group&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;0&quot; y=&quot;18.5&quot; width=&quot;280&quot; height=&quot;110&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;gxEyNkLczhF0qfu5-Okl-34-annotation&quot; value=&quot;&amp;lt;div style=&amp;quot;line-height:1.3&amp;quot;&amp;gt;Include current&amp;lt;br&amp;gt;account&amp;lt;br&amp;gt;authentication&amp;lt;br&amp;gt;version&amp;lt;br&amp;gt;in the JWT claims&amp;lt;/div&amp;gt;&quot; style=&quot;shape=mxgraph.flowchart.annotation_1;whiteSpace=wrap;html=1;align=left;spacingLeft=15;fontSize=18;fontFamily=Arial;fontColor=#18212c;fillColor=none;strokeColor=#8fa4bc;&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-34-group&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;300&quot; y=&quot;0.0&quot; width=&quot;190&quot; height=&quot;147.0&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;gxEyNkLczhF0qfu5-Okl-34-annotation-link&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-34-group&quot; source=&quot;gxEyNkLczhF0qfu5-Okl-34&quot; target=&quot;gxEyNkLczhF0qfu5-Okl-34-annotation&quot; edge=&quot;1&quot; style=&quot;dashed=1;endArrow=none;startArrow=none;strokeColor=#8fa4bc;&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;gxEyNkLczhF0qfu5-Okl-39&quot; value=&quot;&amp;lt;div style=&amp;quot;font-weight:600;line-height:1.3&amp;quot;&amp;gt;Include public&amp;lt;br&amp;gt;user data&amp;lt;/div&amp;gt;&quot; style=&quot;rounded=1;arcSize=14;whiteSpace=wrap;html=1;fontSize=20;fontFamily=Arial;fontColor=#18212c;fontStyle=1;spacing=15;fillColor=#f3f6fb;strokeColor=#8fa4bc;strokeWidth=2;&quot; parent=&quot;login-backend-phase-3&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;110&quot; y=&quot;846&quot; width=&quot;280&quot; height=&quot;110&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;gxEyNkLczhF0qfu5-Okl-27-group&quot; value=&quot;&quot; style=&quot;group&quot; parent=&quot;login-backend-phase-3&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;110&quot; y=&quot;997.5&quot; width=&quot;490&quot; height=&quot;147.0&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;gxEyNkLczhF0qfu5-Okl-27&quot; value=&quot;&amp;lt;div style=&amp;quot;font-weight:600;line-height:1.3&amp;quot;&amp;gt;Return login success&amp;lt;/div&amp;gt;&quot; style=&quot;shape=parallelogram;whiteSpace=wrap;html=1;fontSize=20;fontFamily=Arial;fontColor=#18212c;fontStyle=1;spacing=15;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-27-group&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;0&quot; y=&quot;18.5&quot; width=&quot;280&quot; height=&quot;110&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;gxEyNkLczhF0qfu5-Okl-27-annotation&quot; value=&quot;&amp;lt;div style=&amp;quot;line-height:1.3&amp;quot;&amp;gt;200: access + user&amp;lt;br&amp;gt;Set-Cookie:&amp;lt;br&amp;gt;refresh_token&amp;lt;br&amp;gt;No refresh token in&amp;lt;br&amp;gt;JSON&amp;lt;/div&amp;gt;&quot; style=&quot;shape=mxgraph.flowchart.annotation_1;whiteSpace=wrap;html=1;align=left;spacingLeft=15;fontSize=18;fontFamily=Arial;fontColor=#18212c;fillColor=none;strokeColor=#82b366;&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-27-group&quot; vertex=&quot;1&quot;&gt;&lt;mxGeometry x=&quot;300&quot; y=&quot;0.0&quot; width=&quot;190&quot; height=&quot;147.0&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;gxEyNkLczhF0qfu5-Okl-27-annotation-link&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-27-group&quot; source=&quot;gxEyNkLczhF0qfu5-Okl-27&quot; target=&quot;gxEyNkLczhF0qfu5-Okl-27-annotation&quot; edge=&quot;1&quot; style=&quot;dashed=1;endArrow=none;startArrow=none;strokeColor=#82b366;&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;login-start-open&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-3&quot; source=&quot;login-start&quot; target=&quot;gxEyNkLczhF0qfu5-Okl-11&quot; edge=&quot;1&quot; value=&quot;&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=1;arcSize=12;html=1;strokeColor=#586574;strokeWidth=2;endArrow=block;endFill=1;fontSize=18;fontColor=#18212c;fontStyle=1;exitX=0.5;exitY=1.0;entryX=0.5;entryY=0.0;&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot; x=&quot;0&quot; y=&quot;0&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;gxEyNkLczhF0qfu5-Okl-10&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-3&quot; source=&quot;gxEyNkLczhF0qfu5-Okl-11&quot; target=&quot;gxEyNkLczhF0qfu5-Okl-12&quot; edge=&quot;1&quot; value=&quot;&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=1;arcSize=12;html=1;strokeColor=#586574;strokeWidth=2;endArrow=block;endFill=1;fontSize=18;fontColor=#18212c;fontStyle=1;exitX=0.5;exitY=1.0;entryX=0.5;entryY=0.0;&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot; x=&quot;0&quot; y=&quot;0&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;login-input-prepare&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-3&quot; source=&quot;gxEyNkLczhF0qfu5-Okl-12&quot; target=&quot;login-prepare&quot; edge=&quot;1&quot; value=&quot;&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=1;arcSize=12;html=1;strokeColor=#586574;strokeWidth=2;endArrow=block;endFill=1;fontSize=18;fontColor=#18212c;fontStyle=1;exitX=0.5;exitY=1.0;entryX=0.5;entryY=0.0;&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot; x=&quot;0&quot; y=&quot;0&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;gxEyNkLczhF0qfu5-Okl-14&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-3&quot; source=&quot;login-prepare&quot; target=&quot;gxEyNkLczhF0qfu5-Okl-13&quot; edge=&quot;1&quot; value=&quot;&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=1;arcSize=12;html=1;strokeColor=#586574;strokeWidth=2;endArrow=block;endFill=1;fontSize=18;fontColor=#18212c;fontStyle=1;exitX=0.5;exitY=1.0;entryX=0.0;entryY=0.5;&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot; x=&quot;0&quot; y=&quot;0&quot;&gt;&lt;Array as=&quot;points&quot;&gt;&lt;mxPoint x=&quot;314&quot; y=&quot;980&quot; /&gt;&lt;mxPoint x=&quot;714&quot; y=&quot;980&quot; /&gt;&lt;mxPoint x=&quot;714&quot; y=&quot;835&quot; /&gt;&lt;/Array&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;gxEyNkLczhF0qfu5-Okl-23&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-3&quot; source=&quot;gxEyNkLczhF0qfu5-Okl-13&quot; target=&quot;gxEyNkLczhF0qfu5-Okl-25&quot; edge=&quot;1&quot; value=&quot;Credentials&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=1;arcSize=12;html=1;strokeColor=#586574;strokeWidth=2;endArrow=block;endFill=1;fontSize=18;fontColor=#18212c;fontStyle=1;exitX=0.5;exitY=1.0;entryX=0.5;entryY=0.0;dashed=1;dashPattern=8 8;&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot; x=&quot;0&quot; y=&quot;0&quot;&gt;&lt;mxPoint x=&quot;80.0&quot; y=&quot;15.0&quot; as=&quot;offset&quot; /&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;login-validate-input&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-3&quot; source=&quot;gxEyNkLczhF0qfu5-Okl-25&quot; target=&quot;login-input-valid&quot; edge=&quot;1&quot; value=&quot;&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=1;arcSize=12;html=1;strokeColor=#586574;strokeWidth=2;endArrow=block;endFill=1;fontSize=18;fontColor=#18212c;fontStyle=1;exitX=0.5;exitY=1.0;entryX=0.5;entryY=0.0;&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot; x=&quot;0&quot; y=&quot;0&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;login-input-accepted&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-3&quot; source=&quot;login-input-valid&quot; target=&quot;login-account&quot; edge=&quot;1&quot; value=&quot;Yes&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=1;arcSize=12;html=1;strokeColor=#586574;strokeWidth=2;endArrow=block;endFill=1;fontSize=18;fontColor=#18212c;fontStyle=1;exitX=0.5;exitY=1.0;entryX=0.5;entryY=0.0;&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot; x=&quot;0&quot; y=&quot;0&quot;&gt;&lt;mxPoint x=&quot;41.0&quot; y=&quot;0.0&quot; as=&quot;offset&quot; /&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;login-input-rejected&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-3&quot; source=&quot;login-input-valid&quot; target=&quot;login-reject&quot; edge=&quot;1&quot; value=&quot;No: 400&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=1;arcSize=12;html=1;strokeColor=#586574;strokeWidth=2;endArrow=block;endFill=1;fontSize=18;fontColor=#18212c;fontStyle=1;exitX=0.0;exitY=0.5;entryX=0.0;entryY=0.5;&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot; x=&quot;0&quot; y=&quot;0&quot;&gt;&lt;Array as=&quot;points&quot;&gt;&lt;mxPoint x=&quot;834&quot; y=&quot;1525&quot; /&gt;&lt;mxPoint x=&quot;834&quot; y=&quot;2195&quot; /&gt;&lt;/Array&gt;&lt;mxPoint x=&quot;56.0&quot; y=&quot;220.0&quot; as=&quot;offset&quot; /&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;gxEyNkLczhF0qfu5-Okl-24&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-3&quot; source=&quot;login-account&quot; target=&quot;gxEyNkLczhF0qfu5-Okl-32&quot; edge=&quot;1&quot; value=&quot;&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=1;arcSize=12;html=1;strokeColor=#586574;strokeWidth=2;endArrow=block;endFill=1;fontSize=18;fontColor=#18212c;fontStyle=1;exitX=0.5;exitY=1.0;entryX=0.5;entryY=0.0;&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot; x=&quot;0&quot; y=&quot;0&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;gxEyNkLczhF0qfu5-Okl-28&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-3&quot; source=&quot;gxEyNkLczhF0qfu5-Okl-32&quot; target=&quot;gxEyNkLczhF0qfu5-Okl-34&quot; edge=&quot;1&quot; value=&quot;Yes&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=1;arcSize=12;html=1;strokeColor=#586574;strokeWidth=2;endArrow=block;endFill=1;fontSize=18;fontColor=#18212c;fontStyle=1;exitX=1.0;exitY=0.5;entryX=0.0;entryY=0.5;&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot; x=&quot;0&quot; y=&quot;0&quot;&gt;&lt;mxPoint x=&quot;-190.0&quot; y=&quot;-27.0&quot; as=&quot;offset&quot; /&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;gxEyNkLczhF0qfu5-Okl-30&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-3&quot; source=&quot;gxEyNkLczhF0qfu5-Okl-32&quot; target=&quot;login-reject&quot; edge=&quot;1&quot; value=&quot;No: 401&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=1;arcSize=12;html=1;strokeColor=#586574;strokeWidth=2;endArrow=block;endFill=1;fontSize=18;fontColor=#18212c;fontStyle=1;exitX=0.5;exitY=1.0;entryX=0.5;entryY=0.0;&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot; x=&quot;0&quot; y=&quot;0&quot;&gt;&lt;mxPoint x=&quot;56.0&quot; y=&quot;5.0&quot; as=&quot;offset&quot; /&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;login-error-response&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-3&quot; source=&quot;login-reject&quot; target=&quot;gxEyNkLczhF0qfu5-Okl-22&quot; edge=&quot;1&quot; value=&quot;Error response&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=1;arcSize=12;html=1;strokeColor=#586574;strokeWidth=2;endArrow=block;endFill=1;fontSize=18;fontColor=#18212c;fontStyle=1;exitX=0.0;exitY=0.5;entryX=0.0;entryY=0.5;dashed=1;dashPattern=8 8;&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot; x=&quot;0&quot; y=&quot;0&quot;&gt;&lt;Array as=&quot;points&quot;&gt;&lt;mxPoint x=&quot;804&quot; y=&quot;2195&quot; /&gt;&lt;mxPoint x=&quot;804&quot; y=&quot;720&quot; /&gt;&lt;mxPoint x=&quot;1334&quot; y=&quot;720&quot; /&gt;&lt;mxPoint x=&quot;1334&quot; y=&quot;840&quot; /&gt;&lt;/Array&gt;&lt;mxPoint x=&quot;346.0&quot; y=&quot;-442.5&quot; as=&quot;offset&quot; /&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;login-other-error&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-3&quot; source=&quot;gxEyNkLczhF0qfu5-Okl-13&quot; target=&quot;gxEyNkLczhF0qfu5-Okl-22&quot; edge=&quot;1&quot; value=&quot;Other error / no response&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=1;arcSize=12;html=1;strokeColor=#586574;strokeWidth=2;endArrow=block;endFill=1;fontSize=18;fontColor=#18212c;fontStyle=1;exitX=0.5;exitY=0.0;entryX=0.5;entryY=1.0;jumpStyle=arc;jumpSize=12;&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot; x=&quot;0&quot; y=&quot;0&quot;&gt;&lt;Array as=&quot;points&quot;&gt;&lt;mxPoint x=&quot;1014&quot; y=&quot;610&quot; /&gt;&lt;mxPoint x=&quot;1904&quot; y=&quot;610&quot; /&gt;&lt;mxPoint x=&quot;1904&quot; y=&quot;960&quot; /&gt;&lt;mxPoint x=&quot;1514&quot; y=&quot;960&quot; /&gt;&lt;/Array&gt;&lt;mxPoint x=&quot;-74.0&quot; y=&quot;380.0&quot; as=&quot;offset&quot; /&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;gxEyNkLczhF0qfu5-Okl-21&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-3&quot; source=&quot;gxEyNkLczhF0qfu5-Okl-22&quot; target=&quot;gxEyNkLczhF0qfu5-Okl-12&quot; edge=&quot;1&quot; value=&quot;Correct or retry&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=1;arcSize=12;html=1;strokeColor=#586574;strokeWidth=2;endArrow=block;endFill=1;fontSize=18;fontColor=#18212c;fontStyle=1;exitX=0.5;exitY=0.0;entryX=0.0;entryY=0.5;&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot; x=&quot;0&quot; y=&quot;0&quot;&gt;&lt;Array as=&quot;points&quot;&gt;&lt;mxPoint x=&quot;1514&quot; y=&quot;150&quot; /&gt;&lt;mxPoint x=&quot;114&quot; y=&quot;150&quot; /&gt;&lt;mxPoint x=&quot;114&quot; y=&quot;565&quot; /&gt;&lt;/Array&gt;&lt;mxPoint x=&quot;228.5&quot; y=&quot;26.0&quot; as=&quot;offset&quot; /&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;gxEyNkLczhF0qfu5-Okl-33&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-3&quot; source=&quot;gxEyNkLczhF0qfu5-Okl-34&quot; target=&quot;gxEyNkLczhF0qfu5-Okl-39&quot; edge=&quot;1&quot; value=&quot;&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=1;arcSize=12;html=1;strokeColor=#586574;strokeWidth=2;endArrow=block;endFill=1;fontSize=18;fontColor=#18212c;fontStyle=1;exitX=0.5;exitY=1.0;entryX=0.5;entryY=0.0;&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot; x=&quot;0&quot; y=&quot;0&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;gxEyNkLczhF0qfu5-Okl-38&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-3&quot; source=&quot;gxEyNkLczhF0qfu5-Okl-39&quot; target=&quot;gxEyNkLczhF0qfu5-Okl-27&quot; edge=&quot;1&quot; value=&quot;&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=1;arcSize=12;html=1;strokeColor=#586574;strokeWidth=2;endArrow=block;endFill=1;fontSize=18;fontColor=#18212c;fontStyle=1;exitX=0.5;exitY=1.0;entryX=0.5;entryY=0.0;&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot; x=&quot;0&quot; y=&quot;0&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;login-success-response&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-3&quot; source=&quot;gxEyNkLczhF0qfu5-Okl-27&quot; target=&quot;login-cookie&quot; edge=&quot;1&quot; value=&quot;200 + Set-Cookie&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=1;arcSize=12;html=1;strokeColor=#586574;strokeWidth=2;endArrow=block;endFill=1;fontSize=18;fontColor=#18212c;fontStyle=1;exitX=0.5;exitY=1.0;entryX=0.5;entryY=0.0;dashed=1;dashPattern=8 8;&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot; x=&quot;0&quot; y=&quot;0&quot;&gt;&lt;Array as=&quot;points&quot;&gt;&lt;mxPoint x=&quot;2114&quot; y=&quot;2360&quot; /&gt;&lt;mxPoint x=&quot;2764&quot; y=&quot;2360&quot; /&gt;&lt;mxPoint x=&quot;2764&quot; y=&quot;170&quot; /&gt;&lt;mxPoint x=&quot;2114&quot; y=&quot;170&quot; /&gt;&lt;/Array&gt;&lt;mxPoint x=&quot;-134.0&quot; y=&quot;-5.0&quot; as=&quot;offset&quot; /&gt;&lt;/mxGeometry&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;gxEyNkLczhF0qfu5-Okl-26&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-3&quot; source=&quot;login-cookie&quot; target=&quot;gxEyNkLczhF0qfu5-Okl-36&quot; edge=&quot;1&quot; value=&quot;&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=1;arcSize=12;html=1;strokeColor=#586574;strokeWidth=2;endArrow=block;endFill=1;fontSize=18;fontColor=#18212c;fontStyle=1;exitX=0.5;exitY=1.0;entryX=0.5;entryY=0.0;&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot; x=&quot;0&quot; y=&quot;0&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;login-memory-return&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-3&quot; source=&quot;gxEyNkLczhF0qfu5-Okl-36&quot; target=&quot;login-return&quot; edge=&quot;1&quot; value=&quot;&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=1;arcSize=12;html=1;strokeColor=#586574;strokeWidth=2;endArrow=block;endFill=1;fontSize=18;fontColor=#18212c;fontStyle=1;exitX=0.5;exitY=1.0;entryX=0.5;entryY=0.0;&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot; x=&quot;0&quot; y=&quot;0&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;gxEyNkLczhF0qfu5-Okl-35&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-3&quot; source=&quot;login-return&quot; target=&quot;gxEyNkLczhF0qfu5-Okl-37&quot; edge=&quot;1&quot; value=&quot;&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=1;arcSize=12;html=1;strokeColor=#586574;strokeWidth=2;endArrow=block;endFill=1;fontSize=18;fontColor=#18212c;fontStyle=1;exitX=0.5;exitY=1.0;entryX=0.5;entryY=0.0;&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot; x=&quot;0&quot; y=&quot;0&quot; /&gt;&lt;/mxCell&gt;&lt;mxCell id=&quot;login-open-end&quot; parent=&quot;gxEyNkLczhF0qfu5-Okl-3&quot; source=&quot;gxEyNkLczhF0qfu5-Okl-37&quot; target=&quot;login-end&quot; edge=&quot;1&quot; value=&quot;&quot; style=&quot;edgeStyle=orthogonalEdgeStyle;rounded=1;arcSize=12;html=1;strokeColor=#586574;strokeWidth=2;endArrow=block;endFill=1;fontSize=18;fontColor=#18212c;fontStyle=1;exitX=0.5;exitY=1.0;entryX=0.5;entryY=0.0;&quot;&gt;&lt;mxGeometry relative=&quot;1&quot; as=&quot;geometry&quot; x=&quot;0&quot; y=&quot;0&quot; /&gt;&lt;/mxCell&gt;&lt;/root&gt;&lt;/mxGraphModel&gt;&lt;/diagram&gt;&lt;/mxfile&gt;">
+  <rect width="2944" height="2494" fill="white" />
+  <rect x="40" y="40" width="2864" height="2414" fill="white" stroke="#8fa4bc" stroke-width="2" />
+  <rect x="40" y="40" width="2864" height="64" fill="#eef1f4" stroke="#8fa4bc" />
+  <text x="1472" y="72.0" fill="#18212c" font-family="Arial, sans-serif" font-size="34" font-weight="700" text-anchor="middle" dominant-baseline="central">
+    <tspan x="1472" dy="0">Login Process</tspan>
+  </text>
+  <rect x="40" y="104" width="64" height="1120" fill="#eef1f4" stroke="#8fa4bc" />
+  <g transform="translate(72,664.0) rotate(-90)">
+    <text x="0" y="0.0" fill="#18212c" font-family="Arial, sans-serif" font-size="31" font-weight="700" text-anchor="middle" dominant-baseline="central">
+      <tspan x="0" dy="0">Frontend</tspan>
+    </text>
+  </g>
+  <rect x="104" y="104" width="700" height="1120" fill="white" stroke="#8fa4bc" />
+  <rect x="104" y="104" width="700" height="52" fill="#f4f5f6" stroke="#8fa4bc" />
+  <text x="454.0" y="130.0" fill="#18212c" font-family="Arial, sans-serif" font-size="22" font-weight="700" text-anchor="middle" dominant-baseline="central">
+    <tspan x="454.0" dy="0">Enter Credentials</tspan>
+  </text>
+  <rect x="804" y="104" width="1100" height="1120" fill="white" stroke="#8fa4bc" />
+  <rect x="804" y="104" width="1100" height="52" fill="#f4f5f6" stroke="#8fa4bc" />
+  <text x="1354.0" y="130.0" fill="#18212c" font-family="Arial, sans-serif" font-size="31" font-weight="700" text-anchor="middle" dominant-baseline="central">
+    <tspan x="1354.0" dy="0">Validate Credentials</tspan>
+  </text>
+  <rect x="1904" y="104" width="1000" height="1120" fill="white" stroke="#8fa4bc" />
+  <rect x="1904" y="104" width="1000" height="52" fill="#f4f5f6" stroke="#8fa4bc" />
+  <text x="2404.0" y="130.0" fill="#18212c" font-family="Arial, sans-serif" font-size="28" font-weight="700" text-anchor="middle" dominant-baseline="central">
+    <tspan x="2404.0" dy="0">Establish Session</tspan>
+  </text>
+  <rect x="40" y="1224" width="64" height="1230" fill="#eef1f4" stroke="#8fa4bc" />
+  <g transform="translate(72,1839.0) rotate(-90)">
+    <text x="0" y="0.0" fill="#18212c" font-family="Arial, sans-serif" font-size="31" font-weight="700" text-anchor="middle" dominant-baseline="central">
+      <tspan x="0" dy="0">Backend</tspan>
+    </text>
+  </g>
+  <rect x="104" y="1224" width="700" height="1230" fill="white" stroke="#8fa4bc" />
+  <rect x="804" y="1224" width="1100" height="1230" fill="white" stroke="#8fa4bc" />
+  <rect x="1904" y="1224" width="1000" height="1230" fill="white" stroke="#8fa4bc" />
+  <path d="M2154,1000 L2154,1100" fill="none" stroke="#586574" stroke-width="2" stroke-linejoin="round" />
+  <path d="M2154,790 L2154,890" fill="none" stroke="#586574" stroke-width="2" stroke-linejoin="round" />
+  <path d="M2154,580 L2154,680" fill="none" stroke="#586574" stroke-width="2" stroke-linejoin="round" />
+  <path d="M2154,370 L2154,470" fill="none" stroke="#586574" stroke-width="2" stroke-linejoin="round" />
+  <path d="M2154,2350 L2154.0,2388.0 Q2154,2400 2166.0,2400.0 L2792.0,2400.0 Q2804,2400 2804.0,2388.0 L2804.0,222.0 Q2804,210 2792.0,210.0 L2166.0,210.0 Q2154,210 2154.0,222.0 L2154,260" fill="none" stroke="#586574" stroke-width="2" stroke-linejoin="round" stroke-dasharray="8 8" />
+  <path d="M2154,2180 L2154,2240" fill="none" stroke="#586574" stroke-width="2" stroke-linejoin="round" />
+  <path d="M2154,2010 L2154,2070" fill="none" stroke="#586574" stroke-width="2" stroke-linejoin="round" />
+  <path d="M1554,820 L1554.0,202.0 Q1554,190 1542.0,190.0 L166.0,190.0 Q154,190 154.0,202.0 L154.0,593.0 Q154,605 166.0,605.0 L214,605" fill="none" stroke="#586574" stroke-width="2" stroke-linejoin="round" />
+  <path d="M1054,820 L1054.0,662.0 Q1054,650 1066.0,650.0 L1542,650 Q1554,634 1566,650 L1932.0,650.0 Q1944,650 1944.0,662.0 L1944.0,988.0 Q1944,1000 1932.0,1000.0 L1566.0,1000.0 Q1554,1000 1554.0,988.0 L1554,940" fill="none" stroke="#586574" stroke-width="2" stroke-linejoin="round" />
+  <path d="M914,2235 L856.0,2235.0 Q844,2235 844.0,2223.0 L844.0,772.0 Q844,760 856.0,760.0 L1362.0,760.0 Q1374,760 1374.0,772.0 L1374.0,868.0 Q1374,880 1386.0,880.0 L1434,880" fill="none" stroke="#586574" stroke-width="2" stroke-linejoin="round" stroke-dasharray="8 8" />
+  <path d="M1054,2030 L1054,2180" fill="none" stroke="#586574" stroke-width="2" stroke-linejoin="round" />
+  <path d="M1194,1955 L2014,1955" fill="none" stroke="#586574" stroke-width="2" stroke-linejoin="round" />
+  <path d="M1054,1800 L1054,1880" fill="none" stroke="#586574" stroke-width="2" stroke-linejoin="round" />
+  <path d="M914,1565 L886.0,1565.0 Q874,1565 874.0,1577.0 L874.0,2223.0 Q874,2235 886.0,2235.0 L914,2235" fill="none" stroke="#586574" stroke-width="2" stroke-linejoin="round" />
+  <path d="M1054,1630 L1054,1690" fill="none" stroke="#586574" stroke-width="2" stroke-linejoin="round" />
+  <path d="M1054,1450 L1054,1500" fill="none" stroke="#586574" stroke-width="2" stroke-linejoin="round" />
+  <path d="M1054,930 L1054,1340" fill="none" stroke="#586574" stroke-width="2" stroke-linejoin="round" stroke-dasharray="8 8" />
+  <path d="M354,930 L354.0,1008.0 Q354,1020 366.0,1020.0 L742.0,1020.0 Q754,1020 754.0,1008.0 L754.0,887.0 Q754,875 766.0,875.0 L914,875" fill="none" stroke="#586574" stroke-width="2" stroke-linejoin="round" />
+  <path d="M354,660 L354,820" fill="none" stroke="#586574" stroke-width="2" stroke-linejoin="round" />
+  <path d="M354,470 L354,550" fill="none" stroke="#586574" stroke-width="2" stroke-linejoin="round" />
+  <path d="M354,290 L354,360" fill="none" stroke="#586574" stroke-width="2" stroke-linejoin="round" />
+  <ellipse cx="354.0" cy="260.0" rx="60.0" ry="30.0" fill="#eef1f4" stroke="#586574" stroke-width="2" />
+  <text x="354.0" y="260.0" fill="#18212c" font-family="Arial, sans-serif" font-size="20" font-weight="700" text-anchor="middle" dominant-baseline="central">
+    <tspan x="354.0" dy="0">Start</tspan>
+  </text>
+  <path d="M238,360 L470,360 Q518,415.0 470,470 L238,470 L214,415.0 Z" fill="#f0f7f8" stroke="#91adb0" stroke-width="2" />
+  <text x="354.0" y="415.0" fill="#18212c" font-family="Arial, sans-serif" font-size="20" font-weight="600" text-anchor="middle" dominant-baseline="central">
+    <tspan x="354.0" dy="0">Open login page</tspan>
+  </text>
+  <path d="M494,415.0 H514" stroke="#91adb0" fill="none" stroke-dasharray="4 4" />
+  <path d="M524,353.2 H514 V476.79999999999995 H524" stroke="#91adb0" fill="none" />
+  <text x="529" y="379.9" fill="#18212c" font-family="Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start" dominant-baseline="central">
+    <tspan x="529" dy="0">Route: /login</tspan>
+    <tspan x="529" dy="23.400000000000002">Direct visit or</tspan>
+    <tspan x="529" dy="23.400000000000002">protected-route</tspan>
+    <tspan x="529" dy="23.400000000000002">redirect</tspan>
+  </text>
+  <path d="M214,572 L494,550 L494,660 L214,660 Z" fill="#f6f2fa" stroke="#a99bb8" stroke-width="2" />
+  <text x="354.0" y="600.0" fill="#18212c" font-family="Arial, sans-serif" font-size="20" font-weight="600" text-anchor="middle" dominant-baseline="central">
+    <tspan x="354.0" dy="0">Enter email and</tspan>
+    <tspan x="354.0" dy="26.0">password; select Login</tspan>
+  </text>
+  <path d="M494,605.0 H514" stroke="#a99bb8" fill="none" stroke-dasharray="4 4" />
+  <path d="M524,543.2 H514 V666.8000000000001 H524" stroke="#a99bb8" fill="none" />
+  <text x="529" y="569.9" fill="#18212c" font-family="Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start" dominant-baseline="central">
+    <tspan x="529" dy="0">Required fields;</tspan>
+    <tspan x="529" dy="23.400000000000002">browser checks email</tspan>
+    <tspan x="529" dy="23.400000000000002">format before</tspan>
+    <tspan x="529" dy="23.400000000000002">submission</tspan>
+  </text>
+  <rect x="214" y="820" width="280" height="110" rx="14" fill="#f3f6fb" stroke="#8fa4bc" stroke-width="2" />
+  <text x="354.0" y="875.0" fill="#18212c" font-family="Arial, sans-serif" font-size="20" font-weight="600" text-anchor="middle" dominant-baseline="central">
+    <tspan x="354.0" dy="0">Begin login attempt</tspan>
+  </text>
+  <path d="M494,875.0 H514" stroke="#8fa4bc" fill="none" stroke-dasharray="4 4" />
+  <path d="M524,801.5 H514 V948.5 H524" stroke="#8fa4bc" fill="none" />
+  <text x="529" y="828.2" fill="#18212c" font-family="Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start" dominant-baseline="central">
+    <tspan x="529" dy="0">Disable repeat</tspan>
+    <tspan x="529" dy="23.400000000000002">submits;</tspan>
+    <tspan x="529" dy="23.400000000000002">clear old access</tspan>
+    <tspan x="529" dy="23.400000000000002">token</tspan>
+    <tspan x="529" dy="23.400000000000002">and user from memory</tspan>
+  </text>
+  <path d="M938,820 L1194,820 L1170,930 L914,930 Z" fill="#f4f5f6" stroke="#a4abb2" stroke-width="2" />
+  <text x="1054.0" y="875.0" fill="#18212c" font-family="Arial, sans-serif" font-size="20" font-weight="600" text-anchor="middle" dominant-baseline="central">
+    <tspan x="1054.0" dy="0">Send login request</tspan>
+  </text>
+  <path d="M1194,875.0 H1214" stroke="#a4abb2" fill="none" stroke-dasharray="4 4" />
+  <path d="M1224,813.2 H1214 V936.8000000000001 H1224" stroke="#a4abb2" fill="none" />
+  <text x="1229" y="839.9" fill="#18212c" font-family="Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start" dominant-baseline="central">
+    <tspan x="1229" dy="0">POST</tspan>
+    <tspan x="1229" dy="23.400000000000002">/api/auth/login/</tspan>
+    <tspan x="1229" dy="23.400000000000002">Body: email,</tspan>
+    <tspan x="1229" dy="23.400000000000002">password</tspan>
+  </text>
+  <path d="M1458,820 L1650,820 Q1698,880.0 1650,940 L1458,940 L1434,880.0 Z" fill="#f8cecc" stroke="#b85450" stroke-width="2" />
+  <text x="1554.0" y="867.0" fill="#18212c" font-family="Arial, sans-serif" font-size="20" font-weight="600" text-anchor="middle" dominant-baseline="central">
+    <tspan x="1554.0" dy="0">Show login error</tspan>
+    <tspan x="1554.0" dy="26.0">and allow retry</tspan>
+  </text>
+  <path d="M1674,880.0 H1694" stroke="#b85450" fill="none" stroke-dasharray="4 4" />
+  <path d="M1704,818.2 H1694 V941.8000000000001 H1704" stroke="#b85450" fill="none" />
+  <text x="1709" y="844.9" fill="#18212c" font-family="Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start" dominant-baseline="central">
+    <tspan x="1709" dy="0">401: invalid email</tspan>
+    <tspan x="1709" dy="23.400000000000002">or password</tspan>
+    <tspan x="1709" dy="23.400000000000002">Other errors: try</tspan>
+    <tspan x="1709" dy="23.400000000000002">again</tspan>
+  </text>
+  <path d="M2042,260 L2294,260 Q2256,315.0 2294,370 L2042,370 Q1986,315.0 2042,260 Z" fill="#f4f5f6" stroke="#a4abb2" stroke-width="2" />
+  <text x="2154.0" y="302.0" fill="#18212c" font-family="Arial, sans-serif" font-size="20" font-weight="600" text-anchor="middle" dominant-baseline="central">
+    <tspan x="2154.0" dy="0">Browser stores</tspan>
+    <tspan x="2154.0" dy="26.0">refresh-token cookie</tspan>
+  </text>
+  <path d="M2294,315.0 H2314" stroke="#a4abb2" fill="none" stroke-dasharray="4 4" />
+  <path d="M2324,253.2 H2314 V376.79999999999995 H2324" stroke="#a4abb2" fill="none" />
+  <text x="2329" y="279.9" fill="#18212c" font-family="Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start" dominant-baseline="central">
+    <tspan x="2329" dy="0">HttpOnly; Path=/</tspan>
+    <tspan x="2329" dy="23.400000000000002">SameSite=Lax</tspan>
+    <tspan x="2329" dy="23.400000000000002">Secure in production</tspan>
+    <tspan x="2329" dy="23.400000000000002">Not localStorage</tspan>
+  </text>
+  <rect x="2014" y="470" width="280" height="110" rx="14" fill="#f3f6fb" stroke="#8fa4bc" stroke-width="2" />
+  <text x="2154.0" y="512.0" fill="#18212c" font-family="Arial, sans-serif" font-size="20" font-weight="600" text-anchor="middle" dominant-baseline="central">
+    <tspan x="2154.0" dy="0">Save access token and</tspan>
+    <tspan x="2154.0" dy="26.0">user in memory</tspan>
+  </text>
+  <path d="M2294,525.0 H2314" stroke="#8fa4bc" fill="none" stroke-dasharray="4 4" />
+  <path d="M2324,451.5 H2314 V598.5 H2324" stroke="#8fa4bc" fill="none" />
+  <text x="2329" y="478.2" fill="#18212c" font-family="Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start" dominant-baseline="central">
+    <tspan x="2329" dy="0">AuthContext state</tspan>
+    <tspan x="2329" dy="23.400000000000002">Clear intentional-</tspan>
+    <tspan x="2329" dy="23.400000000000002">logout</tspan>
+    <tspan x="2329" dy="23.400000000000002">flag after login</tspan>
+    <tspan x="2329" dy="23.400000000000002">succeeds</tspan>
+  </text>
+  <rect x="2014" y="680" width="280" height="110" rx="14" fill="#f3f6fb" stroke="#8fa4bc" stroke-width="2" />
+  <text x="2154.0" y="735.0" fill="#18212c" font-family="Arial, sans-serif" font-size="20" font-weight="600" text-anchor="middle" dominant-baseline="central">
+    <tspan x="2154.0" dy="0">Resolve return path</tspan>
+  </text>
+  <path d="M2294,735.0 H2314" stroke="#8fa4bc" fill="none" stroke-dasharray="4 4" />
+  <path d="M2324,673.2 H2314 V796.8000000000001 H2324" stroke="#8fa4bc" fill="none" />
+  <text x="2329" y="699.9" fill="#18212c" font-family="Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start" dominant-baseline="central">
+    <tspan x="2329" dy="0">Saved local pathname</tspan>
+    <tspan x="2329" dy="23.400000000000002">and query, when</tspan>
+    <tspan x="2329" dy="23.400000000000002">safe;</tspan>
+    <tspan x="2329" dy="23.400000000000002">otherwise use /</tspan>
+  </text>
+  <path d="M2038,890 L2270,890 Q2318,945.0 2270,1000 L2038,1000 L2014,945.0 Z" fill="#f0f7f8" stroke="#91adb0" stroke-width="2" />
+  <text x="2154.0" y="945.0" fill="#18212c" font-family="Arial, sans-serif" font-size="20" font-weight="600" text-anchor="middle" dominant-baseline="central">
+    <tspan x="2154.0" dy="0">Open destination page</tspan>
+  </text>
+  <ellipse cx="2154.0" cy="1130.0" rx="60.0" ry="30.0" fill="#eef1f4" stroke="#586574" stroke-width="2" />
+  <text x="2154.0" y="1130.0" fill="#18212c" font-family="Arial, sans-serif" font-size="20" font-weight="700" text-anchor="middle" dominant-baseline="central">
+    <tspan x="2154.0" dy="0">End</tspan>
+  </text>
+  <path d="M914,1706 C914,1685 1194,1685 1194,1706 L1194,1784 C1194,1805 914,1805 914,1784 Z" fill="#f4f5f6" stroke="#a4abb2" stroke-width="2" />
+  <path d="M914,1706 C914,1727 1194,1727 1194,1706" fill="none" stroke="#a4abb2" stroke-width="2" />
+  <text x="1054.0" y="1740.0" fill="#18212c" font-family="Arial, sans-serif" font-size="20" font-weight="600" text-anchor="middle" dominant-baseline="central">
+    <tspan x="1054.0" dy="0">Read account and</tspan>
+    <tspan x="1054.0" dy="26.0">check credentials</tspan>
+  </text>
+  <path d="M1194,1745.0 H1214" stroke="#a4abb2" fill="none" stroke-dasharray="4 4" />
+  <path d="M1224,1671.5 H1214 V1818.5 H1224" stroke="#a4abb2" fill="none" />
+  <text x="1229" y="1698.2" fill="#18212c" font-family="Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start" dominant-baseline="central">
+    <tspan x="1229" dy="0">Backend user</tspan>
+    <tspan x="1229" dy="23.400000000000002">database</tspan>
+    <tspan x="1229" dy="23.400000000000002">Check password hash</tspan>
+    <tspan x="1229" dy="23.400000000000002">and account</tspan>
+    <tspan x="1229" dy="23.400000000000002">eligibility</tspan>
+  </text>
+  <rect x="914" y="1340" width="280" height="110" rx="14" fill="#f3f6fb" stroke="#8fa4bc" stroke-width="2" />
+  <text x="1054.0" y="1395.0" fill="#18212c" font-family="Arial, sans-serif" font-size="20" font-weight="600" text-anchor="middle" dominant-baseline="central">
+    <tspan x="1054.0" dy="0">Validate login input</tspan>
+  </text>
+  <path d="M1194,1395.0 H1214" stroke="#8fa4bc" fill="none" stroke-dasharray="4 4" />
+  <path d="M1224,1333.2 H1214 V1456.8 H1224" stroke="#8fa4bc" fill="none" />
+  <text x="1229" y="1359.9" fill="#18212c" font-family="Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start" dominant-baseline="central">
+    <tspan x="1229" dy="0">Require</tspan>
+    <tspan x="1229" dy="23.400000000000002">email/password;</tspan>
+    <tspan x="1229" dy="23.400000000000002">validate request</tspan>
+    <tspan x="1229" dy="23.400000000000002">fields</tspan>
+  </text>
+  <path d="M1054.0,1500 L1194,1565.0 L1054.0,1630 L914,1565.0 Z" fill="#fff8e8" stroke="#b9aa82" stroke-width="2" />
+  <text x="1054.0" y="1565.0" fill="#18212c" font-family="Arial, sans-serif" font-size="20" font-weight="700" text-anchor="middle" dominant-baseline="central">
+    <tspan x="1054.0" dy="0">Input valid?</tspan>
+  </text>
+  <path d="M1054.0,1880 L1194,1955.0 L1054.0,2030 L914,1955.0 Z" fill="#fff8e8" stroke="#b9aa82" stroke-width="2" />
+  <text x="1054.0" y="1955.0" fill="#18212c" font-family="Arial, sans-serif" font-size="20" font-weight="700" text-anchor="middle" dominant-baseline="central">
+    <tspan x="1054.0" dy="0">Credentials accepted?</tspan>
+  </text>
+  <path d="M938,2180 L1194,2180 L1170,2290 L914,2290 Z" fill="#f8cecc" stroke="#b85450" stroke-width="2" />
+  <text x="1054.0" y="2235.0" fill="#18212c" font-family="Arial, sans-serif" font-size="20" font-weight="600" text-anchor="middle" dominant-baseline="central">
+    <tspan x="1054.0" dy="0">Return login error</tspan>
+  </text>
+  <path d="M1194,2235.0 H1214" stroke="#b85450" fill="none" stroke-dasharray="4 4" />
+  <path d="M1224,2173.2 H1214 V2296.7999999999997 H1224" stroke="#b85450" fill="none" />
+  <text x="1229" y="2199.9" fill="#18212c" font-family="Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start" dominant-baseline="central">
+    <tspan x="1229" dy="0">400: invalid input</tspan>
+    <tspan x="1229" dy="23.400000000000002">401: invalid login</tspan>
+    <tspan x="1229" dy="23.400000000000002">No session</tspan>
+    <tspan x="1229" dy="23.400000000000002">established</tspan>
+  </text>
+  <rect x="2014" y="1900" width="280" height="110" rx="14" fill="#f3f6fb" stroke="#8fa4bc" stroke-width="2" />
+  <text x="2154.0" y="1942.0" fill="#18212c" font-family="Arial, sans-serif" font-size="20" font-weight="600" text-anchor="middle" dominant-baseline="central">
+    <tspan x="2154.0" dy="0">Issue access and</tspan>
+    <tspan x="2154.0" dy="26.0">refresh tokens</tspan>
+  </text>
+  <path d="M2294,1955.0 H2314" stroke="#8fa4bc" fill="none" stroke-dasharray="4 4" />
+  <path d="M2324,1881.5 H2314 V2028.5 H2324" stroke="#8fa4bc" fill="none" />
+  <text x="2329" y="1908.2" fill="#18212c" font-family="Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start" dominant-baseline="central">
+    <tspan x="2329" dy="0">Include current</tspan>
+    <tspan x="2329" dy="23.400000000000002">account</tspan>
+    <tspan x="2329" dy="23.400000000000002">authentication</tspan>
+    <tspan x="2329" dy="23.400000000000002">version</tspan>
+    <tspan x="2329" dy="23.400000000000002">in the JWT claims</tspan>
+  </text>
+  <rect x="2014" y="2070" width="280" height="110" rx="14" fill="#f3f6fb" stroke="#8fa4bc" stroke-width="2" />
+  <text x="2154.0" y="2112.0" fill="#18212c" font-family="Arial, sans-serif" font-size="20" font-weight="600" text-anchor="middle" dominant-baseline="central">
+    <tspan x="2154.0" dy="0">Include public</tspan>
+    <tspan x="2154.0" dy="26.0">user data</tspan>
+  </text>
+  <path d="M2038,2240 L2294,2240 L2270,2350 L2014,2350 Z" fill="#d5e8d4" stroke="#82b366" stroke-width="2" />
+  <text x="2154.0" y="2295.0" fill="#18212c" font-family="Arial, sans-serif" font-size="20" font-weight="600" text-anchor="middle" dominant-baseline="central">
+    <tspan x="2154.0" dy="0">Return login success</tspan>
+  </text>
+  <path d="M2294,2295.0 H2314" stroke="#82b366" fill="none" stroke-dasharray="4 4" />
+  <path d="M2324,2221.5 H2314 V2368.5 H2324" stroke="#82b366" fill="none" />
+  <text x="2329" y="2248.2" fill="#18212c" font-family="Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start" dominant-baseline="central">
+    <tspan x="2329" dy="0">200: access + user</tspan>
+    <tspan x="2329" dy="23.400000000000002">Set-Cookie:</tspan>
+    <tspan x="2329" dy="23.400000000000002">refresh_token</tspan>
+    <tspan x="2329" dy="23.400000000000002">No refresh token in</tspan>
+    <tspan x="2329" dy="23.400000000000002">JSON</tspan>
+  </text>
+  <path d="M354,360 L349.0,349.0 L359.0,349.0 Z" fill="#586574" />
+  <path d="M354,550 L349.0,539.0 L359.0,539.0 Z" fill="#586574" />
+  <path d="M354,820 L349.0,809.0 L359.0,809.0 Z" fill="#586574" />
+  <path d="M914,875 L903.0,880.0 L903.0,870.0 Z" fill="#586574" />
+  <path d="M1054,1340 L1049.0,1329.0 L1059.0,1329.0 Z" fill="#586574" />
+  <text x="1134" y="1150.0" fill="#18212c" font-family="Arial, sans-serif" font-size="18" font-weight="600" text-anchor="middle" dominant-baseline="central">
+    <tspan x="1134" dy="0">Credentials</tspan>
+  </text>
+  <path d="M1054,1500 L1049.0,1489.0 L1059.0,1489.0 Z" fill="#586574" />
+  <path d="M1054,1690 L1049.0,1679.0 L1059.0,1679.0 Z" fill="#586574" />
+  <text x="1095" y="1660.0" fill="#18212c" font-family="Arial, sans-serif" font-size="18" font-weight="600" text-anchor="middle" dominant-baseline="central">
+    <tspan x="1095" dy="0">Yes</tspan>
+  </text>
+  <path d="M914,2235 L903.0,2240.0 L903.0,2230.0 Z" fill="#586574" />
+  <text x="930" y="2120.0" fill="#18212c" font-family="Arial, sans-serif" font-size="18" font-weight="600" text-anchor="middle" dominant-baseline="central">
+    <tspan x="930" dy="0">No: 400</tspan>
+  </text>
+  <path d="M1054,1880 L1049.0,1869.0 L1059.0,1869.0 Z" fill="#586574" />
+  <path d="M2014,1955 L2003.0,1960.0 L2003.0,1950.0 Z" fill="#586574" />
+  <text x="1414" y="1928.0" fill="#18212c" font-family="Arial, sans-serif" font-size="18" font-weight="600" text-anchor="middle" dominant-baseline="central">
+    <tspan x="1414" dy="0">Yes</tspan>
+  </text>
+  <path d="M1054,2180 L1049.0,2169.0 L1059.0,2169.0 Z" fill="#586574" />
+  <text x="1110" y="2110.0" fill="#18212c" font-family="Arial, sans-serif" font-size="18" font-weight="600" text-anchor="middle" dominant-baseline="central">
+    <tspan x="1110" dy="0">No: 401</tspan>
+  </text>
+  <path d="M1434,880 L1423.0,885.0 L1423.0,875.0 Z" fill="#586574" />
+  <text x="1190" y="735.0" fill="#18212c" font-family="Arial, sans-serif" font-size="18" font-weight="600" text-anchor="middle" dominant-baseline="central">
+    <tspan x="1190" dy="0">Error response</tspan>
+  </text>
+  <path d="M1554,940 L1559.0,951.0 L1549.0,951.0 Z" fill="#586574" />
+  <text x="1740" y="1030.0" fill="#18212c" font-family="Arial, sans-serif" font-size="18" font-weight="600" text-anchor="middle" dominant-baseline="central">
+    <tspan x="1740" dy="0">Other error / no response</tspan>
+  </text>
+  <path d="M214,605 L203.0,610.0 L203.0,600.0 Z" fill="#586574" />
+  <text x="1160" y="216.0" fill="#18212c" font-family="Arial, sans-serif" font-size="18" font-weight="600" text-anchor="middle" dominant-baseline="central">
+    <tspan x="1160" dy="0">Correct or retry</tspan>
+  </text>
+  <path d="M2154,2070 L2149.0,2059.0 L2159.0,2059.0 Z" fill="#586574" />
+  <path d="M2154,2240 L2149.0,2229.0 L2159.0,2229.0 Z" fill="#586574" />
+  <path d="M2154,260 L2149.0,249.0 L2159.0,249.0 Z" fill="#586574" />
+  <text x="2670" y="1300.0" fill="#18212c" font-family="Arial, sans-serif" font-size="18" font-weight="600" text-anchor="middle" dominant-baseline="central">
+    <tspan x="2670" dy="0">200 + Set-Cookie</tspan>
+  </text>
+  <path d="M2154,470 L2149.0,459.0 L2159.0,459.0 Z" fill="#586574" />
+  <path d="M2154,680 L2149.0,669.0 L2159.0,669.0 Z" fill="#586574" />
+  <path d="M2154,890 L2149.0,879.0 L2159.0,879.0 Z" fill="#586574" />
+  <path d="M2154,1100 L2149.0,1089.0 L2159.0,1089.0 Z" fill="#586574" />
 </svg>
