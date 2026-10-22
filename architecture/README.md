@@ -7,7 +7,7 @@ application is unfamiliar.
 - [Production deployment](production-deployment.md) describes the implemented
   Pages/EC2 configuration and its operational boundaries. Deployment-specific
   credentials, DNS, certificates, and provider settings still need configuration.
-- [Same-origin API proxy](../diagrams/specific-business-processes/deployment/same-origin-api-proxy.md)
+- [Frontend API proxy guide](../../frontend/docs/deployment/cloudflare-pages.md)
   follows one browser request and its cookies across the frontend and backend.
 - [Backend architecture](../../backend/docs/architecture/README.md) explains
   code responsibilities and persistence inside the API.

@@ -98,6 +98,6 @@ for the separate future direction.
 ## Continue reading
 
 - [Production architecture](architecture/production-deployment.md)
-- [Business processes and data models](diagrams/README.md)
+- [Specific business processes](specific-business-processes/README.md)
 - [Frontend guides](../frontend/docs/README.md)
 - [Backend guides](../backend/docs/README.md)

@@ -73,8 +73,7 @@ same-site. The Function preserves host-only `SameSite=Lax` cookies and does not 
 redirects server-side. It forwards existing authentication payloads and cookie
 policies; target-environment cookie checks remain part of deployment setup.
 
-See the [API proxy process](../diagrams/specific-business-processes/deployment/same-origin-api-proxy.md)
-and [frontend setup](../../frontend/docs/deployment/cloudflare-pages.md) for origin
+See the [frontend API proxy guide](../../frontend/docs/deployment/cloudflare-pages.md) for origin
 configuration, failure handling, response caching and preview restrictions.
 
 Configure exact CORS origins, allowed hosts, Stripe frontend origin, applicable
@@ -121,7 +120,7 @@ operational design; the selected stack does not imply those capabilities.
 - [Backend development Compose](../../backend/compose.dev.yaml) and [Docker guide](../../backend/docs/development/docker.md)
 - [Backend settings](../../backend/ecommerce_backend/settings.py) and [authentication views](../../backend/apps/authentication/views.py)
 - [Stripe test contract](../../backend/docs/api/checkout/stripe.md)
-- [Diagram index](../diagrams/README.md) and [diagramming specification](../diagrams/diagramming-specification.md)
+- [SBP index and maintenance conventions](../specific-business-processes/README.md)
 
 Source links assume sibling frontend/backend/docs checkouts and may not resolve
 when viewing only this repository online.

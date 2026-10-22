@@ -14,21 +14,21 @@ behavior from designs that may change before implementation.
    customer journey, and common terms.
 2. Read [architecture](architecture/README.md) to understand how those parts run
    and communicate.
-3. Use the [maintained diagram index](diagrams/README.md) for a particular process
-   or data-model explanation.
+3. Use the [specific business-process index](specific-business-processes/README.md) for feature flows. Read the
+   [backend data-model index](../backend/docs/erd/README.md) for stored relationships.
 4. Use [planning](planning/README.md) to explore proposed business flows and
    class relationships before implementation.
 
 ## Find the right kind of information
 
-| Location        | Purpose                                                                                   |
-| --------------- | ----------------------------------------------------------------------------------------- |
-| `architecture/` | Implemented application and hosting boundaries, with explicit configuration limits        |
+| Location                                                                    | Purpose                                                                                                    |
+| --------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `architecture/`                                                             | Implemented application and hosting boundaries, with explicit configuration limits                         |
 | [General business processes](planning/general-business-processes/README.md) | System-wide BPMN planning diagrams used to plan business flows before the corresponding features are built |
-| [Specific business processes](specific-business-processes/README.md) | Feature-specific flowcharts showing detailed business-process steps and decisions |
-| `diagrams/`     | Mermaid business processes and links to backend-owned ERD guides                          |
-| [Planning](planning/README.md) | Proposed business flows and class relationships that may change before implementation |
-| [Class diagrams](planning/class-diagrams/README.md) | Proposed class structures and relationships |
+| [Specific business processes](specific-business-processes/README.md)        | Feature-specific flowcharts showing detailed business-process steps and decisions                          |
+| [Backend data models](../backend/docs/erd/README.md)                        | Backend-owned ERD guides and editable Draw.io diagrams                                                     |
+| [Planning](planning/README.md)                                              | Proposed business flows and class relationships that may change before implementation                      |
+| [Class diagrams](planning/class-diagrams/README.md)                         | Proposed class structures and relationships                                                                |
 
 The editable `.drawio.svg` diagrams in `planning/general-business-processes/` use Business
 Process Model and Notation (BPMN) to plan how the whole system should work before
@@ -63,6 +63,6 @@ sibling reference.
 Describe current behavior in plain language before introducing routes or model
 names. Keep proposals distinct, preserve actual limitations, and update related
 links and indexes when moving a guide. Follow the
-[diagramming specification](diagrams/diagramming-specification.md) for process
+[SBP maintenance conventions](specific-business-processes/README.md) for process
 notation and validation. Detailed API and operational instructions stay in the
 application repositories rather than being copied here.
