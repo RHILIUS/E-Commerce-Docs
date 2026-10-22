@@ -24,10 +24,22 @@ that are not implemented.
 | Location        | Purpose                                                                                   |
 | --------------- | ----------------------------------------------------------------------------------------- |
 | `architecture/` | Implemented application and hosting boundaries, with explicit configuration limits        |
-| `specific-business-processes/` | Individual editable Draw.io SVG process references |
+| `general-business-processes/` | System-wide BPMN planning diagrams used to plan business flows before the corresponding features are built |
+| [Specific business processes](specific-business-processes/README.md) | Feature-specific flowcharts showing detailed business-process steps and decisions |
 | `diagrams/`     | Mermaid business processes and links to backend-owned ERD guides                          |
 | `planning/`     | Proposed settlement, withdrawal, and return behavior; superseded ideas are archived       |
 | `drawio/`       | Editable visual references, whose pages can include current, partial, or planned behavior |
+
+The editable `.drawio.svg` diagrams in `general-business-processes/` use Business
+Process Model and Notation (BPMN) to plan how the whole system should work before
+the corresponding features are built. They describe intended flows; check the
+maintained guides and application code for implemented behavior.
+
+The editable `.drawio.svg` diagrams in `specific-business-processes/` are
+flowcharts for individual features. They show the steps, decisions, and possible
+paths within a specific business process, such as login or signup. Check the
+maintained feature guides and application code to confirm which behavior is
+implemented.
 
 A file's format or author does not prove it matches implementation. Maintained
 Markdown must still be checked against the code; a draw.io reference is not

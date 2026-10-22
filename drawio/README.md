@@ -7,14 +7,17 @@ file is obsolete or approved as an implementation contract.
 
 Open `.drawio` files with diagrams.net or a compatible editor. Editable
 `.drawio.svg` files include both the rendered SVG and draw.io content. The
-architecture visual lives in `../architecture/asset/`; individual process visuals
+architecture visual lives in `../architecture/asset/`. System-wide BPMN planning
+visuals live in `../general-business-processes/`, and specific process visuals
 live in `../specific-business-processes/`.
 
 | Reference                                                                                           | Contents                                                        |
 | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
 | [Production architecture](../architecture/asset/production-deployment.drawio.svg)                            | Hosting visual embedded by the architecture guide               |
 | [Class diagrams](class-diagrams/e-commerce-class-diagram.drawio)                                    | General, checkout, store, and shipment pages                    |
-| [General business processes](general-business-processes/e-commerce-general-business-process.drawio) | Order, signup, and online-checkout design flows                 |
+| [Order planning](../general-business-processes/order.drawio.svg) | System-wide order flow planning |
+| [Signup planning](../general-business-processes/signup.drawio.svg) | System-wide signup flow planning |
+| [Online checkout planning](../general-business-processes/online-checkout.drawio.svg) | System-wide online-checkout flow planning |
 | [Login](../specific-business-processes/authentication/login.drawio.svg) | Login process |
 | [Signup](../specific-business-processes/authentication/signup.drawio.svg) | Signup process |
 | [Logout](../specific-business-processes/authentication/logout.drawio.svg) | Logout process |

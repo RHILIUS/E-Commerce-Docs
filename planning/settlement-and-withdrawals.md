@@ -24,8 +24,8 @@ and recovery after release before implementing them. Earlier cancellation questi
 must account for the already implemented original-card cancellation-refund path.
 These notes do not establish a customer-wallet refund policy or a settlement ERD.
 
-Source context: the **Online Checkout Process** page in the
-[editable general business-process reference](../drawio/general-business-processes/e-commerce-general-business-process.drawio).
+Source context: the
+[editable online checkout planning diagram](../general-business-processes/online-checkout.drawio.svg).
 Its three-day seller-review idea starts when returned goods arrive; an appeal
 would need a durable hold while adjudication is pending. These are future design
 constraints, not current customer behavior.
