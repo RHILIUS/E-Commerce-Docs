@@ -5,18 +5,24 @@ from the maintained business-process and per-app ERD guides so their role is cle
 current behavior, partial work, or future direction; storage here does not mean a
 file is obsolete or approved as an implementation contract.
 
-The files retain their original bytes and internal pages. Open `.drawio` files
-with diagrams.net or a compatible editor. The architecture `.drawio.svg`, stored in `../architecture/asset/`, includes
-its editable draw.io content as well as the rendered SVG.
+Open `.drawio` files with diagrams.net or a compatible editor. Editable
+`.drawio.svg` files include both the rendered SVG and draw.io content. The
+architecture visual lives in `../architecture/asset/`; individual process visuals
+live in `../specific-business-processes/`.
 
 | Reference                                                                                           | Contents                                                        |
 | --------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
 | [Production architecture](../architecture/asset/production-deployment.drawio.svg)                            | Hosting visual embedded by the architecture guide               |
 | [Class diagrams](class-diagrams/e-commerce-class-diagram.drawio)                                    | General, checkout, store, and shipment pages                    |
-| [Data models](data-models/e-commerce-entity-relationship-diagram.drawio)                            | Full-system and feature ERD pages, including partial views      |
 | [General business processes](general-business-processes/e-commerce-general-business-process.drawio) | Order, signup, and online-checkout design flows                 |
-| [Authentication processes](specific-business-processes/authentication/authentication.drawio)        | Login, signup, logout, token interception, and auth redirection |
-| [Ecommerce process](specific-business-processes/ecommerce/ecommerce.drawio)                         | Landing-page flow                                               |
+| [Login](../specific-business-processes/authentication/login.drawio.svg) | Login process |
+| [Signup](../specific-business-processes/authentication/signup.drawio.svg) | Signup process |
+| [Logout](../specific-business-processes/authentication/logout.drawio.svg) | Logout process |
+| [JWT interceptor](../specific-business-processes/authentication/jwt-interceptor.drawio.svg) | Token interception process |
+| [Ecommerce process](../specific-business-processes/ecommerce/landing-page.drawio.svg)                         | Landing-page flow                                               |
+
+Use the [backend ERD index](../../backend/docs/erd/README.md) for maintained
+data-model guides and editable diagrams.
 
 Use [the maintained diagram index](../diagrams/README.md) for current Mermaid
 business processes and per-app Draw.io ERDs with model/field explanations, and

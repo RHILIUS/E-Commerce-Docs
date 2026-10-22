@@ -29,8 +29,7 @@ that backend index instead of maintaining a second copy here.
 
 [Backend checkout architecture](../../backend/docs/architecture/checkout-models.md)
 and the [wallet ledger contract](../../backend/docs/architecture/wallet-ledger.md)
-explain deeper service rules. The [original editable ERD](../drawio/data-models/e-commerce-entity-relationship-diagram.drawio)
-remains a separate historical visual reference, not the maintained field contract.
+explain deeper service rules.
 
 ## Related references and planning
 

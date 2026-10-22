@@ -24,6 +24,7 @@ that are not implemented.
 | Location        | Purpose                                                                                   |
 | --------------- | ----------------------------------------------------------------------------------------- |
 | `architecture/` | Implemented application and hosting boundaries, with explicit configuration limits        |
+| `specific-business-processes/` | Individual editable Draw.io SVG process references |
 | `diagrams/`     | Mermaid business processes and links to backend-owned ERD guides                          |
 | `planning/`     | Proposed settlement, withdrawal, and return behavior; superseded ideas are archived       |
 | `drawio/`       | Editable visual references, whose pages can include current, partial, or planned behavior |
