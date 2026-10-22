@@ -22,9 +22,7 @@ a signed Stripe notification; **reconciliation** reads provider state and compar
 it with saved purchase facts. Stripe and PostgreSQL do not share a transaction.
 
 Delivery, seven-day settlement, returns, customer wallet spending, and withdrawals
-are not part of this implemented flow. Their separate
-[planning notes](../../../planning/settlement-and-withdrawals.md) retain unresolved
-decisions without implying current services.
+are not part of this implemented flow.
 
 ## Scope, currency, and ownership
 

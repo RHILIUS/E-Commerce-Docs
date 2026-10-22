@@ -1,12 +1,16 @@
-# Future design and historical proposals
+# Planning
 
-This area holds ideas that are not implemented workflows. Read the
-[system overview](../system-overview.md) and [maintained diagrams](../diagrams/README.md)
-for current behavior first. Proposed records, roles, schedules, or endpoints must
-not be treated as existing contracts.
+This folder contains proposed designs for the E-Commerce system. Use these
+editable diagrams to plan business flows and class relationships before the
+corresponding features are built. These designs may change before implementation.
 
-- [Settlement, withdrawals, and returns](settlement-and-withdrawals.md) preserves
-  the future direction and unresolved decisions formerly mixed into online checkout.
+## Planning diagrams
 
-Implementation must be authorized by the current task and reconciled with code
-and contracts. These notes are product/system planning, not mandatory design briefs.
+| Collection | Purpose |
+| --- | --- |
+| [General business processes](general-business-processes/README.md) | System-wide BPMN planning diagrams |
+| [Class diagrams](class-diagrams/README.md) | Proposed class structures and relationships |
+
+Check the maintained feature guides and application code for implemented behavior.
+
+Return to the [system documentation index](../README.md) for the full reading map.

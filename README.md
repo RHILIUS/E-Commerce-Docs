@@ -4,9 +4,9 @@ This repository explains how the E-Commerce website, backend, database, and
 background services work together. Start here when you need the whole system's
 behavior rather than one application's implementation details.
 
-The project also contains personal draw.io references and future design notes.
-They have separate homes so readers can distinguish current behavior from ideas
-that are not implemented.
+The project also contains planning diagrams for proposed business flows and class
+relationships. They have a separate home so readers can distinguish current
+behavior from designs that may change before implementation.
 
 ## Start reading here
 
@@ -16,21 +16,21 @@ that are not implemented.
    and communicate.
 3. Use the [maintained diagram index](diagrams/README.md) for a particular process
    or data-model explanation.
-4. Use [planning](planning/README.md) only when researching future behavior, or
-   [draw.io references](drawio/README.md) to explore the editable visual notes.
+4. Use [planning](planning/README.md) to explore proposed business flows and
+   class relationships before implementation.
 
 ## Find the right kind of information
 
 | Location        | Purpose                                                                                   |
 | --------------- | ----------------------------------------------------------------------------------------- |
 | `architecture/` | Implemented application and hosting boundaries, with explicit configuration limits        |
-| [General business processes](general-business-processes/README.md) | System-wide BPMN planning diagrams used to plan business flows before the corresponding features are built |
+| [General business processes](planning/general-business-processes/README.md) | System-wide BPMN planning diagrams used to plan business flows before the corresponding features are built |
 | [Specific business processes](specific-business-processes/README.md) | Feature-specific flowcharts showing detailed business-process steps and decisions |
 | `diagrams/`     | Mermaid business processes and links to backend-owned ERD guides                          |
-| `planning/`     | Proposed settlement, withdrawal, and return behavior; superseded ideas are archived       |
-| `drawio/`       | Editable visual references, whose pages can include current, partial, or planned behavior |
+| [Planning](planning/README.md) | Proposed business flows and class relationships that may change before implementation |
+| [Class diagrams](planning/class-diagrams/README.md) | Proposed class structures and relationships |
 
-The editable `.drawio.svg` diagrams in `general-business-processes/` use Business
+The editable `.drawio.svg` diagrams in `planning/general-business-processes/` use Business
 Process Model and Notation (BPMN) to plan how the whole system should work before
 the corresponding features are built. They describe intended flows; check the
 maintained guides and application code for implemented behavior.
@@ -41,9 +41,8 @@ paths within a specific business process, such as login or signup. Check the
 maintained feature guides and application code to confirm which behavior is
 implemented.
 
-A file's format or author does not prove it matches implementation. Maintained
-Markdown must still be checked against the code; a draw.io reference is not
-obsolete just because it is stored separately. Each guide states its own scope.
+A file's format or location does not prove it matches implementation. Maintained
+Markdown must still be checked against the code. Each guide states its own scope.
 
 ## Related repositories
 

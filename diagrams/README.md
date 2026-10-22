@@ -33,9 +33,8 @@ explain deeper service rules.
 
 ## Related references and planning
 
-- [Future settlement, withdrawals, and returns](../planning/settlement-and-withdrawals.md)
-  describes proposals, separately from implemented payment phases.
-- [Editable draw.io index](../drawio/README.md) lists personal visual references.
+- [Planning diagrams](../planning/README.md) describe proposed business flows and
+  class relationships that may change before implementation.
 - [Backend disposable reset guide](../../backend/docs/operations/reset-environment.md)
   describes implemented operator behavior. This repository does not currently
   contain the formerly indexed reset-process Markdown document.
