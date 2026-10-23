@@ -26,6 +26,14 @@ currency comes from their personal-address country when available, with USD as
 the default. The frontend formats the backend's amount and currency; it does not
 calculate exchange rates.
 
+Catalog ranking and displayed ordered quantities count units in all non-cancelled
+orders, including unpaid and refunded purchases. Cancelled orders never count,
+even when refunded. These figures measure customer demand, not completed sales.
+Personal category preferences use lifetime viewer quantities; recent popularity
+uses everyone's units over seven days by default. Updates affect the next request.
+The diagram's general ranking step remains accurate; the exact rules live in the
+[backend catalog contract](../../../../backend/docs/api/ecommerce/product-catalog.md#which-products-appear-first).
+
 Frankfurter supplies exchange rates, rather than converted product prices.
 The backend performs decimal conversion. When conversion is unavailable, it keeps
 the original store amount and currency. Display conversion is not a guarantee
