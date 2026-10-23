@@ -23,6 +23,12 @@ A refresh token allows the browser to obtain another access token later. The
 refresh token is in an HttpOnly cookie, so JavaScript cannot read it. The access
 token and user details are not saved in localStorage.
 
+The refresh cookie persists across browser restarts until its token expires,
+unless browser settings or the customer clear it. Its maximum age follows the
+issued token's remaining validity. The configured refresh lifetime is seven days;
+each successful token rotation starts a new seven-day window and updates the
+cookie. When the website opens, the frontend uses this cookie to restore login.
+
 The frontend clears any previous local session before a new login attempt. The
 backend decides whether credentials are accepted and includes the account's
 authentication version in tokens. This version lets password changes invalidate
