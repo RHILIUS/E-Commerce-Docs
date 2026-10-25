@@ -46,9 +46,8 @@ the older diagram.
 
 ## Diagram limitations
 
-Despite its `.drawio.svg` extension, this file contains raw Draw.io XML rather
-than a rendered SVG with an embedded model. Open it in Draw.io; it cannot currently
-be previewed as a browser image. Its existing contents are preserved.
+The `.drawio.svg` file can be previewed in an SVG viewer and opened for editing
+in Draw.io. It embeds the original diagram model, preserving its existing contents.
 
 The drawing simplifies ranking to user preferences and shows the external service
 returning converted prices. Current behavior and pagination are explained in the
